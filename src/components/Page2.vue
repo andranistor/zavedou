@@ -1,5 +1,6 @@
 <template>
   <div class="demo">
+    <h1>Page 2</h1>
     <div v-if="selected" style="padding-top:10px; width: 100%;">
       You have selected
       <code>{{ selected.name }}, the {{ selected.race }}</code>

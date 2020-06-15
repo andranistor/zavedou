@@ -2,6 +2,7 @@
   <div class="container">
     <router-link to="/page1">Go to Page 1</router-link>
     <router-link to="/page2">Go to Page 2</router-link>
+    <router-link to="/profiles">Go to Profiles</router-link>
 
     <h1>Vue router</h1>
     <div>
