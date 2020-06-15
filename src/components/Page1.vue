@@ -1,33 +1,47 @@
+<!-- Vue component -->
 <template>
   <div>
-    <h1>Page 1</h1>
-    <b-button size="sm" @click="toggle">{{ show ? 'Hide' : 'Show' }} Alert</b-button>
-    <b-alert v-model="show" class="mt-3" dismissible @dismissed="dismissed">Hello {{ name }}!</b-alert>
+    <div>
+      <label class="typo__label">Tagging</label>
+      <multiselect
+        v-model="value"
+        tag-placeholder="Add this as new tag"
+        placeholder="Search or add a tag"
+        label="name"
+        track-by="code"
+        :options="options"
+        :multiple="true"
+        :taggable="true"
+        @tag="addTag"
+      ></multiselect>
+      <!-- <pre class="language-json"><code>{{ value  }}</code></pre> -->
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Page1",
   data() {
     return {
-      name: "BootstrapVue",
-      show: true
+      value: [{ name: "Javascript", code: "js" }],
+      options: [
+        { name: "Vue.js", code: "vu" },
+        { name: "Javascript", code: "js" },
+        { name: "Open Source", code: "os" },
+      ],
     };
   },
-  watch: {
-    show(newVal) {
-      console.log("Alert is now " + (newVal ? "visible" : "hidden"));
-    }
-  },
   methods: {
-    toggle() {
-      console.log("Toggle button clicked");
-      this.show = !this.show;
+    addTag(newTag) {
+      const tag = {
+        name: newTag,
+        code: newTag.substring(0, 2) + Math.floor(Math.random() * 10000000),
+      };
+      this.options.push(tag);
+      this.value.push(tag);
     },
-    dismissed() {
-      console.log("Alert dismissed");
-    }
-  }
+  },
 };
 </script>
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
+<style></style>

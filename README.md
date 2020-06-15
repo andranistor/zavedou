@@ -1,2 +1,7 @@
-# zavedou
-DA web projekt Za vědou
+## Instalace
+
+- `npm install`
+
+## Vývoj
+
+- `npm start`
