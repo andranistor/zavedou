@@ -3,6 +3,7 @@
     <router-link to="/page1">Go to Page 1</router-link>
     <router-link to="/page2">Go to Page 2</router-link>
     <router-link to="/profiles">Go to Profiles</router-link>
+    <router-link to="/about">O projektu</router-link>
 
     <h1>Vue router</h1>
     <div>
@@ -25,7 +26,7 @@
 
 <script>
 export default {
-  name: "App",
+  name: "App"
 };
 </script>
 

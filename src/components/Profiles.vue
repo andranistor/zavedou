@@ -1,7 +1,11 @@
 <template>
   <div>
+<<<<<<< HEAD
     <h1>Profiles</h1>
     <button @click="addData">nahraj data</button>
+=======
+    <h1>Profily</h1>
+>>>>>>> cc17e867a304c8618b7c1b0fb12bd418892cddfd
   </div>
 </template>
 
@@ -9,6 +13,7 @@
 import { db } from "../utils/db";
 
 export default {
+<<<<<<< HEAD
   methods: {
     addData() {
       // let institution =
@@ -50,6 +55,9 @@ export default {
       });
     }
   }
+=======
+  name: "Profily"
+>>>>>>> cc17e867a304c8618b7c1b0fb12bd418892cddfd
 };
 </script>
 
