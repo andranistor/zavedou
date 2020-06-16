@@ -15,10 +15,10 @@
         <img class="d-none d-md-block d-lg-none" src="assets/img/jumbotron_tablet.png" />
         <img class="d-xs-block d-md-none" src="assets/img/jumbotron_mobile.png" />
       </div>
-      <div>
-        <img class="d-none d-md-block footer" src="assets/img/footer.png" />
+      <div class="footer">
+        <!-- <img class="d-none d-md-block footer" src="assets/img/footer.png" />
         <img class="d-none d-md-block d-lg-none footer" src="assets/img/footer_tablet.png" />
-        <img class="d-xs-block d-md-none footer" src="assets/img/footer_mobile.png" />
+        <img class="d-xs-block d-md-none footer" src="assets/img/footer_mobile2.png" />-->
       </div>
     </div>
     <router-view></router-view>
@@ -48,6 +48,10 @@ body img {
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #9df4f4;
+  opacity: 70%;
 }
 
 @media (max-width: 767.98px) {
