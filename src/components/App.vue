@@ -8,7 +8,6 @@
       <router-link to="/calendar">Kalendář akcí</router-link>
       <router-link to="/about">O projektu</router-link>
       <router-link to="/forchildren">Pro děti</router-link>
-      <router-view></router-view>
     </header>
     <img class="d-none d-lg-block d-xl-block" src="assets/img/jumbotron_desktop.png" />
     <img class="d-none d-md-block d-lg-none" src="assets/img/jumbotron_tablet.png" />
