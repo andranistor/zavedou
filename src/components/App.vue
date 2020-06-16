@@ -14,23 +14,10 @@
     <img class="d-none d-md-block d-lg-none" src="assets/img/jumbotron_tablet.png" />
     <img class="d-xs-block d-md-none" src="assets/img/jumbotron_mobile.png" />
 
-    <h1>Vue router</h1>
-    <div>
-      <b-button>Button</b-button>
-      <b-button variant="danger">Button</b-button>
-      <b-button variant="success">Button</b-button>
-      <b-button variant="outline-primary">Button</b-button>
-    </div>
-    <div>
-      <b-button v-b-modal.modal-1>Launch demo modal</b-button>
-
-      <b-modal id="modal-1" title="BootstrapVue">
-        <p class="my-4">Hello from modal!</p>
-      </b-modal>
-      <img class="d-none d-md-block footer" src="assets/img/footer.png" />
-      <img class="d-none d-md-block d-lg-none footer" src="assets/img/footer_tablet.png" />
-      <img class="d-xs-block d-md-none footer" src="assets/img/footer_mobile.png" />
-    </div>
+    <img class="d-none d-md-block footer" src="assets/img/footer.png" />
+    <img class="d-none d-md-block d-lg-none footer" src="assets/img/footer_tablet.png" />
+    <img class="d-xs-block d-md-none footer" src="assets/img/footer_mobile.png" />
+    <router-view></router-view>
   </div>
 </template>
 
