@@ -2,11 +2,13 @@
   <div class="hlavicka">
     <header>
       <img src="assets/img/logo.png" alt="logo" />
-      <router-link to="/page1">Go to Page 1</router-link>
-      <router-link to="/page2">Go to Page 2</router-link>
-      <router-link to="/profiles">Go to Profiles</router-link>
+      <router-link to="/">Domovská stránka</router-link>
+      <router-link to="/map">Mapa</router-link>
+      <router-link to="/profiles">Profily vědců</router-link>
+      <router-link to="/calendar">Kalendář akcí</router-link>
       <router-link to="/about">O projektu</router-link>
-      <router-link to="/">Domů</router-link>
+      <router-link to="/forchildren">Pro děti</router-link>
+      <router-view></router-view>
     </header>
     <img class="d-none d-lg-block d-xl-block" src="assets/img/jumbotron_desktop.png" />
     <img class="d-none d-md-block d-lg-none" src="assets/img/jumbotron_tablet.png" />
@@ -29,8 +31,6 @@
       <img class="d-none d-md-block d-lg-none footer" src="assets/img/footer_tablet.png" />
       <img class="d-xs-block d-md-none footer" src="assets/img/footer_mobile.png" />
     </div>
-
-    <router-view></router-view>
   </div>
 </template>
 
