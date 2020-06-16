@@ -1,0 +1,3 @@
+<template>
+  <h1>Domovská stránka</h1>
+</template>

@@ -7,10 +7,12 @@ import Multiselect from "vue-multiselect";
 import { firestorePlugin } from 'vuefire'
 import VueRouter from 'vue-router'
 import App from './components/App';
-import Page1 from './components/Page1';
-import Page2 from './components/Page2';
+import Home from './components/Home';
+import Map from './components/Map';
 import Profiles from './components/Profiles';
-import About from './components/about';
+import Calendar from './components/Calendar';
+import About from './components/About';
+import Forchildren from './components/Forchildren';
 import './index.html';
 
 Vue.use(VueRouter);
@@ -23,10 +25,12 @@ Vue.use(firestorePlugin)
 const router = new VueRouter({
   mode: 'history',
   routes: [
-    { path: '/page1', component: Page1 },
-    { path: '/page2', component: Page2 },
+    { path: '/', component: Home },
+    { path: '/map', component: Map },
     { path: '/profiles', component: Profiles },
+    { path: '/calendar', component: Calendar },
     { path: '/about', component: About },
+    { path: '/forchildren', component: Forchildren },
   ],
 });
 

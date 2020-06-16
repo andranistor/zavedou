@@ -1,6 +1,5 @@
 <template>
   <div class="demo">
-    <h1>Page 2</h1>
     <div v-if="selected" style="padding-top:10px; width: 100%;">
       You have selected
       <code>{{ selected.name }}, the {{ selected.race }}</code>
@@ -19,10 +18,7 @@
           placeholder: 'Do you feel lucky, punk?',
         }"
       >
-        <div
-          slot-scope="{ suggestion }"
-          style="display: flex; align-items: center;"
-        >
+        <div slot-scope="{ suggestion }" style="display: flex; align-items: center;">
           <img
             :style="{
               display: 'flex',
@@ -33,9 +29,7 @@
             }"
             :src="suggestion.item.avatar"
           />
-          <div style="{ display: 'flex', color: 'navyblue'}">
-            {{ suggestion.item.name }}
-          </div>
+          <div style="{ display: 'flex', color: 'navyblue'}">{{ suggestion.item.name }}</div>
         </div>
       </vue-autosuggest>
     </div>
@@ -44,6 +38,8 @@
 
 <script>
 export default {
+  name: "Autosuggest",
+
   data() {
     return {
       query: "",
@@ -56,46 +52,46 @@ export default {
               name: "Frodo",
               race: "Hobbit",
               avatar:
-                "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Elijah_Wood_as_Frodo_Baggins.png/220px-Elijah_Wood_as_Frodo_Baggins.png",
+                "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Elijah_Wood_as_Frodo_Baggins.png/220px-Elijah_Wood_as_Frodo_Baggins.png"
             },
             {
               id: 2,
               name: "Samwise",
               race: "Hobbit",
               avatar:
-                "https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Sean_Astin_as_Samwise_Gamgee.png/200px-Sean_Astin_as_Samwise_Gamgee.png",
+                "https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Sean_Astin_as_Samwise_Gamgee.png/200px-Sean_Astin_as_Samwise_Gamgee.png"
             },
             {
               id: 3,
               name: "Gandalf",
               race: "Maia",
               avatar:
-                "https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Gandalf600ppx.jpg/220px-Gandalf600ppx.jpg",
+                "https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Gandalf600ppx.jpg/220px-Gandalf600ppx.jpg"
             },
             {
               id: 4,
               name: "Aragorn",
               race: "Human",
               avatar:
-                "https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Aragorn300ppx.png/150px-Aragorn300ppx.png",
-            },
-          ],
-        },
-      ],
+                "https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Aragorn300ppx.png/150px-Aragorn300ppx.png"
+            }
+          ]
+        }
+      ]
     };
   },
   computed: {
     filteredOptions() {
       return [
         {
-          data: this.suggestions[0].data.filter((option) => {
+          data: this.suggestions[0].data.filter(option => {
             return (
               option.name.toLowerCase().indexOf(this.query.toLowerCase()) > -1
             );
-          }),
-        },
+          })
+        }
       ];
-    },
+    }
   },
   methods: {
     clickHandler(item) {
@@ -116,8 +112,8 @@ export default {
     },
     focusMe(e) {
       console.log(e); // FocusEvent
-    },
-  },
+    }
+  }
 };
 </script>
 
