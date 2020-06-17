@@ -1,27 +1,27 @@
 <template>
   <div>
     <div class="hlavicka d-flex flex-column justify-content-between">
-      <div>
-        <header>
-          <img src="assets/img/logo.png" alt="logo" />
-          <router-link to="/">Domovská stránka</router-link>
-          <router-link to="/map">Mapa</router-link>
-          <router-link to="/profiles">Profily vědců</router-link>
-          <router-link to="/calendar">Kalendář akcí</router-link>
-          <router-link to="/about">O projektu</router-link>
-          <router-link to="/forchildren">Pro děti</router-link>
-        </header>
-        <img class="d-none d-lg-block d-xl-block" src="assets/img/jumbotron_desktop.png" />
-        <img class="d-none d-md-block d-lg-none" src="assets/img/jumbotron_tablet.png" />
-        <img class="d-xs-block d-md-none" src="assets/img/jumbotron_mobile.png" />
-      </div>
-      <div class="footer">
-        <!-- <img class="d-none d-md-block footer" src="assets/img/footer.png" />
-        <img class="d-none d-md-block d-lg-none footer" src="assets/img/footer_tablet.png" />
-        <img class="d-xs-block d-md-none footer" src="assets/img/footer_mobile2.png" />-->
-      </div>
+      <header>
+        <img src="assets/img/logo.png" alt="logo" />
+        <router-link to="/">Domovská stránka</router-link>
+        <router-link to="/map">Mapa</router-link>
+        <router-link to="/profiles">Profily vědců</router-link>
+        <router-link to="/calendar">Kalendář akcí</router-link>
+        <router-link to="/about">O projektu</router-link>
+        <router-link to="/forchildren">Pro děti</router-link>
+      </header>
+      <img class="d-none d-lg-block d-xl-block" src="assets/img/jumbotron_desktop.png" />
+      <img class="d-none d-md-block d-lg-none" src="assets/img/jumbotron_tablet.png" />
+      <img class="d-xs-block d-md-none" src="assets/img/jumbotron_mobile.png" />
     </div>
+
     <router-view></router-view>
+
+    <div class="footer">
+      <img class="d-none d-md-block footer" src="assets/img/footer.png" />
+      <img class="d-none d-md-block d-lg-none footer" src="assets/img/footer_tablet.png" />
+      <img class="d-xs-block d-md-none footer" src="assets/img/footer_mobile2.png" />
+    </div>
   </div>
 </template>
 
