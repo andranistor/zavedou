@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style>
-/* .name_surname,
+.name_surname,
 .subject {
   font-family: "Roboto Slab";
   font-size: 25px;
@@ -123,7 +123,7 @@ div[role="tablist"] {
 
 .card-header.p-1 {
   padding: 0 !important; /*tímto přepisuji Bootstrap-Vue třídu, která má také !important */
-/* }
+}
 
 .btn.btn-info {
   width: 700px;
@@ -144,5 +144,5 @@ div[role="tablist"] {
   height: 100px;
   background-color: #84d3ef;
   border-color: #84d3ef;
-} */
+}
 </style>
