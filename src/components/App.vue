@@ -14,13 +14,13 @@
       <img class="d-none d-md-block d-lg-none" src="assets/img/jumbotron_tablet.png" />
       <img class="d-xs-block d-md-none" src="assets/img/jumbotron_mobile.png" />
     </div>
-
-    <router-view></router-view>
-
+    <div class="page--center">
+      <router-view></router-view>
+    </div>
     <div class="footer">
-      <img class="d-none d-md-block footer" src="assets/img/footer.png" />
+      <!--<img class="d-none d-md-block footer" src="assets/img/footer.png" />
       <img class="d-none d-md-block d-lg-none footer" src="assets/img/footer_tablet.png" />
-      <img class="d-xs-block d-md-none footer" src="assets/img/footer_mobile2.png" />
+      <img class="d-xs-block d-md-none footer" src="assets/img/footer_mobile2.png" />-->
     </div>
   </div>
 </template>
@@ -44,10 +44,11 @@ body img {
   width: 100%;
 }
 
+.page--center {
+  height: 30vh;
+}
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 80px;
   background-color: #9df4f4;
