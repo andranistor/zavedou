@@ -55,5 +55,42 @@ export default {
 };
 </script>
 
+// Priprava na nacitacni dat
+// name: "Profiles",
+  // data() {
+  //   return {
+  //     profiles: [],
+  //     firstName: "",
+  //     lastName: "",
+  //     branch: "",
+  //     institution: "",
+  //     offer: "",
+  //     whom: "",
+  //     region: "",
+  //     contact: "",
+  //   };
+  // },
+  // firestore: {
+  //   profiles: db.collection("profiles"),
+  // },
+  // methods: {
+  //   addProfile() {
+  //     db.collection("profiles")
+  //       .add({
+  //         firstName: this.firstName,
+  //         lastName: this.lastName,
+  //         branch: this.branch,
+  //         institution: this.institution,
+  //         offer: this.offer,
+  //         whom: this.whom,
+  //         region: this.region,
+  //         contact: this.contact,
+  //       })
+  //       .then((docRef) => {
+  //         docRef.update({ id: docRef.id });
+  //       });
+  //   },
+  // },  
+
 <style>
 </style>
