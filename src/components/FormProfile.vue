@@ -3,36 +3,36 @@
     <!-- <h1>Formulář</h1>
     <label for="first-name">
       Jméno
-      <input type="text" id="first-name" v-model="firstName" placeholder="Jméno" />
+      <input type="text" id="first-name" v-model.trim="firstName" placeholder="Jméno" />
     </label>
     <label for="last-name">
       Příjmení
-      <input type="text" id="last-name" v-model="lastName" placeholder="Příjmení" />
+      <input type="text" id="last-name" v-model.trim="lastName" placeholder="Příjmení" />
     </label>
     <br />
     <label for="branch">
       Obor
-      <input type="text" id="branch" v-model="branch" placeholder="Obor" />
+      <input type="text" id="branch" v-model.trim="branch" placeholder="Obor" />
     </label>
     <br />
     <label for="institution">
       Instituce
-      <input type="text" id="institution" v-model="institution" placeholder="Instituce" />
+      <input type="text" id="institution" v-model.trim="institution" placeholder="Instituce" />
     </label>
     <br />
     <label for="offer">
       Nabízím:
-      <textarea id="offer" v-model="offer" placeholder="Vysvětlím teorii relativity"></textarea>
+      <textarea id="offer" v-model.trim="offer" placeholder="Vysvětlím teorii relativity"></textarea>
     </label>
     <br />
     <label for="whom">
       Pro koho:
-      <input type="text" id="whom" v-model="whom" placeholder="1.a 2. st. ZŠ, SŠ, dospělý" />
+      <input type="text" id="whom" v-model.trim="whom" placeholder="1.a 2. st. ZŠ, SŠ, dospělý" />
     </label>
 
     <label for="region-select">
       Pro oblast:
-      <select name="type" id="region-select" v-model="selected">
+      <select name="type" id="region-select" v-model.trim="region">
         <option>--Můžete vybrat i více možností--</option>
         <option>Celá ČR</option>
         <option>Hlavní město Praha</option>
@@ -57,7 +57,7 @@
       <input
         type="text"
         id="contact"
-        v-model="contact"
+        v-model.trim="contact"
         placeholder="jmeno.prijmeni@email.cz"
       />
     </label>
