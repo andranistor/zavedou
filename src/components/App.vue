@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="hlavicka d-flex flex-column justify-content-between">
+  <div class="d-flex flex-column justify-content-between">
+    <div class="hlavicka">
       <header>
         <img src="assets/img/logo.png" alt="logo" />
         <router-link to="/">Domovská stránka</router-link>
@@ -45,7 +45,7 @@ body img {
 }
 
 .page--center {
-  height: 30vh;
+  height: 80vh;
 }
 
 .footer {

@@ -25,7 +25,7 @@ Vue.use(firestorePlugin)
 const router = new VueRouter({
   mode: 'history',
   routes: [
-    { path: '/', component: Home },
+    { path: '', component: Home },
     { path: '/map', component: Map },
     { path: '/profiles', component: Profiles },
     { path: '/calendar', component: Calendar },

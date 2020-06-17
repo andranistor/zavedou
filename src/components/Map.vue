@@ -1,4 +1,3 @@
-<!-- Vue component -->
 <template>
   <div>
     <h1>Mapa</h1>
