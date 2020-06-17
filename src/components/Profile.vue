@@ -4,7 +4,7 @@
       <b-card-header header-tag="header" class="p-1" role="tab">
         <b-button block v-b-toggle="'accordion-' + id" variant="info">
           <div class="d-flex justify-content-around align-items-center">
-            <div>
+            <div class="picture">
               <img class="avatar" :src="image" />
             </div>
             <div class="name_surname">{{ name }} {{ surname }}</div>
@@ -81,10 +81,15 @@ export default {
 </script>
 
 <style>
-/* .name_surname,
+.name_surname,
 .subject {
   font-family: "Roboto Slab";
-  font-size: 25px;
+  font-size: 1.3rem;
+  width: 40%;
+}
+
+.picture {
+  width: 20%;
 }
 
 td:first-child {
@@ -102,11 +107,11 @@ div[role="tablist"] {
 }
 
 .card.mb-1 {
-  width: 700px;
+  width: 500px;
 }
 
 .card-text:last-child {
-  width: 650px;
+  width: 450px;
 }
 
 .card-body {
@@ -116,33 +121,33 @@ div[role="tablist"] {
 }
 
 .card-header:first-child {
-  width: 700px;
+  width: 450px;
   height: 100px;
   background-color: #84d3ef;
 }
 
 .card-header.p-1 {
-  padding: 0 !important; /*tímto přepisuji Bootstrap-Vue třídu, která má také !important */
-/* }
+  padding: 0 !important; /*tímto přepisuji Bootstrap-Vue třídu, která má také !important*/
+}
 
 .btn.btn-info {
-  width: 700px;
+  width: 500px;
   height: 100px;
   background-color: #84d3ef;
   border-color: #84d3ef;
 }
 
 .btn.btn-info:hover {
-  width: 700px;
+  width: 500px;
   height: 100px;
   background-color: #84d3ef;
   border-color: #84d3ef;
 }
 
 .btn.btn-info:focus {
-  width: 700px;
+  width: 500px;
   height: 100px;
   background-color: #84d3ef;
   border-color: #84d3ef;
-} */
+}
 </style>

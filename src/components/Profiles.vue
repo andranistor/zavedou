@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Popularizátoři vědy</h1>
-    <div class="profiles d-flex">
+    <div class="profiles d-flex justify-content-around">
       <MyProfile
         :id="id"
         :name="name"
@@ -56,68 +56,4 @@ export default {
 </script>
 
 <style>
-.name_surname,
-.subject {
-  font-family: "Roboto Slab";
-  font-size: 25px;
-}
-
-td:first-child {
-  width: 200px;
-}
-
-.avatar {
-  height: 80px;
-  width: 80px;
-  padding: 0;
-}
-
-div[role="tablist"] {
-  margin: 20px;
-}
-
-.card.mb-1 {
-  width: 700px;
-}
-
-.card-text:last-child {
-  width: 650px;
-}
-
-.card-body {
-  background-color: whitesmoke;
-  font-family: "Roboto Slab";
-  line-height: 35px;
-}
-
-.card-header:first-child {
-  width: 700px;
-  height: 100px;
-  background-color: #84d3ef;
-}
-
-.card-header.p-1 {
-  padding: 0 !important; /*tímto přepisuji Bootstrap-Vue třídu, která má také !important */
-}
-
-.btn.btn-info {
-  width: 700px;
-  height: 100px;
-  background-color: #84d3ef;
-  border-color: #84d3ef;
-}
-
-.btn.btn-info:hover {
-  width: 700px;
-  height: 100px;
-  background-color: #84d3ef;
-  border-color: #84d3ef;
-}
-
-.btn.btn-info:focus {
-  width: 700px;
-  height: 100px;
-  background-color: #84d3ef;
-  border-color: #84d3ef;
-}
 </style>
