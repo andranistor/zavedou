@@ -1,72 +1,45 @@
 <template>
-  <div role="tablist">
-    <b-card no-body class="mb-1">
-      <b-card-header header-tag="header" class="p-1" role="tab">
-        <b-button block v-b-toggle.accordion-1 variant="info">
-          <div class="d-flex justify-content-around align-items-center">
-            <div>
-              <img class="avatar" :src="image" />
-            </div>
-            <div class="name_surname">{{ name }} {{ surname }}</div>
-            <div class="subject">{{ subject }}</div>
-          </div>
-        </b-button>
-      </b-card-header>
-      <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
-        <b-card-body>
-          <table>
-            <tr>
-              <b-card-text>
-                <td>
-                  <strong>Z jaké jsem instituce:</strong>
-                </td>
-                <td>{{ institution }}</td>
-              </b-card-text>
-            </tr>
-            <tr>
-              <b-card-text>
-                <td>
-                  <strong>Co nabízím:</strong>
-                </td>
-                <td>{{ offer }}</td>
-              </b-card-text>
-            </tr>
-            <tr>
-              <b-card-text>
-                <td>
-                  <strong>Komu:</strong>
-                </td>
-                <td>{{ forwhom }}</td>
-              </b-card-text>
-            </tr>
-            <tr>
-              <b-card-text>
-                <td>
-                  <strong>Kde působím:</strong>
-                </td>
-                <td>{{ region }}</td>
-              </b-card-text>
-            </tr>
-            <tr>
-              <b-card-text>
-                <td>
-                  <strong>Mé kontaktní údaje:</strong>
-                </td>
-                <td>{{ contact }}</td>
-              </b-card-text>
-            </tr>
-          </table>
-        </b-card-body>
-      </b-collapse>
-    </b-card>
+  <div>
+    <h1>Popularizátoři vědy</h1>
+    <div class="profiles d-flex">
+      <MyProfile
+        :id="id"
+        :name="name"
+        :surname="surname"
+        :subject="subject"
+        :institution="institution"
+        :offer="offer"
+        :forwhom="forwhom"
+        :region="region"
+        :contact="contact"
+        :image="image"
+      />
+      <MyProfile
+        :id="2"
+        :name="'Jana'"
+        :surname="'Modrá'"
+        :subject="'informatika'"
+        :institution="'Fakulta informatiky, České vysoké učení technické'"
+        :offer="'Ukážu vám programování ve Scratchi'"
+        :forwhom="'ZŠ'"
+        :region="'Liberecký kraj'"
+        :contact="'jana.modra@fit.cvut.cz'"
+        :image="image"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+import Profile from "./Profile.vue";
 export default {
   name: "Profiles",
+  components: {
+    MyProfile: Profile
+  },
   data() {
     return {
+      id: 1,
       name: "Lenka",
       surname: "Novotná, PhD",
       subject: "fyzika, matematika",
@@ -82,8 +55,7 @@ export default {
 };
 </script>
 
-<style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+<style>
 .name_surname,
 .subject {
   font-family: "Roboto Slab";
