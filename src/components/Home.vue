@@ -7,21 +7,21 @@
         <label for="name">
           Jméno
           <br />
-          <input type="text" id="name" placeholder="Jméno" />
+          <input type="text" id="name" placeholder="Jméno" v-model.trim="name" />
         </label>
         <br />
 
         <label for="email">
           E-mail
           <br />
-          <input type="email" id="email" placeholder="E-mail" />
+          <input type="email" id="email" placeholder="E-mail" v-model.trim="email" />
         </label>
         <br />
 
-        <label for="msgText">
+        <label for="message">
           Zpráva
           <br />
-          <textarea name="message" rows="4" placeholder="Zpráva"></textarea>
+          <textarea name="message" rows="4" placeholder="Zpráva" v-model.trim="message"></textarea>
         </label>
         <br />
         <button type="submit" @click="sendMail">Poslat zprávu</button>
