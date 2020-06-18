@@ -7,8 +7,8 @@
             <div>
               <img class="avatar" :src="image" />
             </div>
-            <div class="name_surname">{{ name }} {{ surname }}</div>
-            <div class="subject">{{ subject }}</div>
+            <div class="name_surname">{{ firstName }} {{ lastName }}</div>
+            <div class="subject">{{ branch }}</div>
           </div>
         </b-button>
       </b-card-header>
@@ -18,7 +18,7 @@
             <tr>
               <b-card-text>
                 <td>
-                  <strong>Z jaké jsem instituce:</strong>
+                  <strong>Jsem z:</strong>
                 </td>
                 <td>{{ institution }}</td>
               </b-card-text>
@@ -26,7 +26,15 @@
             <tr>
               <b-card-text>
                 <td>
-                  <strong>Co nabízím:</strong>
+                  <strong>Obor:</strong>
+                </td>
+                <td>{{ branch }}</td>
+              </b-card-text>
+            </tr>
+            <tr>
+              <b-card-text>
+                <td>
+                  <strong>Nabízím:</strong>
                 </td>
                 <td>{{ offer }}</td>
               </b-card-text>
@@ -36,13 +44,13 @@
                 <td>
                   <strong>Komu:</strong>
                 </td>
-                <td>{{ forwhom }}</td>
+                <td>{{ whom }}</td>
               </b-card-text>
             </tr>
             <tr>
               <b-card-text>
                 <td>
-                  <strong>Kde působím:</strong>
+                  <strong>Pro oblast:</strong>
                 </td>
                 <td>{{ region }}</td>
               </b-card-text>
@@ -50,7 +58,7 @@
             <tr>
               <b-card-text>
                 <td>
-                  <strong>Mé kontaktní údaje:</strong>
+                  <strong>Kontakt:</strong>
                 </td>
                 <td>{{ contact }}</td>
               </b-card-text>
@@ -67,12 +75,12 @@ export default {
   name: "Profile",
   props: [
     "id",
-    "name",
-    "surname",
-    "subject",
+    "firstName",
+    "lastName",
+    "branch",
     "institution",
     "offer",
-    "forwhom",
+    "whom",
     "region",
     "contact",
     "image"

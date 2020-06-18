@@ -1,96 +1,62 @@
 <template>
   <div>
     <h1>Popularizátoři vědy</h1>
-    <div class="profiles d-flex">
-      <MyProfile
-        :id="id"
-        :name="name"
-        :surname="surname"
-        :subject="subject"
-        :institution="institution"
-        :offer="offer"
-        :forwhom="forwhom"
-        :region="region"
-        :contact="contact"
+    <div class="profiles d-flex" v-for="profile in profiles" :key="profile.id">
+      <Profile
+        :id="profile.id"
+        :firstName="profile.firstName"
+        :lastName="profile.lastName"
+        :branch="profile.branch"
+        :institution="profile.institution"
+        :offer="profile.offer"
+        :whom="profile.whom"
+        :region="profile.region"
+        :contact="profile.contact"
         :image="image"
       />
-      <MyProfile
-        :id="2"
-        :name="'Jana'"
-        :surname="'Modrá'"
-        :subject="'informatika'"
-        :institution="'Fakulta informatiky, České vysoké učení technické'"
-        :offer="'Ukážu vám programování ve Scratchi'"
-        :forwhom="'ZŠ'"
-        :region="'Liberecký kraj'"
-        :contact="'jana.modra@fit.cvut.cz'"
-        :image="image"
-      />
+    </div>
+    <div>
+      <FormProfile />
     </div>
   </div>
 </template>
 
 <script>
+import { db } from "../utils/db";
 import Profile from "./Profile.vue";
+import FormProfile from "./FormProfile.vue";
+
 export default {
   name: "Profiles",
   components: {
-    MyProfile: Profile
+    Profile,
+    FormProfile
   },
   data() {
     return {
-      id: 1,
-      name: "Lenka",
-      surname: "Novotná, PhD",
-      subject: "fyzika, matematika",
-      institution: "Matematicko-fyzikální fakulta, Univerzita Karlova",
-      offer:
-        "Přednášky pro děti na 2. stupni ZŠ a na SŠ na jakékoliv fyzikální téma. Ráda i doučím matematiku.",
-      forwhom: "ZŠ, SŠ",
-      region: "Praha, Středočeský kraj",
-      contact: "lenka.novotna@matfyz.cuni.cz",
+      profiles: [],
+      id: "",
+      firstName: "",
+      lastName: "",
+      branch: "",
+      institution: "",
+      offer: "",
+      whom: "",
+      region: "",
+      contact: "",
       image: "./assets/img/female_avatar.png"
     };
+  },
+  // Showing and ordering the profiles by lastName
+  firestore: {
+    profiles: db
+      .collection("profiles")
+      .orderBy("lastName") // Ordering of profiles on the page by lastName
+      .limit(5) // It will show only 5 profiles on the page
   }
 };
 </script>
 
-// Priprava na nacitacni dat
-// name: "Profiles",
-  // data() {
-  //   return {
-  //     profiles: [],
-  //     firstName: "",
-  //     lastName: "",
-  //     branch: "",
-  //     institution: "",
-  //     offer: "",
-  //     whom: "",
-  //     region: "",
-  //     contact: "",
-  //   };
-  // },
-  // firestore: {
-  //   profiles: db.collection("profiles"),
-  // },
-  // methods: {
-  //   addProfile() {
-  //     db.collection("profiles")
-  //       .add({
-  //         firstName: this.firstName,
-  //         lastName: this.lastName,
-  //         branch: this.branch,
-  //         institution: this.institution,
-  //         offer: this.offer,
-  //         whom: this.whom,
-  //         region: this.region,
-  //         contact: this.contact,
-  //       })
-  //       .then((docRef) => {
-  //         docRef.update({ id: docRef.id });
-  //       });
-  //   },
-  // },  
 
 <style>
 </style>

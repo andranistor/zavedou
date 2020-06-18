@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     addData() {
-      // let institution = // Insert a json
+      // let institution = // Insert a json and uncomment it
       institution.forEach(function(obj) {
         db.collection("institutions")
           .add({
