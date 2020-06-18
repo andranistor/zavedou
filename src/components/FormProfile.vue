@@ -65,12 +65,7 @@
       <br />
       <label for="contact">
         Kontakt
-        <input
-          type="text"
-          id="contact"
-          v-model.trim="contact"
-          placeholder="jmeno.prijmeni@email.cz"
-        />
+        <input type="text" id="contact" v-model.trim="contact" placeholder="Email" />
       </label>
       <br />
 

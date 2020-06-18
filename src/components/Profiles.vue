@@ -49,10 +49,8 @@ export default {
   },
   // Showing and ordering the profiles by lastName
   firestore: {
-    profiles: db
-      .collection("profiles")
-      .orderBy("lastName") // Ordering of profiles on the page by lastName
-      .limit(5) // It will show only 5 profiles on the page
+    profiles: db.collection("profiles").orderBy("lastName") // Ordering of profiles on the page by lastName
+    // .limit(3) // It will show only 5 profiles on the page
   }
 };
 </script>
