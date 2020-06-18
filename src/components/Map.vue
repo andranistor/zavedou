@@ -2,7 +2,6 @@
   <div>
     <h1>Mapa</h1>
     <div id="map"></div>
-    <!-- <button @click="addData">Nahraj data</button> -->
   </div>
 </template>
 
@@ -14,46 +13,6 @@ export default {
   data() {
     return {};
   },
-  // methods: {
-  // addData() {
-  //   // let institution =
-  //   institution.forEach(function(obj) {
-  //     db.collection("institutions")
-  //       .add({
-  //         address: obj.address,
-  //         scientificInstitution: obj.scientificInstitution,
-  //         funFact: obj.funFact,
-  //         website: obj.website,
-  //         branch: {
-  //           bioMed: obj.bioMed,
-  //           chemistry: obj.chemistry,
-  //           engineering: obj.engineering,
-  //           enviroAgri: obj.enviroAgri,
-  //           mathsPhysicsInformatics: obj.mathsPhysicsInformatics,
-  //           scienceAboutEarth: obj.scienceAboutEarth,
-  //           socialAndArts: obj.socialAndArts
-  //         },
-  //         subject: {
-  //           bio: obj.bio,
-  //           civics: obj.civics,
-  //           czechLang: obj.czechLang,
-  //           foreignLang: obj.foreignLang,
-  //           geo: obj.geo,
-  //           history: obj.history,
-  //           informatics: obj.informatics,
-  //           maths: obj.maths,
-  //           musicAndArt: obj.musicAndArt,
-  //           physics: obj.physics
-  //         }
-  //       })
-  //       .then(function() {
-  //         console.log("Document successfully written!");
-  //       })
-  //       .catch(function(error) {
-  //         console.error("Error writing document: ", error);
-  //       });
-  //   });
-  // },
   mounted() {
     let main = document.querySelector("#map");
     // Adding a map and choosing the first focus and its zoom size
@@ -109,7 +68,7 @@ export default {
 .smap {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   margin: 10px 0;
 }
 </style>
