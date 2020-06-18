@@ -2,7 +2,9 @@
   <div class="d-flex flex-column justify-content-between">
     <div class="hlavicka">
       <header>
-        <img src="assets/img/logo.png" alt="logo" />
+        <router-link to="/">
+          <img src="assets/img/logo.png" alt="logo" />
+        </router-link>
         <router-link to="/">Domovská stránka</router-link>
         <router-link to="/map">Mapa</router-link>
         <router-link to="/profiles">Profily vědců</router-link>
@@ -14,11 +16,19 @@
       <img class="d-none d-md-block d-lg-none" src="assets/img/jumbotron_tablet.png" />
       <img class="d-xs-block d-md-none" src="assets/img/jumbotron_mobile.png" />
     </div>
+
     <div class="page--center">
       <router-view></router-view>
     </div>
+
     <div class="footer">
-      <!--<img class="d-none d-md-block footer" src="assets/img/footer.png" />
+      <router-link to="/">Domovská stránka</router-link>
+      <router-link to="/map">Mapa</router-link>
+      <router-link to="/profiles">Profily vědců</router-link>
+      <router-link to="/calendar">Kalendář akcí</router-link>
+      <router-link to="/about">O projektu</router-link>
+      <router-link to="/forchildren">Pro děti</router-link>
+      <!-- <img class="d-none d-md-block footer" src="assets/img/footer.png" />
       <img class="d-none d-md-block d-lg-none footer" src="assets/img/footer_tablet.png" />
       <img class="d-xs-block d-md-none footer" src="assets/img/footer_mobile2.png" />-->
     </div>
@@ -53,19 +63,19 @@ body img {
 }
 
 .page--center {
-  height: 80vh;
+  height: 70%;
 }
 
 .footer {
   width: 100%;
-  height: 80px;
+  height: 8vh;
   background-color: #9df4f4;
   opacity: 70%;
 }
 
 @media (max-width: 767.98px) {
   header {
-    height: 90px;
+    height: 15%;
   }
   header img {
     width: 200px;
@@ -75,7 +85,7 @@ body img {
 
 @media (max-width: 991.98px) and (min-width: 767.99px) {
   header {
-    height: 110px;
+    height: 15%;
   }
   header img {
     width: 250px;
@@ -85,7 +95,7 @@ body img {
 
 @media (min-width: 991.99px) {
   header {
-    height: 120px;
+    height: 15%;
   }
   header img {
     width: 300px;
