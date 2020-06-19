@@ -2,15 +2,18 @@
   <div class="d-flex flex-column justify-content-between">
     <div class="hlavicka">
       <header>
-        <router-link to="/">
-          <img src="assets/img/logo.png" alt="logo" />
-        </router-link>
-        <router-link to="/">Domovská stránka</router-link>
-        <router-link to="/map">Mapa</router-link>
-        <router-link to="/profiles">Profily vědců</router-link>
-        <router-link to="/calendar">Kalendář akcí</router-link>
-        <router-link to="/about">O projektu</router-link>
-        <router-link to="/forchildren">Pro děti</router-link>
+        <div class="menu d-flex justify-content-around align-items-center">
+          <router-link to="/">
+            <img src="assets/img/logo.png" alt="logo" />
+          </router-link>
+
+          <router-link to="/">Domovská stránka</router-link>
+          <router-link to="/map">Mapa</router-link>
+          <router-link to="/profiles">Profily vědců</router-link>
+          <router-link to="/calendar">Kalendář akcí</router-link>
+          <router-link to="/about">O projektu</router-link>
+          <router-link to="/forchildren">Pro děti</router-link>
+        </div>
       </header>
       <img class="d-none d-lg-block d-xl-block" src="assets/img/jumbotron_desktop.png" />
       <img class="d-none d-md-block d-lg-none" src="assets/img/jumbotron_tablet.png" />
@@ -75,7 +78,7 @@ body img {
 
 @media (max-width: 767.98px) {
   header {
-    height: 15%;
+    height: 12%;
   }
   header img {
     width: 200px;
@@ -85,7 +88,7 @@ body img {
 
 @media (max-width: 991.98px) and (min-width: 767.99px) {
   header {
-    height: 15%;
+    height: 12%;
   }
   header img {
     width: 250px;
@@ -95,7 +98,7 @@ body img {
 
 @media (min-width: 991.99px) {
   header {
-    height: 15%;
+    height: 12%;
   }
   header img {
     width: 300px;
