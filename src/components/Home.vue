@@ -39,7 +39,9 @@
           ></textarea>
         </label>
         <br />
-        <button type="submit" @click="sendMail">Poslat zprávu</button>
+        <button type="submit" v-on:submit.prevent="sendMail">
+          Poslat zprávu
+        </button>
       </form>
     </div>
   </div>

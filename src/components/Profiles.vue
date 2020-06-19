@@ -5,7 +5,6 @@
       <label for="region-filter">
         Vyberte:
         <select name="type" id="region-filter" v-model="regionFilter">
-          <option>--Můžete vybrat i více možností--</option>
           <option>Celá ČR</option>
           <option>Hlavní město Praha</option>
           <option>Středočeský kraj</option>
@@ -59,7 +58,7 @@ export default {
   name: "Profiles",
   components: {
     Profile,
-    FormProfile,
+    FormProfile
   },
   data() {
     return {
@@ -74,24 +73,29 @@ export default {
       region: "",
       contact: "",
       image: "./assets/img/female_avatar.png",
-      regionFilter: null,
+      regionFilter: null
     };
   },
   // Showing and ordering the profiles by lastName
   firestore: {
-    profiles: db.collection("profiles"),
+    profiles: db.collection("profiles")
     // .where("region", "==", "Brno") // Filtering
     // .orderBy("lastName") // Ordering of profiles on the page by lastName
     // .limit(3) // It will show only 5 profiles on the page
   },
   methods: {
     filtering() {
-      const filtered_entries = db
-        .collection("profiles")
-        .where("region", "==", this.regionFilter);
-      this.$bind("profiles", filtered_entries);
-    },
-  },
+      const all_entries = db.collection("profiles");
+      if (this.regionFilter !== "Celá ČR") {
+        const filtered_entries = db
+          .collection("profiles")
+          .where("region", "==", this.regionFilter);
+        this.$bind("profiles", filtered_entries);
+      } else {
+        this.$bind("profiles", all_entries);
+      }
+    }
+  }
 };
 </script>
 

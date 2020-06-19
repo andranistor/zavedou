@@ -1,8 +1,7 @@
 <template>
   <div>
-    Akce
     <div>
-      {{ id }}
+      <strong>Údalost:</strong>
       {{ name }}
       {{ type }}
       {{ description }}
@@ -45,10 +44,9 @@ export default {
     "adult",
     "start",
     "end",
-    "note"
-  ]
+    "note",
+  ],
 };
 </script>
 
-<style >
-</style>
+<style></style>
