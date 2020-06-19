@@ -15,14 +15,8 @@
           <router-link to="/forchildren">Pro děti</router-link>
         </div>
       </header>
-      <img
-        class="d-none d-lg-block d-xl-block"
-        src="assets/img/jumbotron_desktop.png"
-      />
-      <img
-        class="d-none d-md-block d-lg-none"
-        src="assets/img/jumbotron_tablet.png"
-      />
+      <img class="d-none d-lg-block d-xl-block" src="assets/img/jumbotron_desktop.png" />
+      <img class="d-none d-md-block d-lg-none" src="assets/img/jumbotron_tablet.png" />
       <img class="d-xs-block d-md-none" src="assets/img/jumbotron_mobile.png" />
     </div>
 
@@ -46,7 +40,7 @@
 
 <script>
 export default {
-  name: "App",
+  name: "App"
 };
 </script>
 

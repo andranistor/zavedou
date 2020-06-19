@@ -4,31 +4,33 @@
     <form @submit.prevent="addProfile">
       <label for="first-name">
         Jméno
-        <input
-          type="text"
-          id="first-name"
-          v-model.trim="firstName"
-          placeholder="Jméno"
-        />
+        <input type="text" id="first-name" v-model.trim="firstName" placeholder="Jméno" />
       </label>
       <label for="last-name">
         Příjmení
-        <input
-          type="text"
-          id="last-name"
-          v-model.trim="lastName"
-          placeholder="Příjmení"
-        />
+        <input type="text" id="last-name" v-model.trim="lastName" placeholder="Příjmení" />
       </label>
       <br />
       <label for="branch">
         Obor
-        <input
-          type="text"
-          id="branch"
-          v-model.trim="branch"
-          placeholder="Obor"
-        />
+        <input type="text" id="branch" v-model.trim="branch" placeholder="Obor" />
+      </label>
+      <br />
+      <label for="subject-select">
+        Vhodné pro školní předmět(y):
+        <select name="type" id="subject-select" v-model="subject">
+          <option>Cizí jazyky</option>
+          <option>Čeština</option>
+          <option>Dějepis</option>
+          <option>Fyzika</option>
+          <option>Chemie</option>
+          <option>Matematika</option>
+          <option>Občanská výchova</option>
+          <option>Přirodopis/biologie</option>
+          <option>Informatika</option>
+          <option>Hudební a výtvarná výchova</option>
+          <option>Zeměpis</option>
+        </select>
       </label>
       <br />
       <label for="institution">
@@ -43,11 +45,7 @@
       <br />
       <label for="offer">
         Nabízím:
-        <textarea
-          id="offer"
-          v-model.trim="offer"
-          placeholder="Vysvětlím teorii relativity"
-        ></textarea>
+        <textarea id="offer" v-model.trim="offer" placeholder="Vysvětlím teorii relativity"></textarea>
       </label>
       <br />
       <label for="whom">
@@ -59,11 +57,23 @@
           placeholder="1.a 2. st. ZŠ, SŠ, dospělý"
         />
       </label>
-
+      <div>
+        <label class="typo__label">Tagging</label>
+        <multiselect
+          v-model="value"
+          tag-placeholder="Add this as new tag"
+          placeholder="Search or add a tag"
+          label="name"
+          track-by="code"
+          :options="options"
+          :multiple="true"
+          :taggable="true"
+          @tag="addTag"
+        ></multiselect>
+      </div>
       <label for="region-select">
         Pro oblast:
         <select name="type" id="region-select" v-model="region">
-          <option>--Můžete vybrat i více možností--</option>
           <option>Celá ČR</option>
           <option>Hlavní město Praha</option>
           <option>Středočeský kraj</option>
@@ -84,24 +94,18 @@
       <br />
       <label for="contact">
         E-mail
-        <input
-          type="email"
-          id="contact"
-          v-model.trim="contact"
-          placeholder="Email"
-        />
+        <input type="email" id="contact" v-model.trim="contact" placeholder="Email" />
       </label>
       <br />
 
-      <button type="submit" v-on:submit.prevent="addProfile">
-        Přidej profil
-      </button>
+      <button type="submit" v-on:submit.prevent="addProfile">Přidej profil</button>
     </form>
   </div>
 </template>
 
 <script>
 import { db } from "../utils/db";
+import Multiselect from "vue-multiselect";
 
 export default {
   name: "FormProfile",
@@ -111,11 +115,18 @@ export default {
       firstName: "",
       lastName: "",
       branch: "",
+      subject: "",
       institution: "",
       offer: "",
       whom: "",
       region: "",
       contact: "",
+      value: [{ name: "Javascript", code: "js" }],
+      options: [
+        { name: "Vue.js", code: "vu" },
+        { name: "Javascript", code: "js" },
+        { name: "Open Source", code: "os" }
+      ]
     };
   },
   methods: {
@@ -125,13 +136,15 @@ export default {
           firstName: this.firstName,
           lastName: this.lastName,
           branch: this.branch,
+          subject: this.subject,
           institution: this.institution,
           offer: this.offer,
           whom: this.whom,
           region: this.region,
           contact: this.contact,
+          options: this.options
         })
-        .then((docRef) => {
+        .then(docRef => {
           docRef.update({ id: docRef.id });
         });
 
@@ -139,12 +152,21 @@ export default {
       this.firstName = "";
       this.lastName = "";
       this.branch = "";
+      this.subject = "";
       this.institution = "";
       this.offer = "";
       this.whom = "";
       this.region = "";
       this.contact = "";
     },
-  },
+    addTag(newTag) {
+      const tag = {
+        name: newTag,
+        code: newTag.substring(0, 2) + Math.floor(Math.random() * 10000000)
+      };
+      this.options.push(tag);
+      this.value.push(tag);
+    }
+  }
 };
 </script>

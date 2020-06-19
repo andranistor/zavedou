@@ -9,7 +9,7 @@
                 <img class="avatar" :src="image" />
               </div>
               <div class="name_surname">{{ firstName }} {{ lastName }}</div>
-              <div class="subject">{{ branch }}</div>
+              <div class="subject">{{ subject }}</div>
             </div>
           </b-button>
         </b-card-header>
@@ -80,6 +80,7 @@ export default {
     "firstName",
     "lastName",
     "branch",
+    "subject",
     "institution",
     "offer",
     "whom",
