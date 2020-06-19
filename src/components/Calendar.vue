@@ -1,6 +1,28 @@
 <template>
   <div class="calendar">
     <h1>Kalendář akcí</h1>
+    <div v-for="event in events" :key="event.id">
+      <Event
+        :id="event.id"
+        :name="event.name"
+        :type="event.type"
+        :description="event.description"
+        :place="event.place"
+        :town="event.address.town"
+        :street="event.address.street"
+        :descriptiveNumber="event.address.descriptiveNumber"
+        :orientationNumber="event.address.orientationNumber"
+        :townPart="event.address.townPart"
+        :zipCode="event.address.zipCode"
+        :link="event.link"
+        :child="event.attender.child"
+        :teenager="event.attender.teenager"
+        :adult="event.attender.adult"
+        :start="event.date.start"
+        :end="event.date.end"
+        :note="event.date.end"
+      />
+    </div>
     <div>
       <FormEvent />
     </div>
@@ -9,14 +31,14 @@
 
 <script>
 import { db } from "../utils/db";
-// import Event from "./Event.vue";
+import Event from "./Event.vue";
 import FormEvent from "./FormEvent.vue";
 
 export default {
   name: "Calendar",
   components: {
-    FormEvent
-    // Event
+    FormEvent,
+    Event
   },
   data() {
     return {
@@ -42,7 +64,7 @@ export default {
     };
   },
   firestore: {
-    profiles: db.collection("events").orderBy("start")
+    events: db.collection("events") //.orderBy("start")
   }
 };
 </script>

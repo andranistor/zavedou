@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import Vuex from 'vuex'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
@@ -15,6 +16,7 @@ import About from './components/About';
 import Forchildren from './components/Forchildren';
 import './index.html';
 
+Vue.use(Vuex)
 Vue.use(VueRouter);
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)

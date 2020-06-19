@@ -99,9 +99,9 @@
         <input type="date" id="start" v-model="start" />
       </label>
       <br />
-      <label for="end" v-model="end">
+      <label for="end">
         Konec události
-        <input type="date" id="end" />
+        <input type="date" id="end" v-model="end" />
       </label>
       <br />
       <label for="note">
