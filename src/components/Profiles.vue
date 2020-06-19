@@ -1,6 +1,30 @@
 <template>
   <div class>
     <h1>Popularizátoři vědy</h1>
+    <div>
+      <label for="region-filter">
+        Vyberte:
+        <select name="type" id="region-filter" v-model="regionFilter">
+          <option>--Můžete vybrat i více možností--</option>
+          <option>Celá ČR</option>
+          <option>Hlavní město Praha</option>
+          <option>Středočeský kraj</option>
+          <option>Jihočeský kraj</option>
+          <option>Plzeňský kraj</option>
+          <option>Karlovarský kraj</option>
+          <option>Ústecký kraj</option>
+          <option>Liberecký kraj</option>
+          <option>Královéhradecký kraj</option>
+          <option>Pardubický kraj</option>
+          <option>Kraj Vysočina</option>
+          <option>Jihomoravský kraj</option>
+          <option>Olomoucký kraj</option>
+          <option>Zlínský kraj</option>
+          <option>Moravskoslezský kraj</option>
+        </select>
+      </label>
+      <button @click="filtering">Filtrovat</button>
+    </div>
     <div class="b-container fluid">
       <b-row>
         <div class="profiles" v-for="profile in profiles" :key="profile.id">
@@ -35,7 +59,7 @@ export default {
   name: "Profiles",
   components: {
     Profile,
-    FormProfile
+    FormProfile,
   },
   data() {
     return {
@@ -49,17 +73,26 @@ export default {
       whom: "",
       region: "",
       contact: "",
-      image: "./assets/img/female_avatar.png"
+      image: "./assets/img/female_avatar.png",
+      regionFilter: null,
     };
   },
   // Showing and ordering the profiles by lastName
   firestore: {
-    profiles: db.collection("profiles").orderBy("lastName") // Ordering of profiles on the page by lastName
+    profiles: db.collection("profiles"),
+    // .where("region", "==", "Brno") // Filtering
+    // .orderBy("lastName") // Ordering of profiles on the page by lastName
     // .limit(3) // It will show only 5 profiles on the page
-  }
+  },
+  methods: {
+    filtering() {
+      const filtered_entries = db
+        .collection("profiles")
+        .where("region", "==", this.regionFilter);
+      this.$bind("profiles", filtered_entries);
+    },
+  },
 };
 </script>
 
-
-<style>
-</style>
+<style></style>

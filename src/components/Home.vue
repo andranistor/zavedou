@@ -7,21 +7,36 @@
         <label for="name">
           Jméno
           <br />
-          <input type="text" id="name" placeholder="Jméno" v-model.trim="name" />
+          <input
+            type="text"
+            id="name"
+            placeholder="Jméno"
+            v-model.trim="name"
+          />
         </label>
         <br />
 
         <label for="email">
           E-mail
           <br />
-          <input type="email" id="email" placeholder="E-mail" v-model.trim="email" />
+          <input
+            type="email"
+            id="email"
+            placeholder="E-mail"
+            v-model.trim="email"
+          />
         </label>
         <br />
 
         <label for="message">
           Zpráva
           <br />
-          <textarea name="message" rows="4" placeholder="Zpráva" v-model.trim="message"></textarea>
+          <textarea
+            name="message"
+            rows="4"
+            placeholder="Zpráva"
+            v-model.trim="message"
+          ></textarea>
         </label>
         <br />
         <button type="submit" @click="sendMail">Poslat zprávu</button>
@@ -29,7 +44,6 @@
     </div>
   </div>
 </template>
-
 
 // NOT DONE! the sending function is missing
 <script>
@@ -40,8 +54,8 @@ export default {
       contact: {
         name: "",
         email: "",
-        message: ""
-      }
+        message: "",
+      },
     };
   },
   methods: {
@@ -52,7 +66,7 @@ export default {
       this.message = "";
 
       event.preventDefault();
-    }
-  }
+    },
+  },
 };
 </script>

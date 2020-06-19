@@ -15,6 +15,7 @@ import About from './components/About';
 import Forchildren from './components/Forchildren';
 import './index.html';
 
+
 Vue.use(VueRouter);
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
