@@ -4,16 +4,31 @@
     <form @submit.prevent="addProfile">
       <label for="first-name">
         Jméno
-        <input type="text" id="first-name" v-model.trim="firstName" placeholder="Jméno" />
+        <input
+          type="text"
+          id="first-name"
+          v-model.trim="firstName"
+          placeholder="Jméno"
+        />
       </label>
       <label for="last-name">
         Příjmení
-        <input type="text" id="last-name" v-model.trim="lastName" placeholder="Příjmení" />
+        <input
+          type="text"
+          id="last-name"
+          v-model.trim="lastName"
+          placeholder="Příjmení"
+        />
       </label>
       <br />
       <label for="branch">
         Obor
-        <input type="text" id="branch" v-model.trim="branch" placeholder="Obor" />
+        <input
+          type="text"
+          id="branch"
+          v-model.trim="branch"
+          placeholder="Obor"
+        />
       </label>
       <br />
       <label for="institution">
@@ -28,7 +43,11 @@
       <br />
       <label for="offer">
         Nabízím:
-        <textarea id="offer" v-model.trim="offer" placeholder="Vysvětlím teorii relativity"></textarea>
+        <textarea
+          id="offer"
+          v-model.trim="offer"
+          placeholder="Vysvětlím teorii relativity"
+        ></textarea>
       </label>
       <br />
       <label for="whom">
@@ -64,12 +83,19 @@
       </label>
       <br />
       <label for="contact">
-        Kontakt
-        <input type="text" id="contact" v-model.trim="contact" placeholder="Email" />
+        E-mail
+        <input
+          type="email"
+          id="contact"
+          v-model.trim="contact"
+          placeholder="Email"
+        />
       </label>
       <br />
 
-      <button type="submit" @click="addProfile">Přidej profil</button>
+      <button type="submit" v-on:submit.prevent="addProfile">
+        Přidej profil
+      </button>
     </form>
   </div>
 </template>
@@ -89,7 +115,7 @@ export default {
       offer: "",
       whom: "",
       region: "",
-      contact: ""
+      contact: "",
     };
   },
   methods: {
@@ -103,9 +129,9 @@ export default {
           offer: this.offer,
           whom: this.whom,
           region: this.region,
-          contact: this.contact
+          contact: this.contact,
         })
-        .then(docRef => {
+        .then((docRef) => {
           docRef.update({ id: docRef.id });
         });
 
@@ -118,9 +144,7 @@ export default {
       this.whom = "";
       this.region = "";
       this.contact = "";
-
-      event.preventDefault();
-    }
-  }
+    },
+  },
 };
 </script>

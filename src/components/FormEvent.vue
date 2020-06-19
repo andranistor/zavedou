@@ -154,7 +154,9 @@
       </label>
       <br />
 
-      <button type="submit" @click="addEvent">Pridej událost</button>
+      <button type="submit" v-on:submit.prevent="addEvent">
+        Pridej událost
+      </button>
     </form>
   </div>
 </template>
@@ -236,8 +238,6 @@ export default {
       this.start = "";
       this.end = "";
       this.note = "";
-
-      event.preventDefault();
     },
   },
 };
