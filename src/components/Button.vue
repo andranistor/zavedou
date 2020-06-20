@@ -12,7 +12,8 @@ export default {
   },
   methods: {
     pressButton() {
-      this.selected = !this.selected;
+      this.$emit("vyber");
+      // this.selected = !this.selected;
     }
   }
 };

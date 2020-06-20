@@ -18,10 +18,14 @@
         <option>Zeměpis</option>
       </select>
     </label>-->
-    <Button btnName="Vědecké instituce" />
-    <Button btnName="Profily vědců" />
-    <Button btnName="Vědecké akce" />
-    <Button btnName="Vědecké parky" />
+    <Button
+      btnName="Vědecké instituce"
+      @vyber="selected1=!selected1"
+      :class="{selected:selected1}"
+    />
+    <Button btnName="Profily vědců" @vyber="selected2=!selected2" :class="{selected:selected2}" />
+    <Button btnName="Vědecké akce" @vyber="selected3=!selected3" :class="{selected:selected3}" />
+    <Button btnName="Vědecké parky" @vyber="selected4=!selected4" :class="{selected:selected4}" />
     <label for="subject-filter">
       Vyberte obor:
       <select
@@ -68,7 +72,11 @@ export default {
       subjectFilter: "Zobrazit vše",
       branchFilter: "Zobrazit vše",
       layer: null,
-      btnName: ""
+      btnName: "",
+      selected1: false,
+      selected2: false,
+      selected3: false,
+      selected4: false
     };
   },
   firestore: {
