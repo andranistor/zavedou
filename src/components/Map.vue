@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Mapa</h1>
-    <label for="subject-filter">
+    <!-- <label for="subject-filter">
       Vyberte školní předmět:
       <select name="type" id="subject-filter" v-model="subjectFilter">
         <option>Zobrazit vše</option>
@@ -17,7 +17,11 @@
         <option>Hudební a výtvarná výchova</option>
         <option>Zeměpis</option>
       </select>
-    </label>
+    </label>-->
+    <button @click="pressButton">Vědecká instituce</button>
+    <button @click="pressButton">Profily vědců</button>
+    <button @click="pressButton">Vědecká akce</button>
+    <button @click="pressButton">Vědecký park</button>
     <label for="subject-filter">
       Vyberte obor:
       <select name="type" id="branch-filter" v-model="branchFilter">
@@ -52,7 +56,9 @@ export default {
       subject: "",
       branch: "",
       subjectFilter: "Zobrazit vše",
-      branchFilter: "Zobrazit vše"
+      branchFilter: "Zobrazit vše",
+      layer: null,
+      selected: false
     };
   },
   firestore: {
@@ -98,6 +104,9 @@ export default {
     let center = SMap.Coords.fromWGS84(14.4252625, 50.0833472);
     this.map = new SMap(main, center, 7);
     this.map.addDefaultLayer(SMap.DEF_BASE).enable();
+    this.layer = new SMap.Layer.Marker();
+    this.map.addLayer(this.layer);
+    this.layer.enable();
 
     // Resizing of the window during website resizing
     window.addEventListener("resize", () => this.map.syncPort());
@@ -164,6 +173,9 @@ export default {
         cards.push(card);
       });
       return cards;
+    },
+    pressButton() {
+      this.selected = !this.selected;
     }
   },
   watch: {
@@ -172,13 +184,11 @@ export default {
       const markers = this.getMarkers(this.filteredInstitutions);
       // const filteredItems = this.filtered_items(this.institutions);
       // Adding to the map a marker layer
-      let layer = new SMap.Layer.Marker();
-      this.map.addLayer(layer);
-      layer.enable();
+      this.layer.removeAll();
 
       // Adding markers to marker layer
       markers.map((marker, index) => {
-        layer.addMarker(marker);
+        this.layer.addMarker(marker);
       });
 
       // Return cards
@@ -201,5 +211,12 @@ export default {
   width: 100%;
   height: 60vh;
   margin: 10px 0;
+}
+button {
+  background-color: blueviolet;
+}
+
+.selected {
+  background-color: green;
 }
 </style>

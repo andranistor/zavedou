@@ -48,7 +48,7 @@
         <textarea id="offer" v-model.trim="offer" placeholder="Vysvětlím teorii relativity"></textarea>
       </label>
       <br />
-      <label for="whom">
+      <!-- <label for="whom">
         Pro koho:
         <input
           type="text"
@@ -56,8 +56,8 @@
           v-model.trim="whom"
           placeholder="1.a 2. st. ZŠ, SŠ, dospělý"
         />
-      </label>
-      <div>
+      </label>-->
+      <!-- <div>
         <label class="typo__label">Tagging</label>
         <multiselect
           v-model="value"
@@ -70,7 +70,18 @@
           :taggable="true"
           @tag="addTag"
         ></multiselect>
-      </div>
+      </div>-->
+      <label for="whom-select">
+        Pro koho:
+        <select name="type" id="whom-select" v-model="whom">
+          <option>Všechny</option>
+          <option>1. stupeň ZŠ</option>
+          <option>2. stupeň ZŠ</option>
+          <option>Střední školy</option>
+          <option>Dospělé</option>
+        </select>
+      </label>
+      <br />
       <label for="region-select">
         Pro oblast:
         <select name="type" id="region-select" v-model="region">
