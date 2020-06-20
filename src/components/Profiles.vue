@@ -123,26 +123,25 @@ export default {
     }
   },
   methods: {
-    filtering() {
-      // if (this.regionFilter === "Celá ČR") {
-      //   this.regionFilter = null;
-      // }
-      // if (this.subjectFilter === "Zobrazit vše") {
-      //   this.subjectFilter = null;
-      // }
-      // const filtered_entries = db
-      //   .collection("profiles")
-      //   .where("region", "==", this.regionFilter)
-      //   .where("subject", "==", this.subjectFilter);
-      // this.$bind("profiles", filtered_entries);
-      // console.log(this.profiles);
-      //            //.get()
-      // .then(snap => {
-      //   snap.forEach(doc => {
-      //     console.log(doc.data());
-      //   });
-      // });
-    }
+    // filtering() {
+    // if (this.regionFilter === "Celá ČR") {
+    //   this.regionFilter = null;
+    // }
+    // if (this.subjectFilter === "Zobrazit vše") {
+    //   this.subjectFilter = null;
+    // }
+    // const filtered_entries = db
+    //   .collection("profiles")
+    //   .where("region", "==", this.regionFilter)
+    //   .where("subject", "==", this.subjectFilter);
+    // this.$bind("profiles", filtered_entries);
+    // console.log(this.profiles);
+    //            //.get()
+    // .then(snap => {
+    //   snap.forEach(doc => {
+    //     console.log(doc.data());
+    //   });
+    // });
   }
 };
 

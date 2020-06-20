@@ -38,26 +38,6 @@ export default {
 
     // Map controls such as zoom in, out
     this.map.addDefaultControls();
-
-    // Notes of marker 1
-    // let card1 = new SMap.Card();
-    // card1.getHeader().innerHTML = `
-    // <strong>Czechitas</strong> <br />
-    // Václavské náměstí 837/11 <br />
-    // 110 00 Praha, Nové Město Praha`;
-    // card1.getBody().innerHTML = "Tady sídlí <em>Czechitas</em>!";
-
-    // marker1.decorate(SMap.Marker.Feature.Card, card1);
-
-    // // Notes of marker 2
-    // let card2 = new SMap.Card();
-    // card2.getHeader().innerHTML = `
-    // <strong>Vyšehrad, Praha</strong> <br />
-    // Praha – Vyšehrad <br />
-    // Hlavní město Praha, Česko`;
-    // card2.getBody().innerHTML = "Z Vyšehradu je nádherný pohled na Vltavu.";
-
-    // marker2.decorate(SMap.Marker.Feature.Card, card2);
   },
   methods: {
     // fetchData() {
@@ -77,6 +57,23 @@ export default {
         markers.push(marker);
       });
       return markers;
+    },
+
+    // Notes of marker
+    getCards(institutions) {
+      if (!institutions) return;
+      const cards = [];
+      institutions.map((institution, index) => {
+        let card = new SMap.Card();
+        card.getHeader().innerHTML = `
+            <strong>${institution.scientificInstitution}</strong> <br />
+        ${institution.address}<br />
+            ${institution.website}<br />
+            `;
+        card.getBody().innerHTML = `${institution.funFact}`;
+        cards.push(card);
+      });
+      return cards;
     }
   },
   watch: {
@@ -92,6 +89,13 @@ export default {
       // Adding markers to marker layer
       markers.map((marker, index) => {
         layer.addMarker(marker);
+      });
+
+      // Return cards
+      const cards = this.getCards(this.institutions);
+      // Show card on marker click
+      cards.map((card, index) => {
+        markers[index].decorate(SMap.Marker.Feature.Card, cards[index]);
       });
     }
   }
