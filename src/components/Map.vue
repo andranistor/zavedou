@@ -1,6 +1,37 @@
 <template>
   <div>
     <h1>Mapa</h1>
+    <label for="subject-filter">
+      Vyberte školní předmět:
+      <select name="type" id="subject-filter" v-model="subjectFilter">
+        <option>Zobrazit vše</option>
+        <option>Cizí jazyky</option>
+        <option>Čeština</option>
+        <option>Dějepis</option>
+        <option>Fyzika</option>
+        <option>Chemie</option>
+        <option>Matematika</option>
+        <option>Občanská výchova</option>
+        <option>Přirodopis/biologie</option>
+        <option>Informatika</option>
+        <option>Hudební a výtvarná výchova</option>
+        <option>Zeměpis</option>
+      </select>
+    </label>
+    <label for="subject-filter">
+      Vyberte obor:
+      <select name="type" id="branch-filter" v-model="branchFilter">
+        <option>Zobrazit vše</option>
+        <option>Matematika, fyzika a informatika</option>
+        <option>Chemie</option>
+        <option>Technické vědy, inženýrství</option>
+        <option>Vědy o Zemi</option>
+        <option>Biologie a medicína</option>
+        <option>Environmentální a zemědělské vědy</option>
+        <option>Společenské a humanitní vědy</option>
+      </select>
+    </label>
+    <button @click="filtered_items">Filtruj</button>
     <div id="map"></div>
   </div>
 </template>
@@ -16,12 +47,47 @@ export default {
       post: null,
       error: null,
       institutions: [],
-      map: null
+      filteredInstitutions: [],
+      map: null,
+      subject: "",
+      branch: "",
+      subjectFilter: "Zobrazit vše",
+      branchFilter: "Zobrazit vše"
     };
   },
   firestore: {
     institutions: db.collection("institutions")
   },
+  // computed: {
+  //   filtered_items() {
+  //     console.log("ok");
+  //     let result = this.institutions;
+  //     //filtr na obory:
+  //     result = result.filter(item => {
+  //       if (this.branchFilter === "Zobrazit vše") {
+  //         console.log(result);
+  //         return true;
+  //       } else if (this.branchFilter === "Matematika, fyzika a informatika") {
+  //         return item.branch.mathsPhysicsInformatics === "1";
+  //       } else if (this.branchFilter === "Chemie") {
+  //         return item.branch.chemistry === "1";
+  //       } else if (this.branchFilter === "Technické vědy, inženýrství") {
+  //         return item.branch.engineering === "1";
+  //       } else if (this.branchFilter === "Vědy o Zemi") {
+  //         return item.branch.scienceAboutEarth === "1";
+  //       } else if (this.branchFilter === "Biologie a medicína") {
+  //         return item.branch.bioMed === "1";
+  //       } else if (this.branchFilter === "Environmentální a zemědělské vědy") {
+  //         return item.branch.enviroAgri === "1";
+  //       } else if (this.branchFilter === "Společenské a humanitní vědy") {
+  //         return item.branch.socialAndArts === "1";
+  //       }
+  //       this.getMarkers(result);
+  //     });
+
+  //     return result;
+  //   }
+  // },
   // created() {
   //   this.fetchData();
   // },
@@ -45,7 +111,32 @@ export default {
     //   console.log(this.institutions);
     //   // Here insert filtering codes
     // },
+    filtered_items() {
+      let result = this.institutions;
+      //filtr na obory:
+      result = result.filter(item => {
+        if (this.branchFilter === "Zobrazit vše") {
+          console.log(result);
+          return true;
+        } else if (this.branchFilter === "Matematika, fyzika a informatika") {
+          return item.branch.mathsPhysicsInformatics === "1";
+        } else if (this.branchFilter === "Chemie") {
+          return item.branch.chemistry === "1";
+        } else if (this.branchFilter === "Technické vědy, inženýrství") {
+          return item.branch.engineering === "1";
+        } else if (this.branchFilter === "Vědy o Zemi") {
+          return item.branch.scienceAboutEarth === "1";
+        } else if (this.branchFilter === "Biologie a medicína") {
+          return item.branch.bioMed === "1";
+        } else if (this.branchFilter === "Environmentální a zemědělské vědy") {
+          return item.branch.enviroAgri === "1";
+        } else if (this.branchFilter === "Společenské a humanitní vědy") {
+          return item.branch.socialAndArts === "1";
+        }
+      });
 
+      this.filteredInstitutions = result;
+    },
     // Get marker coordination numbers
     getMarkers(institutions) {
       if (!institutions) return;
@@ -77,10 +168,10 @@ export default {
     }
   },
   watch: {
-    institutions() {
+    filteredInstitutions() {
       // Return marker coords
-      const markers = this.getMarkers(this.institutions);
-
+      const markers = this.getMarkers(this.filteredInstitutions);
+      // const filteredItems = this.filtered_items(this.institutions);
       // Adding to the map a marker layer
       let layer = new SMap.Layer.Marker();
       this.map.addLayer(layer);
@@ -92,11 +183,14 @@ export default {
       });
 
       // Return cards
-      const cards = this.getCards(this.institutions);
+      const cards = this.getCards(this.filteredInstitutions);
       // Show card on marker click
       cards.map((card, index) => {
         markers[index].decorate(SMap.Marker.Feature.Card, cards[index]);
       });
+    },
+    institutions() {
+      this.filteredInstitutions = this.institutions;
     }
   }
 };

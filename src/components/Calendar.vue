@@ -116,7 +116,7 @@ export default {
   computed: {
     filtered_events() {
       let result = this.events;
-      //filtr na regiony
+      //filtr regiony
       result = result.filter(item => {
         if (this.regionFilter === "Celá ČR") {
           return true;
