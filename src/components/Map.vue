@@ -18,13 +18,18 @@
         <option>Zeměpis</option>
       </select>
     </label>-->
-    <button @click="pressButton">Vědecká instituce</button>
-    <button @click="pressButton">Profily vědců</button>
-    <button @click="pressButton">Vědecká akce</button>
-    <button @click="pressButton">Vědecký park</button>
+    <Button btnName="Vědecké instituce" />
+    <Button btnName="Profily vědců" />
+    <Button btnName="Vědecké akce" />
+    <Button btnName="Vědecké parky" />
     <label for="subject-filter">
       Vyberte obor:
-      <select name="type" id="branch-filter" v-model="branchFilter">
+      <select
+        name="type"
+        id="branch-filter"
+        v-model="branchFilter"
+        @change="filtered_items"
+      >
         <option>Zobrazit vše</option>
         <option>Matematika, fyzika a informatika</option>
         <option>Chemie</option>
@@ -35,16 +40,21 @@
         <option>Společenské a humanitní vědy</option>
       </select>
     </label>
-    <button @click="filtered_items">Filtruj</button>
+
+    <!-- <button @click="filtered_items">Filtruj</button> -->
     <div id="map"></div>
   </div>
 </template>
 
 <script>
 import { db } from "../utils/db";
+import Button from "./Button.vue";
 
 export default {
   name: "Map",
+  components: {
+    Button
+  },
   data() {
     return {
       loading: false,
@@ -58,7 +68,7 @@ export default {
       subjectFilter: "Zobrazit vše",
       branchFilter: "Zobrazit vše",
       layer: null,
-      selected: false
+      btnName: ""
     };
   },
   firestore: {
