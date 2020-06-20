@@ -4,12 +4,7 @@
     <form @submit.prevent="addEvent">
       <label for="name">
         Název události
-        <input
-          type="text"
-          id="name"
-          v-model.trim="name"
-          placeholder="Název události"
-        />
+        <input type="text" id="name" v-model.trim="name" placeholder="Název události" />
       </label>
       <br />
       <label for="type-select">
@@ -37,12 +32,7 @@
       <br />
       <label for="place">
         Místo
-        <input
-          type="text"
-          id="place"
-          v-model.trim="place"
-          placeholder="Místo konání"
-        />
+        <input type="text" id="place" v-model.trim="place" placeholder="Místo konání" />
       </label>
       <br />
       <label for="town">
@@ -52,12 +42,7 @@
       <br />
       <label for="street">
         Ulice
-        <input
-          type="text"
-          id="street"
-          v-model.trim="street"
-          placeholder="Ulice"
-        />
+        <input type="text" id="street" v-model.trim="street" placeholder="Ulice" />
       </label>
       <label for="descriptive-number">
         Číslo popisné
@@ -94,42 +79,19 @@
       <br />
       <label for="link">
         Odkaz/zdroj
-        <input
-          type="url"
-          id="link"
-          v-model.trim="link"
-          placeholder="Odkaz/zdroj"
-        />
+        <input type="url" id="link" v-model.trim="link" placeholder="Odkaz/zdroj" />
       </label>
       <br />
       <label for="child">
-        <input
-          type="checkbox"
-          name="attender"
-          value="false"
-          id="child"
-          v-model="child"
-        />
+        <input type="checkbox" name="attender" value="false" id="child" v-model="child" />
         pro děti
       </label>
       <label for="teenager">
-        <input
-          type="checkbox"
-          name="attender"
-          value="false"
-          id="teenager"
-          v-model="teenager"
-        />
+        <input type="checkbox" name="attender" value="false" id="teenager" v-model="teenager" />
         pro studenty
       </label>
       <label for="adult">
-        <input
-          type="checkbox"
-          name="attender"
-          value="false"
-          id="adult"
-          v-model="adult"
-        />
+        <input type="checkbox" name="attender" value="false" id="adult" v-model="adult" />
         pro dospělý
       </label>
       <br />
@@ -145,18 +107,11 @@
       <br />
       <label for="note">
         Poznámka
-        <input
-          type="text"
-          id="note"
-          v-model.trim="note"
-          placeholder="Poznámka k události"
-        />
+        <input type="text" id="note" v-model.trim="note" placeholder="Poznámka k události" />
       </label>
       <br />
 
-      <button type="submit" v-on:submit.prevent="addEvent">
-        Pridej událost
-      </button>
+      <button type="submit" v-on:submit.prevent="addEvent">Pridej událost</button>
     </form>
   </div>
 </template>
@@ -183,9 +138,9 @@ export default {
       child: false,
       teenager: false,
       adult: false,
-      start: "",
-      end: "",
-      note: "",
+      start: null,
+      end: null,
+      note: null
     };
   },
   methods: {
@@ -202,21 +157,21 @@ export default {
             descriptiveNumber: this.descriptiveNumber,
             orientationNumber: this.orientationNumber,
             townPart: this.townPart,
-            zipCode: this.zipCode,
+            zipCode: this.zipCode
           },
           link: this.link,
           attender: {
             child: this.child,
             teenager: this.teenager,
-            adult: this.adult,
+            adult: this.adult
           },
           date: {
             start: this.start,
             end: this.end,
-            note: this.note,
-          },
+            note: this.note
+          }
         })
-        .then((docRef) => {
+        .then(docRef => {
           docRef.update({ id: docRef.id });
         });
 
@@ -238,7 +193,7 @@ export default {
       this.start = "";
       this.end = "";
       this.note = "";
-    },
-  },
+    }
+  }
 };
 </script>

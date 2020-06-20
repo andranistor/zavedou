@@ -1,13 +1,14 @@
 <template>
   <div>
     <div>
-      <strong>Údalost:</strong>
+      <strong>Událost:</strong>
       {{ name }}
       {{ type }}
       {{ description }}
       {{ place }}
       {{ town }}
       {{ street }}
+      {{ region }}
       {{ descriptiveNumber }}
       {{ orientationNumber }}
       {{ townPart }}
@@ -45,7 +46,8 @@ export default {
     "start",
     "end",
     "note",
-  ],
+    "region"
+  ]
 };
 </script>
 
