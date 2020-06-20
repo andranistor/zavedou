@@ -116,7 +116,6 @@ export default {
       //filtr na obory:
       result = result.filter(item => {
         if (this.branchFilter === "Zobrazit vše") {
-          console.log(result);
           return true;
         } else if (this.branchFilter === "Matematika, fyzika a informatika") {
           return item.branch.mathsPhysicsInformatics === "1";
