@@ -128,9 +128,9 @@ export default {
       type: "",
       description: "",
       place: "",
-      town: "",
-      street: "",
-      descriptiveNumber: "",
+      town: "Praha",
+      street: "Václavské nám.",
+      descriptiveNumber: "11",
       orientationNumber: "",
       townPart: "",
       zipCode: "",
@@ -144,55 +144,63 @@ export default {
     };
   },
   methods: {
-    addEvent(event) {
-      db.collection("events")
-        .add({
-          name: this.name,
-          type: this.type,
-          description: this.description,
-          place: this.place,
-          address: {
-            town: this.town,
-            street: this.street,
-            descriptiveNumber: this.descriptiveNumber,
-            orientationNumber: this.orientationNumber,
-            townPart: this.townPart,
-            zipCode: this.zipCode
-          },
-          link: this.link,
-          attender: {
-            child: this.child,
-            teenager: this.teenager,
-            adult: this.adult
-          },
-          date: {
-            start: this.start,
-            end: this.end,
-            note: this.note
-          }
-        })
-        .then(docRef => {
-          docRef.update({ id: docRef.id });
-        });
+    addEvent() {
+      // Call mapy API and get coords
+      const address = `${this.street} ${this.descriptiveNumber}/${this.orientationNumber}, ${this.town}`;
+      new SMap.Geocoder(address, response => {
+        let results = response.getResults()[0].results[0].coords;
 
-      // Clearing the input value
-      this.name = "";
-      this.type = "";
-      this.description = "";
-      this.place = "";
-      this.town = "";
-      this.street = "";
-      this.descriptiveNumber = "";
-      this.orientationNumber = "";
-      this.townPart = "";
-      this.zipCode = "";
-      this.link = "";
-      this.child = "";
-      this.teenager = "";
-      this.adult = "";
-      this.start = "";
-      this.end = "";
-      this.note = "";
+        // Add to database
+        db.collection("events")
+          .add({
+            name: this.name,
+            type: this.type,
+            description: this.description,
+            place: this.place,
+            address: {
+              town: this.town,
+              street: this.street,
+              descriptiveNumber: this.descriptiveNumber,
+              orientationNumber: this.orientationNumber,
+              townPart: this.townPart,
+              zipCode: this.zipCode
+            },
+            coords: { x: results.x, y: results.y },
+            link: this.link,
+            attender: {
+              child: this.child,
+              teenager: this.teenager,
+              adult: this.adult
+            },
+            date: {
+              start: this.start,
+              end: this.end,
+              note: this.note
+            }
+          })
+          .then(docRef => {
+            docRef.update({ id: docRef.id });
+          });
+
+        // Clearing the input value
+        this.name = "";
+        this.type = "";
+        this.description = "";
+        this.place = "";
+        this.town = "";
+        this.street = "";
+        this.descriptiveNumber = "";
+        this.orientationNumber = "";
+        this.townPart = "";
+        this.zipCode = "";
+        this.link = "";
+        this.child = "";
+        this.teenager = "";
+        this.adult = "";
+        this.start = "";
+        this.end = "";
+        this.note = "";
+      });
     }
   }
 };
