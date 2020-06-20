@@ -66,6 +66,14 @@ export default {
   firestore: {
     events: db.collection("events") //.orderBy("start")
   }
+  // computed: {
+  //   let dayStart = new Date(this.start);
+  //   let dayEnd = new Date(this.end);
+  //   start = `${dayStart.getDate()}.${dayStart.getMonth() +
+  //     1}.${dayStart.getFullYear()}`;
+  //   end = `${dayEnd.getDate()}.${dayEnd.getMonth() +
+  //     1}.${dayEnd.getFullYear()}`;
+  // }
 };
 </script>
 
