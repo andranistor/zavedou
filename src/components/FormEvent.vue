@@ -77,6 +77,27 @@
         <input type="number" id="zip-code" v-model.trim="zipCode" />
       </label>
       <br />
+      <label for="type-select">
+        Vyberte kraj:
+        <select name="type" id="type-select" v-model="region">
+          <option>Celá ČR</option>
+          <option>Hlavní město Praha</option>
+          <option>Středočeský kraj</option>
+          <option>Jihočeský kraj</option>
+          <option>Plzeňský kraj</option>
+          <option>Karlovarský kraj</option>
+          <option>Ústecký kraj</option>
+          <option>Liberecký kraj</option>
+          <option>Královéhradecký kraj</option>
+          <option>Pardubický kraj</option>
+          <option>Kraj Vysočina</option>
+          <option>Jihomoravský kraj</option>
+          <option>Olomoucký kraj</option>
+          <option>Zlínský kraj</option>
+          <option>Moravskoslezský kraj</option>
+        </select>
+      </label>
+      <br />
       <label for="link">
         Odkaz/zdroj
         <input type="url" id="link" v-model.trim="link" placeholder="Odkaz/zdroj" />
@@ -140,7 +161,8 @@ export default {
       adult: false,
       start: null,
       end: null,
-      note: null
+      note: null,
+      region: "Všechny kraje"
     };
   },
   methods: {
@@ -176,7 +198,8 @@ export default {
               start: this.start,
               end: this.end,
               note: this.note
-            }
+            },
+            region: this.region
           })
           .then(docRef => {
             docRef.update({ id: docRef.id });
@@ -200,6 +223,7 @@ export default {
         this.start = "";
         this.end = "";
         this.note = "";
+        this.region = "";
       });
     }
   }
