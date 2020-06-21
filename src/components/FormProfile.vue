@@ -11,8 +11,21 @@
         <input type="text" id="last-name" v-model.trim="lastName" placeholder="Příjmení" />
       </label>
       <br />
+      <!-- <label for="branch-select">
+        Vyberte obor:
+        <select name="branch" id="branch-select" v-model="branch">
+          <option>Matematika, fyzika a informatika</option>
+          <option>Chemie</option>
+          <option>Technické vědy, inženýrství</option>
+          <option>Vědy o Zemi</option>
+          <option>Biologie a medicína</option>
+          <option>Environmentální a zemědělské vědy</option>
+          <option>Společenské a humanitní vědy</option>
+        </select>
+      </label>
+      <br />-->
       <label for="field">
-        Obor
+        Specifikujte obor
         <input type="text" id="field" v-model.trim="field" placeholder="Obor" />
       </label>
       <br />
@@ -41,6 +54,11 @@
           v-model.trim="institution"
           placeholder="Instituce"
         />
+      </label>
+      <br />
+      <label for="address">
+        Adresa instituce
+        <input type="text" id="address" v-model.trim="address" placeholder="Adresa" />
       </label>
       <br />
       <label for="offer">
@@ -104,6 +122,7 @@ export default {
       field: "",
       subject: "",
       institution: "",
+      address: "",
       offer: "",
       whom: "",
       region: "",
@@ -112,33 +131,52 @@ export default {
   },
   methods: {
     addProfile(event) {
-      db.collection("profiles")
-        .add({
-          firstName: this.firstName,
-          lastName: this.lastName,
-          field: this.field,
-          subject: this.subject,
-          institution: this.institution,
-          offer: this.offer,
-          whom: this.whom,
-          region: this.region,
-          contact: this.contact,
-          options: this.options
-        })
-        .then(docRef => {
-          docRef.update({ id: docRef.id });
-        });
+      const address = this.address;
+      // Call mapy API and get coords
+      new SMap.Geocoder(address, response => {
+        let results = response.getResults()[0].results[0].coords;
+        console.log(results);
 
-      // Clearing the input value
-      this.firstName = "";
-      this.lastName = "";
-      this.field = "";
-      this.subject = "";
-      this.institution = "";
-      this.offer = "";
-      this.whom = "";
-      this.region = "";
-      this.contact = "";
+        // Add to database
+        db.collection("profiles")
+          .add({
+            firstName: this.firstName,
+            lastName: this.lastName,
+            field: this.field,
+            subject: this.subject,
+            institution: this.institution,
+            address: this.address,
+            coords: { x: results.x, y: results.y },
+            offer: this.offer,
+            whom: this.whom,
+            region: this.region,
+            contact: this.contact,
+            branch: {
+              bioMed: "1",
+              chemistry: "1",
+              engineering: "1",
+              enviroAgri: "1",
+              mathsPhysicsInformatics: "1",
+              scienceAboutEarth: "1",
+              socialAndArts: "1"
+            }
+          })
+          .then(docRef => {
+            docRef.update({ id: docRef.id });
+          });
+
+        // Clearing the input value
+        this.firstName = "";
+        this.lastName = "";
+        this.field = "";
+        this.subject = "";
+        this.institution = "";
+        this.address = "";
+        this.offer = "";
+        this.whom = "";
+        this.region = "";
+        this.contact = "";
+      });
     }
   }
 };

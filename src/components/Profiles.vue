@@ -47,7 +47,7 @@
             :id="profile.id"
             :firstName="profile.firstName"
             :lastName="profile.lastName"
-            :branch="profile.branch"
+            :field="profile.field"
             :subject="profile.subject"
             :institution="profile.institution"
             :offer="profile.offer"
@@ -83,6 +83,7 @@ export default {
       id: "",
       firstName: "",
       lastName: "",
+      field: "",
       branch: "",
       subject: "",
       institution: "",

@@ -199,7 +199,16 @@ export default {
               end: this.end,
               note: this.note
             },
-            region: this.region
+            region: this.region,
+            branch: {
+              bioMed: "1",
+              chemistry: "1",
+              engineering: "1",
+              enviroAgri: "1",
+              mathsPhysicsInformatics: "1",
+              scienceAboutEarth: "1",
+              socialAndArts: "1"
+            }
           })
           .then(docRef => {
             docRef.update({ id: docRef.id });

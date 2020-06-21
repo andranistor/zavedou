@@ -29,7 +29,7 @@
                   <td>
                     <strong>Obor:</strong>
                   </td>
-                  <td>{{ branch }}</td>
+                  <td>{{ field }}</td>
                 </b-card-text>
               </tr>
               <tr>
@@ -79,7 +79,7 @@ export default {
     "id",
     "firstName",
     "lastName",
-    "branch",
+    "field",
     "subject",
     "institution",
     "offer",
