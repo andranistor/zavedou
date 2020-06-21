@@ -165,22 +165,16 @@ export default {
     },
     // Get marker coordination numbers
     getMarkers(institutions) {
+      console.log("ok");
       if (!institutions) return;
       const markers = [];
+      const cards = [];
       institutions.map((institution, index) => {
         let marker = new SMap.Marker(
           SMap.Coords.fromWGS84(institution.coords.x, institution.coords.y)
         );
         markers.push(marker);
-      });
-      return markers;
-    },
 
-    // Notes of marker
-    getCards(institutions) {
-      if (!institutions) return;
-      const cards = [];
-      institutions.map((institution, index) => {
         let card = new SMap.Card();
         card.getHeader().innerHTML = `
             <strong>${institution.scientificInstitution}</strong> <br />
@@ -190,8 +184,24 @@ export default {
         card.getBody().innerHTML = `${institution.funFact}`;
         cards.push(card);
       });
-      return cards;
+      return { markers, cards };
     },
+
+    // getCards(institutions) {
+    //   if (!institutions) return;
+    //   const cards = [];
+    //   institutions.map((institution, index) => {
+    //     let card = new SMap.Card();
+    //     card.getHeader().innerHTML = `
+    //         <strong>${institution.scientificInstitution}</strong> <br />
+    //     ${institution.address}<br />
+    //         ${institution.website}<br />
+    //         `;
+    //     card.getBody().innerHTML = `${institution.funFact}`;
+    //     cards.push(card);
+    //   });
+    //   return cards;
+    // },
     pressButton() {
       this.selected = !this.selected;
     }
@@ -199,21 +209,24 @@ export default {
   watch: {
     filteredInstitutions() {
       // Return marker coords
-      const markers = this.getMarkers(this.filteredInstitutions);
+      const markerCards = this.getMarkers(this.filteredInstitutions);
       // const filteredItems = this.filtered_items(this.institutions);
       // Adding to the map a marker layer
       this.layer.removeAll();
 
       // Adding markers to marker layer
-      markers.map((marker, index) => {
+      markerCards.markers.map((marker, index) => {
         this.layer.addMarker(marker);
       });
 
       // Return cards
-      const cards = this.getCards(this.filteredInstitutions);
+
       // Show card on marker click
-      cards.map((card, index) => {
-        markers[index].decorate(SMap.Marker.Feature.Card, cards[index]);
+      markerCards.cards.forEach((card, index) => {
+        markerCards.markers[index].decorate(
+          SMap.Marker.Feature.Card,
+          markerCards.cards[index]
+        );
       });
     },
     institutions() {
