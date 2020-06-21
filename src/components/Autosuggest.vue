@@ -1,8 +1,8 @@
 <template>
   <div class="demo">
     <div v-if="selected" style="padding-top:10px; width: 100%;">
-      You have selected
-      <code>{{ selected.name }}, the {{ selected.race }}</code>
+      Výběr:
+      <code>{{ selected.name }}</code>
     </div>
     <div class="autosuggest-container">
       <vue-autosuggest
@@ -15,11 +15,11 @@
         :get-suggestion-value="getSuggestionValue"
         :input-props="{
           id: 'autosuggest__input',
-          placeholder: 'Do you feel lucky, punk?',
+          placeholder: 'Instituce',
         }"
       >
         <div slot-scope="{ suggestion }" style="display: flex; align-items: center;">
-          <img
+          <!-- <img
             :style="{
               display: 'flex',
               width: '25px',
@@ -28,7 +28,7 @@
               marginRight: '10px',
             }"
             :src="suggestion.item.avatar"
-          />
+          />-->
           <div style="{ display: 'flex', color: 'navyblue'}">{{ suggestion.item.name }}</div>
         </div>
       </vue-autosuggest>
@@ -37,6 +37,8 @@
 </template>
 
 <script>
+import { db } from "../utils/db";
+
 export default {
   name: "Autosuggest",
 
@@ -48,38 +50,14 @@ export default {
         {
           data: [
             {
-              id: 1,
-              name: "Frodo",
-              race: "Hobbit",
-              avatar:
-                "https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Elijah_Wood_as_Frodo_Baggins.png/220px-Elijah_Wood_as_Frodo_Baggins.png"
-            },
-            {
-              id: 2,
-              name: "Samwise",
-              race: "Hobbit",
-              avatar:
-                "https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Sean_Astin_as_Samwise_Gamgee.png/200px-Sean_Astin_as_Samwise_Gamgee.png"
-            },
-            {
-              id: 3,
-              name: "Gandalf",
-              race: "Maia",
-              avatar:
-                "https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Gandalf600ppx.jpg/220px-Gandalf600ppx.jpg"
-            },
-            {
-              id: 4,
-              name: "Aragorn",
-              race: "Human",
-              avatar:
-                "https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Aragorn300ppx.png/150px-Aragorn300ppx.png"
+              name: scientificInstitution[0]
             }
           ]
         }
       ]
     };
   },
+
   computed: {
     filteredOptions() {
       return [

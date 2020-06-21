@@ -11,9 +11,9 @@
         <input type="text" id="last-name" v-model.trim="lastName" placeholder="Příjmení" />
       </label>
       <br />
-      <label for="branch">
+      <label for="field">
         Obor
-        <input type="text" id="branch" v-model.trim="branch" placeholder="Obor" />
+        <input type="text" id="field" v-model.trim="field" placeholder="Obor" />
       </label>
       <br />
       <label for="subject-select">
@@ -48,29 +48,6 @@
         <textarea id="offer" v-model.trim="offer" placeholder="Vysvětlím teorii relativity"></textarea>
       </label>
       <br />
-      <!-- <label for="whom">
-        Pro koho:
-        <input
-          type="text"
-          id="whom"
-          v-model.trim="whom"
-          placeholder="1.a 2. st. ZŠ, SŠ, dospělý"
-        />
-      </label>-->
-      <!-- <div>
-        <label class="typo__label">Tagging</label>
-        <multiselect
-          v-model="value"
-          tag-placeholder="Add this as new tag"
-          placeholder="Search or add a tag"
-          label="name"
-          track-by="code"
-          :options="options"
-          :multiple="true"
-          :taggable="true"
-          @tag="addTag"
-        ></multiselect>
-      </div>-->
       <label for="whom-select">
         Pro koho:
         <select name="type" id="whom-select" v-model="whom">
@@ -116,7 +93,6 @@
 
 <script>
 import { db } from "../utils/db";
-import Multiselect from "vue-multiselect";
 
 export default {
   name: "FormProfile",
@@ -125,19 +101,13 @@ export default {
       profiles: [],
       firstName: "",
       lastName: "",
-      branch: "",
+      field: "",
       subject: "",
       institution: "",
       offer: "",
       whom: "",
       region: "",
-      contact: "",
-      value: [{ name: "Javascript", code: "js" }],
-      options: [
-        { name: "Vue.js", code: "vu" },
-        { name: "Javascript", code: "js" },
-        { name: "Open Source", code: "os" }
-      ]
+      contact: ""
     };
   },
   methods: {
@@ -146,7 +116,7 @@ export default {
         .add({
           firstName: this.firstName,
           lastName: this.lastName,
-          branch: this.branch,
+          field: this.field,
           subject: this.subject,
           institution: this.institution,
           offer: this.offer,
@@ -162,21 +132,13 @@ export default {
       // Clearing the input value
       this.firstName = "";
       this.lastName = "";
-      this.branch = "";
+      this.field = "";
       this.subject = "";
       this.institution = "";
       this.offer = "";
       this.whom = "";
       this.region = "";
       this.contact = "";
-    },
-    addTag(newTag) {
-      const tag = {
-        name: newTag,
-        code: newTag.substring(0, 2) + Math.floor(Math.random() * 10000000)
-      };
-      this.options.push(tag);
-      this.value.push(tag);
     }
   }
 };

@@ -6,13 +6,15 @@
 </template>
 
 <script>
-// import { db } from "../utils/db";
+import { db } from "../utils/db";
+
 // import FormInstitution from "./FormInstitution.vue";
 
 export default {
   name: "About"
   // components: {
-  //   FormInstitution
+
+  //   //   FormInstitution
   // }
 };
 </script>
