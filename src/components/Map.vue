@@ -241,7 +241,7 @@ export default {
         let card = new SMap.Card();
         card.getHeader().innerHTML = `
              <strong>${event.name}</strong> <br />
-             <a href="${event.website}">Odkaz na akci</a><br />
+             <a href="${event.link}">Odkaz na akci</a><br />
             `;
         card.getBody().innerHTML = `${event.description}`;
         cards.push(card);
@@ -346,7 +346,7 @@ export default {
 .smap {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   margin: 10px 0;
 }
 

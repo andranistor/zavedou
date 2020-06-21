@@ -43,28 +43,31 @@
         <option>Dospělí</option>
       </select>
     </label>
-    <div v-for="event in filtered_events" :key="event.id">
-      <Event
-        :id="event.id"
-        :name="event.name"
-        :type="event.type"
-        :description="event.description"
-        :place="event.place"
-        :town="event.address.town"
-        :street="event.address.street"
-        :descriptiveNumber="event.address.descriptiveNumber"
-        :orientationNumber="event.address.orientationNumber"
-        :townPart="event.address.townPart"
-        :zipCode="event.address.zipCode"
-        :link="event.link"
-        :child="event.attender.child"
-        :teenager="event.attender.teenager"
-        :adult="event.attender.adult"
-        :start="event.date.start"
-        :end="event.date.end"
-        :note="event.date.note"
-        :region="event.region"
-      />
+    <div class="b-container fluid">
+      <div v-for="event in filtered_events" :key="event.id">
+        <Event
+          :id="event.id"
+          :name="event.name"
+          :type="event.type"
+          :description="event.description"
+          :place="event.place"
+          :town="event.address.town"
+          :street="event.address.street"
+          :descriptiveNumber="event.address.descriptiveNumber"
+          :orientationNumber="event.address.orientationNumber"
+          :townPart="event.address.townPart"
+          :zipCode="event.address.zipCode"
+          :link="event.link"
+          :link_picture="event.link_picture"
+          :child="event.attender.child"
+          :teenager="event.attender.teenager"
+          :adult="event.attender.adult"
+          :start="event.date.start"
+          :end="event.date.end"
+          :note="event.date.note"
+          :region="event.region"
+        />
+      </div>
     </div>
     <div>
       <router-link to="/addevent">
@@ -101,6 +104,7 @@ export default {
       townPart: "",
       zipCode: "",
       link: "",
+      link_picture: "",
       child: "",
       teenager: "",
       adult: "",
