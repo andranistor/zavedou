@@ -72,7 +72,7 @@ export default {
       branchFilter: "Zobrazit vše",
       layer: null,
       btnName: "",
-      selected1: false,
+      selected1: true,
       selected2: false,
       selected3: false,
       selected4: false
@@ -165,8 +165,19 @@ export default {
       const cards = [];
       //card for institutions
       const renderInstitutions = (institution, index) => {
+        const znacka = JAK.mel("div");
+        const obrazek = JAK.mel("img", {
+          src: "./assets/img/pin_institution.png"
+        });
+        obrazek.classList.add("custom_pin");
+        znacka.appendChild(obrazek);
+
         let marker = new SMap.Marker(
-          SMap.Coords.fromWGS84(institution.coords.x, institution.coords.y)
+          SMap.Coords.fromWGS84(institution.coords.x, institution.coords.y),
+          null,
+          {
+            url: znacka
+          }
         );
         markers.push(marker);
 
@@ -182,9 +193,21 @@ export default {
       //card for profiles
 
       const renderProfiles = (profile, index) => {
+        const znacka = JAK.mel("div");
+        const obrazek = JAK.mel("img", {
+          src: "./assets/img/pin_profile.png"
+        });
+        obrazek.classList.add("custom_pin");
+        znacka.appendChild(obrazek);
+
         let marker = new SMap.Marker(
-          SMap.Coords.fromWGS84(profile.coords.x, profile.coords.y)
+          SMap.Coords.fromWGS84(profile.coords.x, profile.coords.y),
+          null,
+          {
+            url: znacka
+          }
         );
+
         markers.push(marker);
 
         let card = new SMap.Card();
@@ -200,8 +223,18 @@ export default {
       //card for events
 
       const renderEvents = (event, index) => {
+        const znacka = JAK.mel("div");
+        const obrazek = JAK.mel("img", {
+          src: "./assets/img/pin_event.png"
+        });
+        obrazek.classList.add("custom_pin");
+        znacka.appendChild(obrazek);
         let marker = new SMap.Marker(
-          SMap.Coords.fromWGS84(event.coords.x, event.coords.y)
+          SMap.Coords.fromWGS84(event.coords.x, event.coords.y),
+          null,
+          {
+            url: znacka
+          }
         );
         markers.push(marker);
 
@@ -217,8 +250,18 @@ export default {
       //card for parks
 
       const renderParks = (park, index) => {
+        const znacka = JAK.mel("div");
+        const obrazek = JAK.mel("img", {
+          src: "./assets/img/pin_park.png"
+        });
+        obrazek.classList.add("custom_pin");
+        znacka.appendChild(obrazek);
         let marker = new SMap.Marker(
-          SMap.Coords.fromWGS84(park.coords.x, park.coords.y)
+          SMap.Coords.fromWGS84(park.coords.x, park.coords.y),
+          null,
+          {
+            url: znacka
+          }
         );
         markers.push(marker);
 
@@ -310,11 +353,18 @@ export default {
   height: 60vh;
   margin: 10px 0;
 }
+
+.smap img.custom_pin {
+  width: 40px;
+}
 button {
   background-color: blueviolet;
 }
 
 .selected {
   background-color: green;
+}
+.custom_pin {
+  width: 40px;
 }
 </style>

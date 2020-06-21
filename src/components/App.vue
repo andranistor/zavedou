@@ -64,6 +64,9 @@ body h1 {
 body img {
   width: 100%;
 }
+.custom_pin {
+  width: 40px;
+}
 
 .page--center {
   min-height: 90vh;
