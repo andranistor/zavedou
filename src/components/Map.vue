@@ -72,7 +72,7 @@ export default {
       branchFilter: "Zobrazit vše",
       layer: null,
       btnName: "",
-      selected1: true,
+      selected1: false,
       selected2: false,
       selected3: false,
       selected4: false
@@ -101,6 +101,7 @@ export default {
 
     // Map controls such as zoom in, out
     this.map.addDefaultControls();
+    this.filtered_items();
   },
   methods: {
     filtered_items() {
@@ -154,7 +155,6 @@ export default {
           }
         });
       });
-      console.log("ahoj", source);
 
       this.filteredInstitutions = source;
     },
@@ -275,7 +275,6 @@ export default {
         cards.push(card);
       };
 
-      console.log("čau", source);
       source.institutions.forEach(renderInstitutions);
       source.profiles.forEach(renderProfiles);
       source.events.forEach(renderEvents);
@@ -283,21 +282,6 @@ export default {
       return { markers, cards };
     },
 
-    // getCards(institutions) {
-    //   if (!institutions) return;
-    //   const cards = [];
-    //   institutions.map((institution, index) => {
-    //     let card = new SMap.Card();
-    //     card.getHeader().innerHTML = `
-    //         <strong>${institution.scientificInstitution}</strong> <br />
-    //     ${institution.address}<br />
-    //         ${institution.website}<br />
-    //         `;
-    //     card.getBody().innerHTML = `${institution.funFact}`;
-    //     cards.push(card);
-    //   });
-    //   return cards;
-    // },
     pressButton() {
       this.selected = !this.selected;
     }
@@ -328,8 +312,20 @@ export default {
       });
     },
     institutions() {
-      this.filtered_items();
+      setTimeout(() => this.filtered_items(), 1);
     },
+    profiles() {
+      setTimeout(() => this.filtered_items(), 1);
+    },
+    events() {
+      setTimeout(() => this.filtered_items(), 1);
+    },
+    parks() {
+      setTimeout(() => this.filtered_items(), 1);
+    },
+    // institutions() {
+    //   this.filtered_items();
+    // },
     selected1() {
       this.filtered_items();
     },

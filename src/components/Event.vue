@@ -26,52 +26,46 @@
         <div class="event">
           <table>
             <tr>
-              <b-card-text>
-                <td>
-                  <strong>Jsem z:</strong>
-                </td>
-                <td>{{ institution }}</td>
-              </b-card-text>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
-              <b-card-text>
-                <td>
-                  <strong>Obor:</strong>
-                </td>
-                <td>{{ branch }}</td>
-              </b-card-text>
+              <td class="title">
+                <strong>{{name}}</strong>
+              </td>
+              <td>
+                <strong>Od:</strong>
+                {{ start }}
+              </td>
+              <td>
+                <strong>Do:</strong>
+                {{end}}
+              </td>
             </tr>
             <tr>
-              <b-card-text>
-                <td>
-                  <strong>Nabízím:</strong>
-                </td>
-                <td>{{ offer }}</td>
-              </b-card-text>
+              <td>{{ description }}</td>
+              <td>
+                <strong>Místo</strong>
+                : {{ town }}
+              </td>
             </tr>
             <tr>
-              <b-card-text>
-                <td>
-                  <strong>Komu:</strong>
-                </td>
-                <td>{{ whom }}</td>
-              </b-card-text>
+              <td>
+                <strong>Komu:</strong>
+              </td>
+              <td>{{ whom }}</td>
             </tr>
             <tr>
-              <b-card-text>
-                <td>
-                  <strong>Pro oblast:</strong>
-                </td>
-                <td>{{ region }}</td>
-              </b-card-text>
+              <td>
+                <strong>Pro oblast:</strong>
+              </td>
+              <td>{{ region }}</td>
             </tr>
             <tr>
-              <b-card-text>
-                <td>
-                  <strong>Kontakt:</strong>
-                </td>
-                <td>{{ contact }}</td>
-              </b-card-text>
+              <td>
+                <strong>Kontakt:</strong>
+              </td>
+              <td>{{ contact }}</td>
             </tr>
           </table>
         </div>
@@ -109,6 +103,17 @@ export default {
 
 <style>
 .event {
-  width: 500px;
+  width: 40rem;
+  background-color: #84d3ef;
+  border-radius: 20px;
+  padding: 20px;
+}
+.title {
+  font-size: 1.5rem;
+}
+td:first-child {
+  width: 50%;
+  text-align: justify;
+  padding-right: 1rem;
 }
 </style>
