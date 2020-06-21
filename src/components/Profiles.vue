@@ -61,7 +61,10 @@
     </div>
 
     <div>
-      <FormProfile />
+      <router-link to="/addprofile">
+        <button>Přidat profil</button>
+      </router-link>
+      <!-- <FormProfile /> -->
     </div>
   </div>
 </template>
@@ -69,13 +72,13 @@
 <script>
 import { db } from "../utils/db";
 import Profile from "./Profile.vue";
-import FormProfile from "./FormProfile.vue";
+// import FormProfile from "./FormProfile.vue";
 
 export default {
   name: "Profiles",
   components: {
-    Profile,
-    FormProfile
+    Profile
+    // FormProfile
   },
   data() {
     return {

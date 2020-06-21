@@ -132,8 +132,12 @@
       </label>
       <br />
 
-      <button type="submit" v-on:submit.prevent="addEvent">Pridej událost</button>
+      <button type="submit" v-on:submit.prevent="addEvent">Nahrajte akci</button>
     </form>
+    <br />
+    <router-link to="/calendar">
+      <button>Zpět do kalendáře</button>
+    </router-link>
   </div>
 </template>
 
@@ -149,9 +153,9 @@ export default {
       type: "",
       description: "",
       place: "",
-      town: "Praha",
-      street: "Václavské nám.",
-      descriptiveNumber: "11",
+      town: "",
+      street: "",
+      descriptiveNumber: "",
       orientationNumber: "",
       townPart: "",
       zipCode: "",
