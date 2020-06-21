@@ -62,7 +62,6 @@ body {
 .blog-card {
   display: flex;
   flex-direction: column;
-  min-height: 200px;
   margin: 1rem auto;
   box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
   margin-bottom: 1.6%;
@@ -207,6 +206,7 @@ body {
   .blog-card {
     flex-direction: row;
     max-width: 700px;
+    min-height: 200px;
   }
   .blog-card .meta {
     flex-basis: 40%;
