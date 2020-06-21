@@ -1,19 +1,17 @@
 <template>
-  <button @click="pressButton" :class="{color:selected}">{{btnName}}</button>
+  <button @click="pressButton">{{btnName}}</button>
 </template>
 <script>
 export default {
   name: "Button",
   props: ["btnName"],
   data() {
-    return {
-      selected: false
-    };
+    return {};
   },
+
   methods: {
     pressButton() {
       this.$emit("vyber");
-      // this.selected = !this.selected;
     }
   }
 };
