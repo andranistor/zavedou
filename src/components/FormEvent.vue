@@ -132,8 +132,12 @@
       </label>
       <br />
 
-      <button type="submit" v-on:submit.prevent="addEvent">Pridej událost</button>
+      <button type="submit" v-on:submit.prevent="addEvent">Nahrajte akci</button>
     </form>
+    <br />
+    <router-link to="/calendar">
+      <button>Zpět do kalendáře</button>
+    </router-link>
   </div>
 </template>
 

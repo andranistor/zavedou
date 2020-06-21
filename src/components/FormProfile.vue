@@ -104,8 +104,12 @@
       </label>
       <br />
 
-      <button type="submit" v-on:submit.prevent="addProfile">Přidej profil</button>
+      <button type="submit" v-on:submit.prevent="addProfile">Nahrajte profil</button>
     </form>
+    <br />
+    <router-link to="/profiles">
+      <button>Zpět na profily</button>
+    </router-link>
   </div>
 </template>
 

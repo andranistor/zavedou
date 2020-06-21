@@ -72,7 +72,7 @@ export default {
       branchFilter: "Zobrazit vše",
       layer: null,
       btnName: "",
-      selected1: true,
+      selected1: false,
       selected2: false,
       selected3: false,
       selected4: false

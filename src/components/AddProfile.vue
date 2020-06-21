@@ -8,7 +8,7 @@
 import FormProfile from "./FormProfile.vue";
 
 export default {
-  name: "Forms",
+  name: "AddProfile",
   components: { FormProfile }
 };
 </script>

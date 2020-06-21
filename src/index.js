@@ -13,6 +13,8 @@ import Profiles from './components/Profiles';
 import Calendar from './components/Calendar';
 import About from './components/About';
 import Contact from './components/Contact';
+import AddProfile from './components/AddProfile';
+import AddEvent from './components/AddEvent';
 import './index.html';
 
 
@@ -32,6 +34,8 @@ const router = new VueRouter({
     { path: '/calendar', component: Calendar },
     { path: '/about', component: About },
     { path: '/contact', component: Contact },
+    { path: '/addprofile', component: AddProfile },
+    { path: '/addevent', component: AddEvent },
   ],
 });
 

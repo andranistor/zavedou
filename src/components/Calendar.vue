@@ -67,7 +67,10 @@
       />
     </div>
     <div>
-      <FormEvent />
+      <router-link to="/addevent">
+        <button>Přidat akci</button>
+      </router-link>
+      <!-- <FormEvent /> -->
     </div>
   </div>
 </template>
@@ -75,12 +78,12 @@
 <script>
 import { db } from "../utils/db";
 import Event from "./Event.vue";
-import FormEvent from "./FormEvent.vue";
+// import FormEvent from "./FormEvent.vue";
 
 export default {
   name: "Calendar",
   components: {
-    FormEvent,
+    // FormEvent,
     Event
   },
   data() {
