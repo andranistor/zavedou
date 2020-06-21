@@ -8,11 +8,11 @@ import { firestorePlugin } from 'vuefire'
 import VueRouter from 'vue-router'
 import App from './components/App';
 import Home from './components/Home';
-import Map from './components/Map';
+//import Map from './components/Map';
 import Profiles from './components/Profiles';
 import Calendar from './components/Calendar';
 import About from './components/About';
-import Forchildren from './components/Forchildren';
+import Contact from './components/Contact';
 import './index.html';
 
 
@@ -27,11 +27,11 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     { path: '', component: Home },
-    { path: '/map', component: Map },
+    //{ path: '/map', component: Map },
     { path: '/profiles', component: Profiles },
     { path: '/calendar', component: Calendar },
     { path: '/about', component: About },
-    { path: '/forchildren', component: Forchildren },
+    { path: '/contact', component: Contact },
   ],
 });
 
