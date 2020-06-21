@@ -1,9 +1,11 @@
 const { VueLoaderPlugin } = require('vue-loader');
 const CopyPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack')
 
 const path = require('path');
 
 module.exports = {
+  mode: 'production',
   entry: [
     './src/index.js'
   ],
@@ -53,12 +55,15 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new CopyPlugin({
-      patterns: [{ 
-        from: 'src/assets', 
+      patterns: [{
+        from: 'src/assets',
         to: 'assets',
-        noErrorOnMissing: true, 
+        noErrorOnMissing: true,
       }],
     }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    })
   ],
   devServer: { historyApiFallback: true },
 };
