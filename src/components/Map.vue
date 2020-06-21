@@ -45,7 +45,6 @@
       </select>
     </label>
 
-    <!-- <button @click="filtered_items">Filtruj</button> -->
     <div id="map"></div>
   </div>
 </template>
@@ -65,7 +64,7 @@ export default {
       post: null,
       error: null,
       institutions: [],
-      filteredInstitutions: [],
+      filteredInstitutions: {},
       map: null,
       subject: "",
       branch: "",
@@ -80,41 +79,12 @@ export default {
     };
   },
   firestore: {
-    institutions: db.collection("institutions")
+    institutions: db.collection("institutions"),
+    profiles: db.collection("profiles"),
+    events: db.collection("events"),
+    parks: db.collection("parks")
   },
-  // computed: {
-  //   filtered_items() {
-  //     console.log("ok");
-  //     let result = this.institutions;
-  //     //filtr na obory:
-  //     result = result.filter(item => {
-  //       if (this.branchFilter === "Zobrazit vše") {
-  //         console.log(result);
-  //         return true;
-  //       } else if (this.branchFilter === "Matematika, fyzika a informatika") {
-  //         return item.branch.mathsPhysicsInformatics === "1";
-  //       } else if (this.branchFilter === "Chemie") {
-  //         return item.branch.chemistry === "1";
-  //       } else if (this.branchFilter === "Technické vědy, inženýrství") {
-  //         return item.branch.engineering === "1";
-  //       } else if (this.branchFilter === "Vědy o Zemi") {
-  //         return item.branch.scienceAboutEarth === "1";
-  //       } else if (this.branchFilter === "Biologie a medicína") {
-  //         return item.branch.bioMed === "1";
-  //       } else if (this.branchFilter === "Environmentální a zemědělské vědy") {
-  //         return item.branch.enviroAgri === "1";
-  //       } else if (this.branchFilter === "Společenské a humanitní vědy") {
-  //         return item.branch.socialAndArts === "1";
-  //       }
-  //       this.getMarkers(result);
-  //     });
 
-  //     return result;
-  //   }
-  // },
-  // created() {
-  //   this.fetchData();
-  // },
   mounted() {
     let main = document.querySelector("#map");
 
@@ -133,43 +103,68 @@ export default {
     this.map.addDefaultControls();
   },
   methods: {
-    // fetchData() {
-    //   this.institutions = db.collection("institutions"); // After inserting filters delete it
-    //   console.log(this.institutions);
-    //   // Here insert filtering codes
-    // },
     filtered_items() {
-      let result = this.institutions;
-      //filtr na obory:
-      result = result.filter(item => {
-        if (this.branchFilter === "Zobrazit vše") {
-          return true;
-        } else if (this.branchFilter === "Matematika, fyzika a informatika") {
-          return item.branch.mathsPhysicsInformatics === "1";
-        } else if (this.branchFilter === "Chemie") {
-          return item.branch.chemistry === "1";
-        } else if (this.branchFilter === "Technické vědy, inženýrství") {
-          return item.branch.engineering === "1";
-        } else if (this.branchFilter === "Vědy o Zemi") {
-          return item.branch.scienceAboutEarth === "1";
-        } else if (this.branchFilter === "Biologie a medicína") {
-          return item.branch.bioMed === "1";
-        } else if (this.branchFilter === "Environmentální a zemědělské vědy") {
-          return item.branch.enviroAgri === "1";
-        } else if (this.branchFilter === "Společenské a humanitní vědy") {
-          return item.branch.socialAndArts === "1";
-        }
-      });
+      let source = { institutions: [], profiles: [], events: [], parks: [] };
+      if (this.selected1 === true) {
+        source.institutions = this.institutions;
+      }
+      if (this.selected2 === true) {
+        source.profiles = this.profiles;
+      }
+      if (this.selected3 === true) {
+        source.events = this.events;
+      }
+      if (this.selected4 === true) {
+        source.parks = this.parks;
+      }
+      if (
+        !this.selected1 &&
+        !this.selected2 &&
+        !this.selected3 &&
+        !this.selected4
+      ) {
+        source = {
+          institutions: this.institutions,
+          profiles: this.profiles,
+          events: this.events,
+          parks: this.parks
+        };
+      }
 
-      this.filteredInstitutions = result;
+      Object.keys(source).forEach(category => {
+        source[category] = source[category].filter(item => {
+          if (this.branchFilter === "Zobrazit vše") {
+            return true;
+          } else if (this.branchFilter === "Matematika, fyzika a informatika") {
+            return item.branch.mathsPhysicsInformatics === "1";
+          } else if (this.branchFilter === "Chemie") {
+            return item.branch.chemistry === "1";
+          } else if (this.branchFilter === "Technické vědy, inženýrství") {
+            return item.branch.engineering === "1";
+          } else if (this.branchFilter === "Vědy o Zemi") {
+            return item.branch.scienceAboutEarth === "1";
+          } else if (this.branchFilter === "Biologie a medicína") {
+            return item.branch.bioMed === "1";
+          } else if (
+            this.branchFilter === "Environmentální a zemědělské vědy"
+          ) {
+            return item.branch.enviroAgri === "1";
+          } else if (this.branchFilter === "Společenské a humanitní vědy") {
+            return item.branch.socialAndArts === "1";
+          }
+        });
+      });
+      console.log("ahoj", source);
+
+      this.filteredInstitutions = source;
     },
     // Get marker coordination numbers
-    getMarkers(institutions) {
-      console.log("ok");
-      if (!institutions) return;
+    getMarkers(source) {
+      if (!source) return;
       const markers = [];
       const cards = [];
-      institutions.map((institution, index) => {
+      //card for institutions
+      const renderInstitutions = (institution, index) => {
         let marker = new SMap.Marker(
           SMap.Coords.fromWGS84(institution.coords.x, institution.coords.y)
         );
@@ -177,13 +172,71 @@ export default {
 
         let card = new SMap.Card();
         card.getHeader().innerHTML = `
-            <strong>${institution.scientificInstitution}</strong> <br />
-        ${institution.address}<br />
-            ${institution.website}<br />
+             <strong>${institution.scientificInstitution}</strong> <br />
+         ${institution.address}<br />
+             ${institution.website}<br />
             `;
         card.getBody().innerHTML = `${institution.funFact}`;
         cards.push(card);
-      });
+      };
+      //card for profiles
+
+      const renderProfiles = (profile, index) => {
+        let marker = new SMap.Marker(
+          SMap.Coords.fromWGS84(profile.coords.x, profile.coords.y)
+        );
+        markers.push(marker);
+
+        let card = new SMap.Card();
+        card.getHeader().innerHTML = `
+             <strong>${profile.firstName} ${profile.lastName}</strong> <br />
+         ${profile.field}<br />
+             ${profile.contact}<br />
+            `;
+        card.getBody().innerHTML = `${profile.offer}`;
+        cards.push(card);
+      };
+
+      //card for events
+
+      const renderEvents = (event, index) => {
+        let marker = new SMap.Marker(
+          SMap.Coords.fromWGS84(event.coords.x, event.coords.y)
+        );
+        markers.push(marker);
+
+        let card = new SMap.Card();
+        card.getHeader().innerHTML = `
+             <strong>${event.name}</strong> <br />
+             <a href="${event.website}">Odkaz na akci</a><br />
+            `;
+        card.getBody().innerHTML = `${event.description}`;
+        cards.push(card);
+      };
+
+      //card for parks
+
+      const renderParks = (park, index) => {
+        let marker = new SMap.Marker(
+          SMap.Coords.fromWGS84(park.coords.x, park.coords.y)
+        );
+        markers.push(marker);
+
+        let card = new SMap.Card();
+        card.getHeader().innerHTML = `
+             <strong>${park.name}</strong> <br />
+             <a href="${park.website}">Odkaz na akci</a><br />
+
+            `;
+        card.getBody().innerHTML = `${park.address}`;
+        cards.push(card);
+      };
+
+      console.log("čau", source);
+      source.institutions.forEach(renderInstitutions);
+      source.profiles.forEach(renderProfiles);
+      source.events.forEach(renderEvents);
+      source.parks.forEach(renderParks);
       return { markers, cards };
     },
 
@@ -208,6 +261,8 @@ export default {
   },
   watch: {
     filteredInstitutions() {
+      if (!this.layer) return;
+
       // Return marker coords
       const markerCards = this.getMarkers(this.filteredInstitutions);
       // const filteredItems = this.filtered_items(this.institutions);
@@ -230,7 +285,19 @@ export default {
       });
     },
     institutions() {
-      this.filteredInstitutions = this.institutions;
+      this.filtered_items();
+    },
+    selected1() {
+      this.filtered_items();
+    },
+    selected2() {
+      this.filtered_items();
+    },
+    selected3() {
+      this.filtered_items();
+    },
+    selected4() {
+      this.filtered_items();
     }
   }
 };
