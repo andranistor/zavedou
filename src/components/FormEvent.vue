@@ -200,6 +200,8 @@
         >
           Odeslat
         </b-button>
+        <p v-if="showAddressLabel === true">Adresa neexistuje. Znovu a lépe.</p>
+        <p v-if="formSent === true">Formulář odeslán. Děkujeme.</p>
       </form>
       <router-link to="/calendar">
         <b-button variant="outline-primary">Zpět do kalendáře</b-button>
@@ -234,6 +236,8 @@ export default {
       end: null,
       note: null,
       region: "Všechny kraje",
+      showAddressLabel: false,
+      formSent: false,
     };
   },
   methods: {
@@ -241,7 +245,12 @@ export default {
       // Call mapy API and get coords
       const address = `${this.street} ${this.descriptiveNumber}/${this.orientationNumber}, ${this.town}`;
       new SMap.Geocoder(address, (response) => {
-        let results = response.getResults()[0].results[0].coords;
+        let results = response.getResults()[0].results[0];
+
+        if (!results) {
+          this.showAddressLabel = true;
+          return;
+        }
 
         // Add to database
         db.collection("events")
@@ -258,7 +267,7 @@ export default {
               townPart: this.townPart,
               zipCode: this.zipCode,
             },
-            coords: { x: results.x, y: results.y },
+            coords: { x: results.coords.x, y: results.coords.y },
             link: this.link,
             attender: {
               child: this.child,
@@ -304,6 +313,8 @@ export default {
         this.end = "";
         this.note = "";
         this.region = "";
+        this.showAddressLabel = false;
+        this.formSent = true;
       });
     },
   },
