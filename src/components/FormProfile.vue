@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Formulář</h2>
+    <h2>Přidej profil</h2>
     <div class="form">
       <form @submit.prevent="addProfile">
         <label for="first-name">
@@ -44,7 +44,7 @@
             <option>Chemie</option>
             <option>Matematika</option>
             <option>Občanská výchova</option>
-            <option>Přirodopis/biologie</option>
+            <option>Přirodopis</option>
             <option>Informatika</option>
             <option>Hudební a výtvarná výchova</option>
             <option>Zeměpis</option>

@@ -99,7 +99,7 @@ export default {
 .name_surname,
 .subject {
   font-family: "Roboto Slab";
-  font-size: 1.3rem;
+  font-size: 1rem;
   width: 40%;
 }
 
@@ -108,7 +108,10 @@ export default {
 }
 
 td:first-child {
-  width: 200px;
+  width: 10rem;
+}
+td:nth-child(2) {
+  padding-right: 1rem;
 }
 
 .avatar {
@@ -118,15 +121,17 @@ td:first-child {
 }
 
 div[role="tablist"] {
-  margin: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card.mb-1 {
-  width: 500px;
+  width: 30vw;
 }
 
 .card-text:last-child {
-  width: 450px;
+  width: 30vw;
 }
 
 .card-body {
@@ -136,7 +141,7 @@ div[role="tablist"] {
 }
 
 .card-header:first-child {
-  width: 450px;
+  width: 30vw;
   height: 100px;
   background-color: #84d3ef;
 }
@@ -146,23 +151,79 @@ div[role="tablist"] {
 }
 
 .btn.btn-info {
-  width: 500px;
+  width: 30vw;
   height: 100px;
   background-color: #84d3ef;
   border-color: #84d3ef;
 }
 
 .btn.btn-info:hover {
-  width: 500px;
+  width: 30vw;
   height: 100px;
   background-color: #84d3ef;
   border-color: #84d3ef;
 }
 
 .btn.btn-info:focus {
-  width: 500px;
+  width: 30vw;
   height: 100px;
   background-color: #84d3ef;
   border-color: #84d3ef;
+}
+
+@media (max-width: 767.98px) {
+  .avatar {
+    height: 60px;
+    width: 60px;
+    padding: 0;
+  }
+  .card.mb-1 {
+    width: 90vw;
+  }
+
+  .card-header:first-child {
+    width: 90vw;
+  }
+
+  .btn.btn-info {
+    width: 90vw;
+  }
+
+  .btn.btn-info:hover {
+    width: 90vw;
+  }
+  .btn.btn-info:focus {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 991.98px) and (min-width: 767.99px) {
+  .avatar {
+    height: 60px;
+    width: 60px;
+    padding: 0;
+  }
+
+  .card.mb-1 {
+    width: 40vw;
+  }
+
+  .card-header:first-child {
+    width: 40vw;
+  }
+
+  .btn.btn-info {
+    width: 40vw;
+  }
+
+  .btn.btn-info:hover {
+    width: 40vw;
+  }
+  .btn.btn-info:focus {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 991.99px) {
 }
 </style>

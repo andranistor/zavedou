@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Formulář</h2>
+    <h2>Přidej akci</h2>
     <div class="form">
       <form @submit.prevent="addEvent">
         <label for="name">
