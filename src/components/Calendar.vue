@@ -1,63 +1,87 @@
 <template>
   <div class="calendar">
-    <h1>Kalendář akcí</h1>
-    <label for="region-filter">
-      Vyberte kraj:
-      <select
-        class="custom-select select-selected"
-        name="type"
-        id="region-filter"
-        v-model="regionFilter"
-      >
-        <option class="select-items">Celá ČR</option>
-        <option class="select-items">Hlavní město Praha</option>
-        <option class="select-items">Středočeský kraj</option>
-        <option class="select-items">Jihočeský kraj</option>
-        <option class="select-items">Plzeňský kraj</option>
-        <option class="select-items">Karlovarský kraj</option>
-        <option class="select-items">Ústecký kraj</option>
-        <option class="select-items">Liberecký kraj</option>
-        <option class="select-items">Královéhradecký kraj</option>
-        <option class="select-items">Pardubický kraj</option>
-        <option class="select-items">Kraj Vysočina</option>
-        <option class="select-items">Jihomoravský kraj</option>
-        <option class="select-items">Olomoucký kraj</option>
-        <option class="select-items">Zlínský kraj</option>
-        <option class="select-items">Moravskoslezský kraj</option>
-      </select>
-    </label>
-    <label for="type-filter">
-      Vyberte druh akce:
-      <select
-        class="custom-select select-selected"
-        name="type"
-        id="type-filter"
-        v-model="typeFilter"
-      >
-        <option class="select-items">Všechny akce</option>
-        <option class="select-items">Veletrh / festival</option>
-        <option class="select-items">Přednáška</option>
-        <option class="select-items">Workshop</option>
-        <option class="select-items">Soutěž</option>
-        <option class="select-items">Tábor/letní škola</option>
-        <option class="select-items">Kroužek</option>
-        <option class="select-items">Ostatní</option>
-      </select>
-    </label>
-    <label for="attender-filter">
-      Pro koho je akce určená:
-      <select
-        class="custom-select select-selected"
-        name="type"
-        id="attender-filter"
-        v-model="attenderFilter"
-      >
-        <option class="select-items">Pro všechny</option>
-        <option class="select-items">Děti (ZŠ)</option>
-        <option class="select-items">Studenti (SŠ)</option>
-        <option class="select-items">Dospělí</option>
-      </select>
-    </label>
+    <div class="header">
+      <h1>Kalendář akcí</h1>
+      <div class="plus">
+        <router-link to="/addevent">
+          <img class="add-event" :src="image" />
+        </router-link>
+      </div>
+    </div>
+
+    <div class="b-container">
+      <b-row>
+        <b-col b-col sm="12" md="6" lg="4"
+          ><label for="region-filter">
+            Kraj: <br />
+            <select
+              class="custom-select select-selected"
+              name="type"
+              id="region-filter"
+              v-model="regionFilter"
+            >
+              <option class="select-items">Celá ČR</option>
+              <option class="select-items">Hlavní město Praha</option>
+              <option class="select-items">Středočeský kraj</option>
+              <option class="select-items">Jihočeský kraj</option>
+              <option class="select-items">Plzeňský kraj</option>
+              <option class="select-items">Karlovarský kraj</option>
+              <option class="select-items">Ústecký kraj</option>
+              <option class="select-items">Liberecký kraj</option>
+              <option class="select-items">Královéhradecký kraj</option>
+              <option class="select-items">Pardubický kraj</option>
+              <option class="select-items">Kraj Vysočina</option>
+              <option class="select-items">Jihomoravský kraj</option>
+              <option class="select-items">Olomoucký kraj</option>
+              <option class="select-items">Zlínský kraj</option>
+              <option class="select-items">Moravskoslezský kraj</option>
+            </select>
+          </label>
+        </b-col>
+
+        <b-col b-col sm="12" md="6" lg="4">
+          <label for="type-filter">
+            Druh akce: <br />
+            <select
+              class="custom-select select-selected"
+              name="type"
+              id="type-filter"
+              v-model="typeFilter"
+            >
+              <option class="select-items">Všechny akce</option>
+              <option class="select-items">Veletrh / festival</option>
+              <option class="select-items">Přednáška</option>
+              <option class="select-items">Workshop</option>
+              <option class="select-items">Soutěž</option>
+              <option class="select-items">Tábor/letní škola</option>
+              <option class="select-items">Kroužek</option>
+              <option class="select-items">Ostatní</option>
+            </select>
+          </label>
+        </b-col>
+        <b-col b-col sm="12" md="6" lg="4">
+          <label for="attender-filter">
+            Pro koho:
+            <br />
+            <select
+              class="custom-select select-selected"
+              name="type"
+              id="attender-filter"
+              v-model="attenderFilter"
+            >
+              <option class="select-items">Pro všechny</option>
+              <option class="select-items">Děti (ZŠ)</option>
+              <option class="select-items">Studenti (SŠ)</option>
+              <option class="select-items">Dospělí</option>
+            </select>
+          </label>
+        </b-col>
+        <b-col b-col sm="12" md="12" lg="3">
+          <!-- <FormEvent /> -->
+        </b-col>
+      </b-row>
+    </div>
+
     <div class="b-container fluid">
       <div v-for="event in filtered_events" :key="event.id">
         <Event
@@ -83,12 +107,6 @@
           :region="event.region"
         />
       </div>
-    </div>
-    <div>
-      <router-link to="/addevent">
-        <b-button variant="outline-primary">Přidat akci</b-button>
-      </router-link>
-      <!-- <FormEvent /> -->
     </div>
   </div>
 </template>
@@ -130,6 +148,7 @@ export default {
       regionFilter: "Celá ČR",
       typeFilter: "Všechny akce",
       attenderFilter: "Pro všechny",
+      image: "./assets/img/button_plus.png",
     };
   },
   firestore: {
@@ -179,6 +198,29 @@ export default {
 </script>
 
 <style>
+h1 {
+  padding: 2rem 0;
+}
+.header {
+  display: flex;
+  position: relative;
+}
+
+.plus {
+  position: absolute;
+  right: 5rem;
+}
+
+.menu-select {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-event {
+  width: 4rem;
+  padding-top: 1rem;
+}
+
 .custom-select {
   position: relative;
 }
@@ -188,7 +230,8 @@ export default {
 }
 
 .select-selected {
-  background-color: #84d3ef;
+  background-color: rgb(188, 220, 241);
+  width: 15rem;
 }
 
 /* Style the arrow inside the select element: */
