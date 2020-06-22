@@ -46,11 +46,15 @@
     </div>
 
     <div class="footer">
-      <router-link to="/">Domovská stránka</router-link>
+      <router-link class="footer-item" to="/">Domovská stránka</router-link>
       <!-- <router-link to="/map">Mapa</router-link> -->
-      <router-link to="/profiles">Profily vědců</router-link>
-      <router-link to="/calendar">Kalendář akcí</router-link>
-      <router-link to="/about">O projektu</router-link>
+      <router-link class="footer-item" to="/profiles"
+        >Profily vědců</router-link
+      >
+      <router-link class="footer-item" to="/calendar"
+        >Kalendář akcí</router-link
+      >
+      <router-link class="footer-item" to="/about">O projektu</router-link>
       <p>Copyright ©2020 zavedou.cz</p>
       <!-- <router-link to="/contact">Kontakt</router-link> -->
       <!-- <img class="d-none d-md-block footer" src="assets/img/footer.png" />
@@ -104,24 +108,38 @@ body img {
   align-items: center;
   width: 80%;
   height: 10vh;
-  /* background-color: #9df4f4; */
-  /* opacity: 70%; */
+  flex-wrap: wrap;
 }
 .footer p {
   margin-bottom: 0;
+  padding: 0 1rem;
 }
 
-.bg.info {
-  background-color: white !important;
+.footer-item {
+  padding: 0rem 1rem;
 }
 
 @media (max-width: 767.98px) {
   header {
-    height: 12%;
+    height: 8%;
   }
   header img {
     width: 13rem;
-    padding: 30px 20px;
+    padding: 0;
+  }
+  .footer {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    height: 10vh;
+    font-size: 0.8rem;
+  }
+  .page--center {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -131,7 +149,7 @@ body img {
   }
   header img {
     width: 13rem;
-    padding: 30px 20px;
+    padding: 0;
   }
   .footer {
     margin: 0 auto;
@@ -141,6 +159,12 @@ body img {
     align-items: center;
     width: 70%;
     height: 10vh;
+    font-size: 0.8rem;
+  }
+
+  .page--center {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -150,7 +174,7 @@ body img {
   }
   header img {
     width: 13rem;
-    padding: 1rem 0;
+    padding: 0rem;
   }
 
   .footer {
@@ -161,6 +185,12 @@ body img {
     align-items: center;
     width: 70%;
     height: 10vh;
+    font-size: 1rem;
+  }
+
+  .page--center {
+    width: 70%;
+    margin: 0 auto;
   }
 }
 </style>
