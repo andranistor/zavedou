@@ -83,7 +83,7 @@
 
     <div>
       <router-link to="/addprofile">
-        <button>Odeslat</button>
+        <b-button variant="outline-primary">Přidat profil</b-button>
       </router-link>
       <!-- <FormProfile /> -->
     </div>

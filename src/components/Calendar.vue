@@ -86,7 +86,7 @@
     </div>
     <div>
       <router-link to="/addevent">
-        <button>Přidat akci</button>
+        <b-button variant="outline-primary">Přidat akci</b-button>
       </router-link>
       <!-- <FormEvent /> -->
     </div>
@@ -102,7 +102,7 @@ export default {
   name: "Calendar",
   components: {
     // FormEvent,
-    Event
+    Event,
   },
   data() {
     return {
@@ -129,31 +129,31 @@ export default {
       region: "",
       regionFilter: "Celá ČR",
       typeFilter: "Všechny akce",
-      attenderFilter: "Pro všechny"
+      attenderFilter: "Pro všechny",
     };
   },
   firestore: {
-    events: db.collection("events").orderBy("date.start")
+    events: db.collection("events").orderBy("date.start"),
   },
   computed: {
     filtered_events() {
       let result = this.events;
       //filtr regiony
-      result = result.filter(item => {
+      result = result.filter((item) => {
         if (this.regionFilter === "Celá ČR") {
           return true;
         }
         return item.region === this.regionFilter;
       });
       //filtr typy akcí
-      result = result.filter(item => {
+      result = result.filter((item) => {
         if (this.typeFilter === "Všechny akce") {
           return true;
         }
         return item.type === this.typeFilter;
       });
       //filtr návštěvníci
-      result = result.filter(item => {
+      result = result.filter((item) => {
         if (this.attenderFilter === "Pro všechny") {
           return true;
         } else if (this.attenderFilter === "Děti (ZŠ)") {
@@ -165,8 +165,8 @@ export default {
         }
       });
       return result;
-    }
-  }
+    },
+  },
   // computed: {
   //   let dayStart = new Date(this.start);
   //   let dayEnd = new Date(this.end);

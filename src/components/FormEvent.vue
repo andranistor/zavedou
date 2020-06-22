@@ -1,169 +1,210 @@
 <template>
   <div>
     <h2>Formulář</h2>
-    <form @submit.prevent="addEvent">
-      <label for="name">
-        Název události:
-        <input
-          type="text"
-          id="name"
-          v-model.trim="name"
-          placeholder="Název události"
-          required
-        />
-      </label>
-      <br />
-      <label for="type-select">
-        Vyberte typ události:
-        <select name="type" id="type-select" v-model="type" required>
-          <option>Veletrh / festival</option>
-          <option>Přednáška</option>
-          <option>Workshop</option>
-          <option>Tábor / letní škola</option>
-          <option>Soutěž</option>
-          <option>Kroužek</option>
-          <option>Ostatní</option>
-        </select>
-      </label>
-      <br />
-      <label for="description">
-        Popis události:
-        <textarea
-          id="description"
-          v-model.trim="description"
-          placeholder="Popis události"
-          required
-        ></textarea>
-      </label>
-      <br />
-      <label for="place">
-        Místo konání:
-        <input
-          type="text"
-          id="place"
-          v-model.trim="place"
-          placeholder="Místo konání"
-          required
-        />
-      </label>
-      <br />
-      <label for="town">
-        Město:
-        <input type="text" id="town" v-model.trim="town" placeholder="Město" required />
-      </label>
-      <br />
-      <label for="street">
-        Ulice:
-        <input type="text" id="street" v-model.trim="street" placeholder="Ulice" required />
-      </label>
-      <label for="descriptive-number">
-        Číslo popisné:
-        <input
-          type="number"
-          id="descriptive-number"
-          min="1"
-          v-model="descriptiveNumber"
-          required
-        />
-      </label>
-      <label for="orientation-number">
-        Číslo orientační:
-        <input
-          type="number"
-          id="orientation-number"
-          min="1"
-          v-model="orientationNumber"
-        />
-      </label>
-      <br />
-      <label for="town-part">
-        Městská čtvrť:
-        <input
-          type="text"
-          id="town-part"
-          v-model.trim="townPart"
-          placeholder="Městská čtvrť"
-        />
-      </label>
-      <label for="zip-code">
-        PSČ:
-        <input
-          type="text"
-          inputmode="numeric"
-          id="zip-code"
-          v-model.trim="zipCode"
-          pattern="\d{3} ?\d{2}"
-          required
-        />
-      </label>
-      <br />
-      <label for="type-select">
-        Vyberte kraj:
-        <select name="type" id="type-select" v-model="region">
-          <option>Celá ČR</option>
-          <option>Hlavní město Praha</option>
-          <option>Středočeský kraj</option>
-          <option>Jihočeský kraj</option>
-          <option>Plzeňský kraj</option>
-          <option>Karlovarský kraj</option>
-          <option>Ústecký kraj</option>
-          <option>Liberecký kraj</option>
-          <option>Královéhradecký kraj</option>
-          <option>Pardubický kraj</option>
-          <option>Kraj Vysočina</option>
-          <option>Jihomoravský kraj</option>
-          <option>Olomoucký kraj</option>
-          <option>Zlínský kraj</option>
-          <option>Moravskoslezský kraj</option>
-        </select>
-      </label>
-      <br />
-      <label for="link">
-        Odkaz/zdroj:
-        <input
-          type="url"
-          id="link"
-          v-model.trim="link"
-          placeholder="Odkaz/zdroj"
-          required
-        />
-      </label>
-      <br />
-      <label for="child">
-        <input type="checkbox" name="attender" value="false" id="child" v-model="child" />
-        pro děti
-      </label>
-      <label for="teenager">
-        <input type="checkbox" name="attender" value="false" id="teenager" v-model="teenager" />
-        pro studenty
-      </label>
-      <label for="adult">
-        <input type="checkbox" name="attender" value="false" id="adult" v-model="adult" />
-        pro dospělé
-      </label>
-      <br />
-      <label for="start">
-        Začátek události:
-        <input type="date" id="start" v-model="start" required />
-      </label>
-      <br />
-      <label for="end">
-        Konec události:
-        <input type="date" id="end" v-model="end" required />
-      </label>
-      <br />
-      <label for="note">
-        Poznámka
-        <input type="text" id="note" v-model.trim="note" placeholder="Poznámka k události" />
-      </label>
-      <br />
-
-      <button type="submit" v-on:submit.prevent="addEvent">Nahrajte akci</button>
-    </form>
-    <br />
-    <router-link to="/calendar">
-      <button>Zpět do kalendáře</button>
-    </router-link>
+    <div class="form">
+      <form @submit.prevent="addEvent">
+        <label for="name">
+          Název události:
+          <input
+            type="text"
+            id="name"
+            v-model.trim="name"
+            placeholder="Název události"
+            required
+          />
+        </label>
+        <br />
+        <label for="type-select">
+          Vyberte typ události:
+          <select name="type" id="type-select" v-model="type" required>
+            <option>Veletrh / festival</option>
+            <option>Přednáška</option>
+            <option>Workshop</option>
+            <option>Tábor / letní škola</option>
+            <option>Soutěž</option>
+            <option>Kroužek</option>
+            <option>Ostatní</option>
+          </select>
+        </label>
+        <br />
+        <label for="description">
+          Popis události:
+          <textarea
+            id="description"
+            v-model.trim="description"
+            placeholder="Popis události"
+            required
+          ></textarea>
+        </label>
+        <br />
+        <label for="place">
+          Místo konání:
+          <input
+            type="text"
+            id="place"
+            v-model.trim="place"
+            placeholder="Místo konání"
+            required
+          />
+        </label>
+        <br />
+        <label for="town">
+          Město:
+          <input
+            type="text"
+            id="town"
+            v-model.trim="town"
+            placeholder="Město"
+            required
+          />
+        </label>
+        <br />
+        <label for="street">
+          Ulice:
+          <input
+            type="text"
+            id="street"
+            v-model.trim="street"
+            placeholder="Ulice"
+            required
+          />
+        </label>
+        <label for="descriptive-number">
+          Číslo popisné:
+          <input
+            type="number"
+            id="descriptive-number"
+            min="1"
+            v-model="descriptiveNumber"
+            required
+          />
+        </label>
+        <label for="orientation-number">
+          Číslo orientační:
+          <input
+            type="number"
+            id="orientation-number"
+            min="1"
+            v-model="orientationNumber"
+          />
+        </label>
+        <br />
+        <label for="town-part">
+          Městská čtvrť:
+          <input
+            type="text"
+            id="town-part"
+            v-model.trim="townPart"
+            placeholder="Městská čtvrť"
+          />
+        </label>
+        <label for="zip-code">
+          PSČ:
+          <input
+            type="text"
+            inputmode="numeric"
+            id="zip-code"
+            v-model.trim="zipCode"
+            pattern="\d{3} ?\d{2}"
+            required
+          />
+        </label>
+        <br />
+        <label for="type-select">
+          Vyberte kraj:
+          <select name="type" id="type-select" v-model="region">
+            <option>Celá ČR</option>
+            <option>Hlavní město Praha</option>
+            <option>Středočeský kraj</option>
+            <option>Jihočeský kraj</option>
+            <option>Plzeňský kraj</option>
+            <option>Karlovarský kraj</option>
+            <option>Ústecký kraj</option>
+            <option>Liberecký kraj</option>
+            <option>Královéhradecký kraj</option>
+            <option>Pardubický kraj</option>
+            <option>Kraj Vysočina</option>
+            <option>Jihomoravský kraj</option>
+            <option>Olomoucký kraj</option>
+            <option>Zlínský kraj</option>
+            <option>Moravskoslezský kraj</option>
+          </select>
+        </label>
+        <br />
+        <label for="link">
+          Odkaz/zdroj:
+          <input
+            type="url"
+            id="link"
+            v-model.trim="link"
+            placeholder="Odkaz/zdroj"
+            required
+          />
+        </label>
+        <br />
+        <label for="child">
+          <input
+            type="checkbox"
+            name="attender"
+            value="false"
+            id="child"
+            v-model="child"
+          />
+          pro děti
+        </label>
+        <label for="teenager">
+          <input
+            type="checkbox"
+            name="attender"
+            value="false"
+            id="teenager"
+            v-model="teenager"
+          />
+          pro studenty
+        </label>
+        <label for="adult">
+          <input
+            type="checkbox"
+            name="attender"
+            value="false"
+            id="adult"
+            v-model="adult"
+          />
+          pro dospělé
+        </label>
+        <br />
+        <label for="start">
+          Začátek události:
+          <input type="date" id="start" v-model="start" required />
+        </label>
+        <br />
+        <label for="end">
+          Konec události:
+          <input type="date" id="end" v-model="end" required />
+        </label>
+        <br />
+        <label for="note">
+          Poznámka
+          <input
+            type="text"
+            id="note"
+            v-model.trim="note"
+            placeholder="Poznámka k události"
+          />
+        </label>
+        <br />
+        <b-button
+          variant="outline-primary"
+          type="submit"
+          v-on:submit.prevent="addEvent"
+        >
+          Odeslat
+        </b-button>
+      </form>
+      <router-link to="/calendar">
+        <b-button variant="outline-primary">Zpět do kalendáře</b-button>
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -192,14 +233,14 @@ export default {
       start: null,
       end: null,
       note: null,
-      region: "Všechny kraje"
+      region: "Všechny kraje",
     };
   },
   methods: {
     addEvent() {
       // Call mapy API and get coords
       const address = `${this.street} ${this.descriptiveNumber}/${this.orientationNumber}, ${this.town}`;
-      new SMap.Geocoder(address, response => {
+      new SMap.Geocoder(address, (response) => {
         let results = response.getResults()[0].results[0].coords;
 
         // Add to database
@@ -215,19 +256,19 @@ export default {
               descriptiveNumber: this.descriptiveNumber,
               orientationNumber: this.orientationNumber,
               townPart: this.townPart,
-              zipCode: this.zipCode
+              zipCode: this.zipCode,
             },
             coords: { x: results.x, y: results.y },
             link: this.link,
             attender: {
               child: this.child,
               teenager: this.teenager,
-              adult: this.adult
+              adult: this.adult,
             },
             date: {
               start: this.start,
               end: this.end,
-              note: this.note
+              note: this.note,
             },
             region: this.region,
             branch: {
@@ -237,10 +278,10 @@ export default {
               enviroAgri: "1",
               mathsPhysicsInformatics: "1",
               scienceAboutEarth: "1",
-              socialAndArts: "1"
-            }
+              socialAndArts: "1",
+            },
           })
-          .then(docRef => {
+          .then((docRef) => {
             docRef.update({ id: docRef.id });
           });
 
@@ -264,7 +305,44 @@ export default {
         this.note = "";
         this.region = "";
       });
-    }
-  }
+    },
+  },
 };
 </script>
+
+<style>
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>

@@ -12,11 +12,17 @@
           <router-link to="/profiles">Profily vědců</router-link>
           <router-link to="/calendar">Kalendář akcí</router-link>
           <router-link to="/about">O projektu</router-link>
-          <router-link to="/contact">Kontakt</router-link>
+          <!-- <router-link to="/contact">Kontakt</router-link> -->
         </div>
       </header>
-      <img class="d-none d-lg-block d-xl-block" src="assets/img/jumbotron_desktop.png" />
-      <img class="d-none d-md-block d-lg-none" src="assets/img/jumbotron_tablet.png" />
+      <img
+        class="d-none d-lg-block d-xl-block"
+        src="assets/img/jumbotron_desktop.png"
+      />
+      <img
+        class="d-none d-md-block d-lg-none"
+        src="assets/img/jumbotron_tablet.png"
+      />
       <img class="d-xs-block d-md-none" src="assets/img/jumbotron_mobile.png" />
     </div>
 
@@ -30,7 +36,8 @@
       <router-link to="/profiles">Profily vědců</router-link>
       <router-link to="/calendar">Kalendář akcí</router-link>
       <router-link to="/about">O projektu</router-link>
-      <router-link to="/contact">Kontakt</router-link>
+      <p>Copyright ©2020 zavedou.cz</p>
+      <!-- <router-link to="/contact">Kontakt</router-link> -->
       <!-- <img class="d-none d-md-block footer" src="assets/img/footer.png" />
       <img class="d-none d-md-block d-lg-none footer" src="assets/img/footer_tablet.png" />
       <img class="d-xs-block d-md-none footer" src="assets/img/footer_mobile2.png" />-->
@@ -40,7 +47,7 @@
 
 <script>
 export default {
-  name: "App"
+  name: "App",
 };
 </script>
 
@@ -78,8 +85,8 @@ body img {
 .footer {
   width: 100%;
   height: 8vh;
-  background-color: #9df4f4;
-  opacity: 70%;
+  /* background-color: #9df4f4; */
+  /* opacity: 70%; */
 }
 
 @media (max-width: 767.98px) {

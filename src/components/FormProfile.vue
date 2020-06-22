@@ -50,12 +50,7 @@
         <br />
         <label for="subject-select">
           Vhodné pro školní předmět:
-          <select
-            name="type"
-            id="subject-select"
-            v-model="subject"
-            required
-          >
+          <select name="type" id="subject-select" v-model="subject" required>
             <option>Cizí jazyky</option>
             <option>Čeština</option>
             <option>Dějepis</option>
@@ -155,9 +150,9 @@
           variant="outline-primary"
           type="submit"
           v-on:submit.prevent="addProfile"
-        >Nahrajte profil</b-button>
+          >Odeslat</b-button
+        >
       </form>
-      <br />
       <router-link to="/profiles">
         <b-button variant="outline-primary">Zpět na profily</b-button>
       </router-link>
@@ -182,7 +177,7 @@ export default {
       offer: "",
       whom: "",
       region: "",
-      contact: "@"
+      contact: "@",
       // errors: []
     };
   },
@@ -191,7 +186,7 @@ export default {
     addProfile(event) {
       const address = this.address.replace(/\d{3} ?\d{2}/, "");
       // Call mapy API and get coords
-      new SMap.Geocoder(address, response => {
+      new SMap.Geocoder(address, (response) => {
         let results = response.getResults()[0].results[0].coords;
         console.log(results);
 
@@ -216,10 +211,10 @@ export default {
               enviroAgri: "1",
               mathsPhysicsInformatics: "1",
               scienceAboutEarth: "1",
-              socialAndArts: "1"
-            }
+              socialAndArts: "1",
+            },
           })
-          .then(docRef => {
+          .then((docRef) => {
             docRef.update({ id: docRef.id });
           });
 
@@ -235,7 +230,7 @@ export default {
         this.region = "";
         this.contact = "";
       });
-    }
+    },
     // checkForm: function(e) {
     //   if (this.firstName && this.lastName) {
     //     return true;
@@ -250,7 +245,7 @@ export default {
     //     this.errors.push("Doplňte prosím příjmení.");
     //   }
     // }
-  }
+  },
 };
 </script>
 <style>
