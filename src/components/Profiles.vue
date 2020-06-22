@@ -57,7 +57,7 @@
                 <option class="select-items">Chemie</option>
                 <option class="select-items">Matematika</option>
                 <option class="select-items">Občanská výchova</option>
-                <option class="select-items">Přirodopis</option>
+                <option class="select-items">Přírodopis</option>
                 <option class="select-items">Informatika</option>
                 <option class="select-items">Hudební a výtvarný výchova</option>
                 <option class="select-items">Zeměpis</option>
@@ -69,10 +69,6 @@
     </div>
     <div class="b-container fluid">
       <b-row>
-        <!-- <div
-          class="profiles"
-          
-        > -->
         <b-col
           sm="12"
           md="6"
@@ -94,7 +90,6 @@
             :image="image"
           />
         </b-col>
-        <!-- </div> -->
       </b-row>
     </div>
   </div>
@@ -103,13 +98,11 @@
 <script>
 import { db } from "../utils/db";
 import Profile from "./Profile.vue";
-// import FormProfile from "./FormProfile.vue";
 
 export default {
   name: "Profiles",
   components: {
     Profile,
-    // FormProfile
   },
   data() {
     return {
@@ -131,13 +124,12 @@ export default {
       plus: "./assets/img/button_plus.png",
     };
   },
-  // Showing and ordering the profiles by lastName
+
+  // Data upload from database and ordering by lastName
   firestore: {
-    profiles: db.collection("profiles"),
-    // .where("region", "==", "Brno") // Filtering
-    // .orderBy("lastName") // Ordering of profiles on the page by lastName
-    // .limit(3) // It will show only 5 profiles on the page
+    profiles: db.collection("profiles").orderBy("lastName"),
   },
+
   computed: {
     filtered_profiles() {
       return this.profiles.filter((item) => {
@@ -158,36 +150,8 @@ export default {
       });
     },
   },
-  methods: {
-    // filtering() {
-    // if (this.regionFilter === "Celá ČR") {
-    //   this.regionFilter = null;
-    // }
-    // if (this.subjectFilter === "Zobrazit vše") {
-    //   this.subjectFilter = null;
-    // }
-    // const filtered_entries = db
-    //   .collection("profiles")
-    //   .where("region", "==", this.regionFilter)
-    //   .where("subject", "==", this.subjectFilter);
-    // this.$bind("profiles", filtered_entries);
-    // console.log(this.profiles);
-    //            //.get()
-    // .then(snap => {
-    //   snap.forEach(doc => {
-    //     console.log(doc.data());
-    //   });
-    // });
-  },
+  methods: {},
 };
-
-//  if (this.regionFilter !== "Celá ČR") {
-//       const filtered_entries = db
-//         .collection("profiles")
-//         .where("region", "==", this.regionFilter);
-//       this.$bind("profiles", filtered_entries);
-//     } else {
-//       this.$bind("profiles", all_entries);
 </script>
 
 <style scoped>
