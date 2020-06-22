@@ -416,7 +416,7 @@ export default {
 
 .custom-select {
   position: relative;
-  width: 17rem;
+  width: 19rem;
 }
 
 .custom-select select {
@@ -424,8 +424,7 @@ export default {
 }
 
 .select-selected {
-  background-color: #84d3ef;
-  opacity: 0.5;
+  background-color: rgb(188, 220, 241);
 }
 
 /* Style the arrow inside the select element: */
