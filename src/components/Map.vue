@@ -409,6 +409,7 @@ export default {
 
 .custom-select {
   position: relative;
+  width: 17rem;
 }
 
 .custom-select select {

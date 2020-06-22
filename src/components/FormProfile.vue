@@ -150,13 +150,14 @@
           variant="outline-primary"
           type="submit"
           v-on:submit.prevent="addProfile"
-          >Odeslat</b-button
+          >Nahrajte profil</b-button
         >
       </form>
-      <router-link to="/profiles">
-        <b-button variant="outline-primary">Zpět na profily</b-button>
-      </router-link>
+      <br />
     </div>
+    <router-link to="/profiles">
+      <b-button variant="outline-primary">Zpět na profily</b-button>
+    </router-link>
   </div>
 </template>
 
@@ -230,6 +231,7 @@ export default {
         this.region = "";
         this.contact = "";
       });
+      this.$router.push("profiles");
     },
     // checkForm: function(e) {
     //   if (this.firstName && this.lastName) {
