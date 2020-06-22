@@ -12,7 +12,7 @@
 
             <b-collapse id="nav-collapse" is-nav>
               <b-navbar-nav>
-                <!-- odkazy řazené vlevo -->
+                <!-- Left aligned nav items -->
               </b-navbar-nav>
 
               <!-- Right aligned nav items -->
@@ -46,8 +46,7 @@
     </div>
 
     <div class="footer">
-      <router-link class="footer-item" to="/">Domovská stránka</router-link>
-      <!-- <router-link to="/map">Mapa</router-link> -->
+      <router-link class="footer-item" to="/">Mapa</router-link>
       <router-link class="footer-item" to="/profiles"
         >Profily vědců</router-link
       >
@@ -56,10 +55,6 @@
       >
       <router-link class="footer-item" to="/about">O projektu</router-link>
       <p>Copyright ©2020 zavedou.cz</p>
-      <!-- <router-link to="/contact">Kontakt</router-link> -->
-      <!-- <img class="d-none d-md-block footer" src="assets/img/footer.png" />
-      <img class="d-none d-md-block d-lg-none footer" src="assets/img/footer_tablet.png" />
-      <img class="d-xs-block d-md-none footer" src="assets/img/footer_mobile2.png" />-->
     </div>
   </div>
 </template>

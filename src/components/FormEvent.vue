@@ -79,8 +79,8 @@
             required
           />
         </label>
-        <label for="orientation-number">
-          Číslo orientační:
+        <label for="orientation-number" class="optionalText">
+          Číslo orientační (volitelné):
           <input
             type="number"
             id="orientation-number"
@@ -89,8 +89,8 @@
           />
         </label>
         <br />
-        <label for="town-part">
-          Městská čtvrť:
+        <label for="town-part" class="optionalText">
+          Městská čtvrť (volitelné):
           <input
             type="text"
             id="town-part"
@@ -112,7 +112,7 @@
         <br />
         <label for="type-select">
           Vyberte kraj:
-          <select name="type" id="type-select" v-model="region">
+          <select name="type" id="type-select" v-model="region" required>
             <option>Celá ČR</option>
             <option>Hlavní město Praha</option>
             <option>Středočeský kraj</option>
@@ -183,8 +183,8 @@
           <input type="date" id="end" v-model="end" required />
         </label>
         <br />
-        <label for="note">
-          Poznámka
+        <label for="note" class="optionalText">
+          Poznámka (volitelné)
           <input
             type="text"
             id="note"
@@ -249,6 +249,7 @@ export default {
       new SMap.Geocoder(address, (response) => {
         let results = response.getResults()[0].results[0];
 
+        // Error message call
         if (!results) {
           this.showAddressLabel = true;
           return;
@@ -296,7 +297,7 @@ export default {
             docRef.update({ id: docRef.id });
           });
 
-        // Clearing the input value
+        // Clearing the input values
         this.name = "";
         this.type = "";
         this.description = "";
@@ -327,17 +328,17 @@ export default {
 input[type="text"],
 select,
 textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
-/* Style the submit button with a specific background color etc */
+/* Submit button */
 input[type="submit"] {
   background-color: #4caf50;
   color: white;
@@ -347,15 +348,17 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 input[type="submit"]:hover {
   background-color: #45a049;
 }
 
-/* Add a background color and some padding around the form */
 .form {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+}
+
+.optionalText {
+  color: grey;
 }
 </style>
