@@ -52,7 +52,17 @@
     </div>
     <div class="b-container fluid">
       <b-row>
-        <div class="profiles" v-for="profile in filtered_profiles" :key="profile.id">
+        <!-- <div
+          class="profiles"
+          
+        > -->
+        <b-col
+          sm="12"
+          md="12"
+          lg="6"
+          v-for="profile in filtered_profiles"
+          :key="profile.id"
+        >
           <Profile
             :id="profile.id"
             :firstName="profile.firstName"
@@ -66,13 +76,14 @@
             :contact="profile.contact"
             :image="image"
           />
-        </div>
+        </b-col>
+        <!-- </div> -->
       </b-row>
     </div>
 
     <div>
       <router-link to="/addprofile">
-        <button>Přidat profil</button>
+        <button>Odeslat</button>
       </router-link>
       <!-- <FormProfile /> -->
     </div>
@@ -87,7 +98,7 @@ import Profile from "./Profile.vue";
 export default {
   name: "Profiles",
   components: {
-    Profile
+    Profile,
     // FormProfile
   },
   data() {
@@ -106,19 +117,19 @@ export default {
       contact: "",
       image: "./assets/img/female_avatar.png",
       regionFilter: "Celá ČR",
-      subjectFilter: "Zobrazit vše"
+      subjectFilter: "Zobrazit vše",
     };
   },
   // Showing and ordering the profiles by lastName
   firestore: {
-    profiles: db.collection("profiles")
+    profiles: db.collection("profiles"),
     // .where("region", "==", "Brno") // Filtering
     // .orderBy("lastName") // Ordering of profiles on the page by lastName
     // .limit(3) // It will show only 5 profiles on the page
   },
   computed: {
     filtered_profiles() {
-      return this.profiles.filter(item => {
+      return this.profiles.filter((item) => {
         if (
           this.regionFilter !== "Celá ČR" &&
           this.subjectFilter !== "Zobrazit vše"
@@ -134,7 +145,7 @@ export default {
         }
         return true;
       });
-    }
+    },
   },
   methods: {
     // filtering() {
@@ -156,7 +167,7 @@ export default {
     //     console.log(doc.data());
     //   });
     // });
-  }
+  },
 };
 
 //  if (this.regionFilter !== "Celá ČR") {
@@ -169,4 +180,3 @@ export default {
 </script>
 
 <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
-

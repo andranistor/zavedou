@@ -20,12 +20,24 @@
     </label>-->
     <Button
       btnName="Vědecké instituce"
-      @vyber="selected1=!selected1"
-      :class="{selected:selected1}"
+      @vyber="selected1 = !selected1"
+      :class="{ selected: selected1 }"
     />
-    <Button btnName="Profily vědců" @vyber="selected2=!selected2" :class="{selected:selected2}" />
-    <Button btnName="Vědecké akce" @vyber="selected3=!selected3" :class="{selected:selected3}" />
-    <Button btnName="Vědecké parky" @vyber="selected4=!selected4" :class="{selected:selected4}" />
+    <Button
+      btnName="Profily vědců"
+      @vyber="selected2 = !selected2"
+      :class="{ selected: selected2 }"
+    />
+    <Button
+      btnName="Vědecké akce"
+      @vyber="selected3 = !selected3"
+      :class="{ selected: selected3 }"
+    />
+    <Button
+      btnName="Vědecké parky"
+      @vyber="selected4 = !selected4"
+      :class="{ selected: selected4 }"
+    />
     <label for="subject-filter">
       Vyberte obor:
       <select
@@ -57,7 +69,7 @@ import Button from "./Button.vue";
 export default {
   name: "Map",
   components: {
-    Button
+    Button,
   },
   data() {
     return {
@@ -76,14 +88,14 @@ export default {
       selected1: false,
       selected2: false,
       selected3: false,
-      selected4: false
+      selected4: false,
     };
   },
   firestore: {
     institutions: db.collection("institutions").limit(30),
     profiles: db.collection("profiles").limit(30),
     events: db.collection("events").limit(30),
-    parks: db.collection("parks").limit(30)
+    parks: db.collection("parks").limit(30),
   },
 
   mounted() {
@@ -129,12 +141,12 @@ export default {
           institutions: this.institutions,
           profiles: this.profiles,
           events: this.events,
-          parks: this.parks
+          parks: this.parks,
         };
       }
 
-      Object.keys(source).forEach(category => {
-        source[category] = source[category].filter(item => {
+      Object.keys(source).forEach((category) => {
+        source[category] = source[category].filter((item) => {
           if (this.branchFilter === "Zobrazit vše") {
             return true;
           } else if (this.branchFilter === "Matematika, fyzika a informatika") {
@@ -168,7 +180,7 @@ export default {
       const renderInstitutions = (institution, index) => {
         const znacka = JAK.mel("div");
         const obrazek = JAK.mel("img", {
-          src: "./assets/img/pin_institution.png"
+          src: "./assets/img/pin_institution.png",
         });
         obrazek.classList.add("custom_pin");
         znacka.appendChild(obrazek);
@@ -177,7 +189,7 @@ export default {
           SMap.Coords.fromWGS84(institution.coords.x, institution.coords.y),
           null,
           {
-            url: znacka
+            url: znacka,
           }
         );
         markers.push(marker);
@@ -196,7 +208,7 @@ export default {
       const renderProfiles = (profile, index) => {
         const znacka = JAK.mel("div");
         const obrazek = JAK.mel("img", {
-          src: "./assets/img/pin_profile.png"
+          src: "./assets/img/pin_profile.png",
         });
         obrazek.classList.add("custom_pin");
         znacka.appendChild(obrazek);
@@ -205,7 +217,7 @@ export default {
           SMap.Coords.fromWGS84(profile.coords.x, profile.coords.y),
           null,
           {
-            url: znacka
+            url: znacka,
           }
         );
 
@@ -226,7 +238,7 @@ export default {
       const renderEvents = (event, index) => {
         const znacka = JAK.mel("div");
         const obrazek = JAK.mel("img", {
-          src: "./assets/img/pin_event.png"
+          src: "./assets/img/pin_event.png",
         });
         obrazek.classList.add("custom_pin");
         znacka.appendChild(obrazek);
@@ -234,7 +246,7 @@ export default {
           SMap.Coords.fromWGS84(event.coords.x, event.coords.y),
           null,
           {
-            url: znacka
+            url: znacka,
           }
         );
         markers.push(marker);
@@ -253,7 +265,7 @@ export default {
       const renderParks = (park, index) => {
         const znacka = JAK.mel("div");
         const obrazek = JAK.mel("img", {
-          src: "./assets/img/pin_park.png"
+          src: "./assets/img/pin_park.png",
         });
         obrazek.classList.add("custom_pin");
         znacka.appendChild(obrazek);
@@ -261,7 +273,7 @@ export default {
           SMap.Coords.fromWGS84(park.coords.x, park.coords.y),
           null,
           {
-            url: znacka
+            url: znacka,
           }
         );
         markers.push(marker);
@@ -285,7 +297,7 @@ export default {
 
     pressButton() {
       this.selected = !this.selected;
-    }
+    },
   },
   watch: {
     filteredInstitutions() {
@@ -338,8 +350,8 @@ export default {
     },
     selected4() {
       this.filtered_items();
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -356,7 +368,7 @@ export default {
 }
 
 .selected {
-  background-color: blue;
+  background-image: url("../assets/img/button_off.png");
 }
 .custom_pin {
   width: 40px;
@@ -372,6 +384,7 @@ export default {
 
 .select-selected {
   background-color: #84d3ef;
+  opacity: 0.5;
 }
 
 /* Style the arrow inside the select element: */

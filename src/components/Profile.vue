@@ -1,75 +1,79 @@
 <template>
-  <b-col sm="12" md="12" lg="4">
-    <div role="tablist">
-      <b-card no-body class="mb-1">
-        <b-card-header header-tag="header" class="p-1" role="tab">
-          <b-button block v-b-toggle="'accordion-' + id" variant="info">
-            <div class="d-flex justify-content-around align-items-center">
-              <div class="picture">
-                <img class="avatar" :src="image" />
-              </div>
-              <div class="name_surname">{{ firstName }} {{ lastName }}</div>
-              <div class="subject">{{ subject }}</div>
+  <!-- <b-col sm="12" md="12" lg="4"> -->
+  <div role="tablist">
+    <b-card no-body class="mb-1">
+      <b-card-header header-tag="header" class="p-1" role="tab">
+        <b-button block v-b-toggle="'accordion-' + id" variant="info">
+          <div class="d-flex justify-content-around align-items-center">
+            <div class="picture">
+              <img class="avatar" :src="image" />
             </div>
-          </b-button>
-        </b-card-header>
-        <b-collapse :id="'accordion-' + id" accordion="my-accordion" role="tabpanel">
-          <b-card-body>
-            <table>
-              <tr>
-                <b-card-text>
-                  <td>
-                    <strong>Jsem z:</strong>
-                  </td>
-                  <td>{{ institution }}</td>
-                </b-card-text>
-              </tr>
-              <tr>
-                <b-card-text>
-                  <td>
-                    <strong>Obor:</strong>
-                  </td>
-                  <td>{{ field }}</td>
-                </b-card-text>
-              </tr>
-              <tr>
-                <b-card-text>
-                  <td>
-                    <strong>Nabízím:</strong>
-                  </td>
-                  <td>{{ offer }}</td>
-                </b-card-text>
-              </tr>
-              <tr>
-                <b-card-text>
-                  <td>
-                    <strong>Komu:</strong>
-                  </td>
-                  <td>{{ whom }}</td>
-                </b-card-text>
-              </tr>
-              <tr>
-                <b-card-text>
-                  <td>
-                    <strong>Pro oblast:</strong>
-                  </td>
-                  <td>{{ region }}</td>
-                </b-card-text>
-              </tr>
-              <tr>
-                <b-card-text>
-                  <td>
-                    <strong>Kontakt:</strong>
-                  </td>
-                  <td>{{ contact }}</td>
-                </b-card-text>
-              </tr>
-            </table>
-          </b-card-body>
-        </b-collapse>
-      </b-card>
-    </div>
-  </b-col>
+            <div class="name_surname">{{ firstName }} {{ lastName }}</div>
+            <div class="subject">{{ subject }}</div>
+          </div>
+        </b-button>
+      </b-card-header>
+      <b-collapse
+        :id="'accordion-' + id"
+        accordion="my-accordion"
+        role="tabpanel"
+      >
+        <b-card-body>
+          <table>
+            <tr>
+              <b-card-text>
+                <td>
+                  <strong>Jsem z:</strong>
+                </td>
+                <td>{{ institution }}</td>
+              </b-card-text>
+            </tr>
+            <tr>
+              <b-card-text>
+                <td>
+                  <strong>Obor:</strong>
+                </td>
+                <td>{{ field }}</td>
+              </b-card-text>
+            </tr>
+            <tr>
+              <b-card-text>
+                <td>
+                  <strong>Nabízím:</strong>
+                </td>
+                <td>{{ offer }}</td>
+              </b-card-text>
+            </tr>
+            <tr>
+              <b-card-text>
+                <td>
+                  <strong>Komu:</strong>
+                </td>
+                <td>{{ whom }}</td>
+              </b-card-text>
+            </tr>
+            <tr>
+              <b-card-text>
+                <td>
+                  <strong>Pro oblast:</strong>
+                </td>
+                <td>{{ region }}</td>
+              </b-card-text>
+            </tr>
+            <tr>
+              <b-card-text>
+                <td>
+                  <strong>Kontakt:</strong>
+                </td>
+                <td>{{ contact }}</td>
+              </b-card-text>
+            </tr>
+          </table>
+        </b-card-body>
+      </b-collapse>
+    </b-card>
+  </div>
+  <!-- </b-col> -->
 </template>
 
 <script>
@@ -86,8 +90,8 @@ export default {
     "whom",
     "region",
     "contact",
-    "image"
-  ]
+    "image",
+  ],
 };
 </script>
 
