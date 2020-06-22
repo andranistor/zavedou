@@ -92,10 +92,10 @@ export default {
     };
   },
   firestore: {
-    institutions: db.collection("institutions").limit(30),
-    profiles: db.collection("profiles").limit(30),
-    events: db.collection("events").limit(30),
-    parks: db.collection("parks").limit(30),
+    institutions: db.collection("institutions").limit(10),
+    profiles: db.collection("profiles").limit(10),
+    events: db.collection("events").limit(10),
+    parks: db.collection("parks").limit(10),
   },
 
   mounted() {
@@ -176,104 +176,137 @@ export default {
       if (!source) return;
       const markers = [];
       const cards = [];
-      //card for institutions
+
+      //Markers and cards for institutions
       const renderInstitutions = (institution, index) => {
-        const znacka = JAK.mel("div");
-        const obrazek = JAK.mel("img", {
+        const pin = JAK.mel("div");
+        const pinImg = JAK.mel("img", {
           src: "./assets/img/pin_institution.png",
         });
-        obrazek.classList.add("custom_pin");
-        znacka.appendChild(obrazek);
+        pinImg.classList.add("custom_pin");
+        pin.appendChild(pinImg);
 
         let marker = new SMap.Marker(
           SMap.Coords.fromWGS84(institution.coords.x, institution.coords.y),
           null,
           {
-            url: znacka,
+            url: pin,
           }
         );
         markers.push(marker);
 
         let card = new SMap.Card();
+        // Card styles and content
+        card.setSize(450, 300);
+        card.getHeader().style.backgroundColor = "#ccc";
+        card.getHeader().style.width = "100%";
+        card.getHeader().style.height = "100%";
+        card.getHeader().style.padding = "2";
+        card.getBody().style.padding = "5px 0px";
+        card.getFooter().style.padding = "0";
+
         card.getHeader().innerHTML = `
-             <strong>${institution.scientificInstitution}</strong> <br />
-         ${institution.address}<br />
-             ${institution.website}<br />
+        <strong>${institution.scientificInstitution}</strong>
             `;
-        card.getBody().innerHTML = `${institution.funFact}`;
+        card.getBody().innerHTML = `
+        ${institution.address}<br /> 
+        ${institution.funFact}
+        `;
+        card.getFooter().innerHTML = `
+        <a href="${institution.website}">Odkaz na web</a>
+        `;
+
         cards.push(card);
       };
-      //card for profiles
 
+      //Markers and cards for Profiles
       const renderProfiles = (profile, index) => {
-        const znacka = JAK.mel("div");
-        const obrazek = JAK.mel("img", {
+        const pin = JAK.mel("div");
+        const pinImg = JAK.mel("img", {
           src: "./assets/img/pin_profile.png",
         });
-        obrazek.classList.add("custom_pin");
-        znacka.appendChild(obrazek);
+        pinImg.classList.add("custom_pin");
+        pin.appendChild(pinImg);
 
         let marker = new SMap.Marker(
           SMap.Coords.fromWGS84(profile.coords.x, profile.coords.y),
           null,
           {
-            url: znacka,
+            url: pin,
           }
         );
 
         markers.push(marker);
 
         let card = new SMap.Card();
+        // Card styles and content
+        card.setSize(450, 300);
+        card.getHeader().style.backgroundColor = "#ccc";
+        card.getHeader().style.width = "100%";
+        card.getHeader().style.height = "100%";
+        card.getHeader().style.padding = "2";
+        card.getBody().style.padding = "5px 0px";
+        card.getFooter().style.padding = "0";
+
         card.getHeader().innerHTML = `
              <strong>${profile.firstName} ${profile.lastName}</strong> <br />
-         ${profile.field}<br />
-             ${profile.contact}<br />
             `;
-        card.getBody().innerHTML = `${profile.offer}`;
+        card.getBody().innerHTML = `Obor: ${profile.field}<br />
+            ${profile.offer}`;
+        card.getFooter().innerHTML = `Kontakt: ${profile.contact}`;
         cards.push(card);
       };
 
-      //card for events
-
+      //Marker and cards for Events
       const renderEvents = (event, index) => {
-        const znacka = JAK.mel("div");
-        const obrazek = JAK.mel("img", {
+        const pin = JAK.mel("div");
+        const pinImg = JAK.mel("img", {
           src: "./assets/img/pin_event.png",
         });
-        obrazek.classList.add("custom_pin");
-        znacka.appendChild(obrazek);
+        pinImg.classList.add("custom_pin");
+        pin.appendChild(pinImg);
         let marker = new SMap.Marker(
           SMap.Coords.fromWGS84(event.coords.x, event.coords.y),
           null,
           {
-            url: znacka,
+            url: pin,
           }
         );
         markers.push(marker);
 
         let card = new SMap.Card();
+
+        // Card styles and content
+        card.setSize(450, 300);
+        card.getHeader().style.backgroundColor = "#ccc";
+        card.getHeader().style.width = "100%";
+        card.getHeader().style.height = "100%";
+        card.getHeader().style.padding = "2";
+        card.getBody().style.padding = "5px 0px";
+        card.getFooter().style.padding = "0";
+
         card.getHeader().innerHTML = `
              <strong>${event.name}</strong> <br />
-             <a href="${event.link}">Odkaz na akci</a><br />
             `;
         card.getBody().innerHTML = `${event.description}`;
+        card.getFooter().innerHTML = `<a href="${event.link}">Odkaz na akci</a>`;
         cards.push(card);
       };
 
       //card for parks
 
       const renderParks = (park, index) => {
-        const znacka = JAK.mel("div");
-        const obrazek = JAK.mel("img", {
+        const pin = JAK.mel("div");
+        const pinImg = JAK.mel("img", {
           src: "./assets/img/pin_park.png",
         });
-        obrazek.classList.add("custom_pin");
-        znacka.appendChild(obrazek);
+        pinImg.classList.add("custom_pin");
+        pin.appendChild(pinImg);
         let marker = new SMap.Marker(
           SMap.Coords.fromWGS84(park.coords.x, park.coords.y),
           null,
           {
-            url: znacka,
+            url: pin,
           }
         );
         markers.push(marker);
