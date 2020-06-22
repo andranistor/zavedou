@@ -1,44 +1,48 @@
 <template>
   <div>
-    <!-- <label for="subject-filter">
-      Vyberte školní předmět:
-      <select name="type" id="subject-filter" v-model="subjectFilter">
-        <option>Zobrazit vše</option>
-        <option>Cizí jazyky</option>
-        <option>Čeština</option>
-        <option>Dějepis</option>
-        <option>Fyzika</option>
-        <option>Chemie</option>
-        <option>Matematika</option>
-        <option>Občanská výchova</option>
-        <option>Přirodopis/biologie</option>
-        <option>Informatika</option>
-        <option>Hudební a výtvarná výchova</option>
-        <option>Zeměpis</option>
-      </select>
-    </label>-->
-    <Button
-      btnName="Vědecké instituce"
-      @vyber="selected1 = !selected1"
-      :class="{ selected: selected1 }"
-    />
-    <Button
-      btnName="Profily vědců"
-      @vyber="selected2 = !selected2"
-      :class="{ selected: selected2 }"
-    />
-    <Button
-      btnName="Vědecké akce"
-      @vyber="selected3 = !selected3"
-      :class="{ selected: selected3 }"
-    />
-    <Button
-      btnName="Vědecké parky"
-      @vyber="selected4 = !selected4"
-      :class="{ selected: selected4 }"
-    />
-    <label for="subject-filter">
-      Vyberte obor:
+    <div class="intro">
+      <p>
+        Seznamte se s českými vědeckými institucemi a science parky! Podívejte
+        se, kdy a kde se konají vědecké akce pro veřejnost, a prohlédněte si
+        profily vědců, které si může škola pozvat k sobě na hodinu! Česká věda
+        vám nikdy nebyla blíž!
+      </p>
+    </div>
+    <div class="b-container-fluid">
+      <b-row>
+        <b-col>
+          <Button
+            btnName="Vědecké instituce"
+            @vyber="selected1 = !selected1"
+            :class="{ selected: selected1 }"
+          />
+        </b-col>
+        <b-col>
+          <Button
+            btnName="Profily vědců"
+            @vyber="selected2 = !selected2"
+            :class="{ selected: selected2 }"
+          />
+        </b-col>
+        <b-col>
+          <Button
+            btnName="Vědecké akce"
+            @vyber="selected3 = !selected3"
+            :class="{ selected: selected3 }"
+          />
+        </b-col>
+        <b-col>
+          <Button
+            btnName="Vědecké parky"
+            @vyber="selected4 = !selected4"
+            :class="{ selected: selected4 }"
+          />
+        </b-col>
+      </b-row>
+    </div>
+
+    <label class="select" for="subject-filter">
+      Vyberte obor: <br />
       <select
         class="custom-select select-selected"
         name="type"
@@ -407,11 +411,48 @@ export default {
   width: 30px;
 }
 
+button {
+  border: none;
+  color: white;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #ff3b41;
+  border-radius: 20px;
+  width: 8rem;
+}
+button:focus {
+  outline: none;
+}
 .selected {
-  background-image: url("../assets/img/button_off.png");
+  background-color: #84b71c;
 }
 .custom_pin {
   width: 40px;
+}
+
+.categories {
+  display: flex;
+  height: 5rem;
+  max-width: 100%;
+}
+
+.categories p {
+  padding: 1rem;
+}
+
+.intro {
+  font-family: Raleway;
+  font-size: 1.5rem;
+  padding: 2rem 0;
+  height: 10rem;
+}
+.select {
+  margin-top: 1.5rem;
 }
 
 .custom-select {
@@ -455,7 +496,6 @@ export default {
   cursor: pointer;
 }
 
-/* Style items (options): */
 .select-items {
   position: absolute;
   background-color: white;
@@ -465,7 +505,6 @@ export default {
   z-index: 99;
 }
 
-/* Hide the items when the select box is closed: */
 .select-hide {
   display: none;
 }
@@ -473,5 +512,39 @@ export default {
 .select-items div:hover,
 .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767.98px) {
+  .custom-select.select-selected {
+    width: 70vw;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+    height: 3rem;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #ff3b41;
+    border-radius: 20px;
+    width: 5rem;
+  }
+}
+
+@media (max-width: 991.98px) and (min-width: 767.99px) {
+  .custom-select.select-selected {
+    width: 70vw;
+  }
+}
+
+@media (min-width: 991.99px) {
+  .custom-select.select-selected {
+    width: 20vw;
+    margin: 0 auto;
+  }
 }
 </style>

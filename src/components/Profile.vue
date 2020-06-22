@@ -108,7 +108,7 @@ export default {
 }
 
 td:first-child {
-  width: 30rem;
+  width: 5rem;
 }
 td:nth-child(2) {
   padding-right: 1rem;

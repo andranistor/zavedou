@@ -187,7 +187,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 h1 {
   padding: 2rem 0;
 }

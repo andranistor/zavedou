@@ -1,5 +1,8 @@
 <template>
-  <button @click="pressButton" id="button">{{ btnName }}</button>
+  <button class="button" @click="pressButton">
+    {{ btnName }}
+  </button>
+  <!-- <img :src="image" @click="pressButton" /> -->
 </template>
 <script>
 export default {
@@ -18,4 +21,4 @@ export default {
   },
 };
 </script>
-<style></style>
+<style scoped></style>
