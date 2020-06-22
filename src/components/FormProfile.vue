@@ -24,19 +24,6 @@
           />
         </label>
         <br />
-        <!-- <label for="branch-select">
-        Vyberte obor:
-        <select name="branch" id="branch-select" v-model="branch">
-          <option>Matematika, fyzika a informatika</option>
-          <option>Chemie</option>
-          <option>Technické vědy, inženýrství</option>
-          <option>Vědy o Zemi</option>
-          <option>Biologie a medicína</option>
-          <option>Environmentální a zemědělské vědy</option>
-          <option>Společenské a humanitní vědy</option>
-        </select>
-      </label>
-        <br />-->
         <label for="field">
           Specifikujte váš obor:
           <input
@@ -140,12 +127,6 @@
           />
         </label>
         <br />
-
-        <!-- <p v-if="errors.length">Please correct the following error(s):</p>
-      <ul>
-        <li v-for="error in errors">{{ error }}</li>
-        </ul>-->
-
         <b-button
           variant="success"
           type="submit"
@@ -195,6 +176,7 @@ export default {
       new SMap.Geocoder(address, (response) => {
         let results = response.getResults()[0].results[0];
 
+        // Error message call
         if (!results) {
           this.showAddressLabel = true;
           return;
@@ -228,7 +210,7 @@ export default {
             docRef.update({ id: docRef.id });
           });
 
-        // Clearing the input value
+        // Clearing the input values
         this.firstName = "";
         this.lastName = "";
         this.field = "";
@@ -251,17 +233,17 @@ export default {
 input[type="text"],
 select,
 textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
-/* Style the submit button with a specific background color etc */
+/* Submit button */
 input[type="submit"] {
   background-color: #4caf50;
   color: white;
@@ -271,12 +253,10 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 input[type="submit"]:hover {
   background-color: #45a049;
 }
 
-/* Add a background color and some padding around the form */
 .form {
   border-radius: 5px;
   background-color: #f2f2f2;
