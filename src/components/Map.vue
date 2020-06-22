@@ -2,10 +2,12 @@
   <div>
     <div class="intro">
       <p>
-        Seznamte se s českými vědeckými institucemi a science parky! Podívejte
+        Seznamte se s českými vědeckými institucemi a science parky. Podívejte
         se, kdy a kde se konají vědecké akce pro veřejnost, a prohlédněte si
-        profily vědců, které si může škola pozvat k sobě na hodinu! Česká věda
-        vám nikdy nebyla blíž!
+        profily vědců, které si může škola pozvat k sobě na hodinu. Česká věda
+        vám nikdy nebyla blíž! <br />
+        <br />
+        Filtrujte pomocí tlačítek:
       </p>
     </div>
     <div class="b-container-fluid">
@@ -200,7 +202,7 @@ export default {
 
         let card = new SMap.Card();
         // Card styles and content
-        card.setSize(450, 300);
+        card.setSize(350, 250);
         card.getHeader().style.backgroundColor = "#6687C4";
         card.getHeader().style.width = "100%";
         card.getHeader().style.height = "100%";
@@ -243,7 +245,7 @@ export default {
 
         let card = new SMap.Card();
         // Card styles and content
-        card.setSize(450, 300);
+        card.setSize(350, 250);
         card.getHeader().style.backgroundColor = "#AF519A";
         card.getHeader().style.width = "100%";
         card.getHeader().style.height = "100%";
@@ -280,7 +282,7 @@ export default {
         let card = new SMap.Card();
 
         // Card styles and content
-        card.setSize(450, 300);
+        card.setSize(350, 250);
         card.getHeader().style.backgroundColor = "#7DBA27";
         card.getHeader().style.width = "100%";
         card.getHeader().style.height = "100%";
@@ -316,7 +318,7 @@ export default {
         let card = new SMap.Card();
 
         // Card styles and content
-        card.setSize(450, 300);
+        card.setSize(350, 250);
         card.getHeader().style.backgroundColor = "#FBBB19";
         card.getHeader().style.width = "100%";
         card.getHeader().style.height = "100%";
@@ -447,9 +449,9 @@ button:focus {
 
 .intro {
   font-family: Raleway;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 2rem 0;
-  height: 10rem;
+  height: 10%;
 }
 .select {
   margin-top: 1.5rem;
