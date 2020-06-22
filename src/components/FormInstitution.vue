@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     addData() {
-      // Insert a json and uncomment it
+      // Data of institution information in JSON format for upload into the database
       let institution = [
         {
           x: 14.4033295974469,
@@ -42,7 +42,7 @@ export default {
             "Agentura vojenského zdravotnictví; Vojenský veterinární ústav Hlučín, Česká republika - Ministerstvo obrany",
           socialAndArts: "",
           website:
-            "http://www.zdravotnictvi.army.cz/vojensky-veterinarni-ustav-hlucin"
+            "http://www.zdravotnictvi.army.cz/vojensky-veterinarni-ustav-hlucin",
         },
         {
           x: 14.3907025,
@@ -67,7 +67,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "CESNET, zájmové sdružení právnických osob",
           socialAndArts: "",
-          website: "https://www.cesnet.cz/"
+          website: "https://www.cesnet.cz/",
         },
         {
           x: 14.4480965630816,
@@ -93,7 +93,7 @@ export default {
           scientificInstitution:
             "Centrum pro studium vysokého školství, v. v. i.",
           socialAndArts: "1",
-          website: "https://www.csvs.cz/"
+          website: "https://www.csvs.cz/",
         },
         {
           x: 13.3052635500565,
@@ -118,7 +118,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "COMTES FHT a.s",
           socialAndArts: "",
-          website: "https://www.comtesfht.cz/"
+          website: "https://www.comtesfht.cz/",
         },
         {
           x: 16.9665033889167,
@@ -143,7 +143,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Agritec Plant Research s.r.o.",
           socialAndArts: "",
-          website: "http://www.agritec.cz/cs"
+          website: "http://www.agritec.cz/cs",
         },
         {
           x: 17.3646273857415,
@@ -168,7 +168,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Agrotest fyto, s.r.o.",
           socialAndArts: "",
-          website: "https://www.vukrom.cz/cz/agrotest-fyto-s-r-o.html"
+          website: "https://www.vukrom.cz/cz/agrotest-fyto-s-r-o.html",
         },
         {
           x: 17.0088280019717,
@@ -193,7 +193,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Agrovýzkum Rapotín s.r.o.",
           socialAndArts: "",
-          website: "https://www.vuchs.cz/main/"
+          website: "https://www.vuchs.cz/main/",
         },
         {
           x: 14.402310116362,
@@ -218,7 +218,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Akademie múzických umění v Praze",
           socialAndArts: "1",
-          website: "https://www.amu.cz/cs/"
+          website: "https://www.amu.cz/cs/",
         },
         {
           x: 14.4240051583492,
@@ -243,7 +243,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Akademie výtvarných umění v Praze",
           socialAndArts: "1",
-          website: "https://www.avu.cz/"
+          website: "https://www.avu.cz/",
         },
         {
           x: 15.3686033848061,
@@ -268,7 +268,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "ALKA Wildlife, o.p.s.",
           socialAndArts: "",
-          website: "https://www.alkawildlife.eu/"
+          website: "https://www.alkawildlife.eu/",
         },
         {
           x: 14.4090114619364,
@@ -293,7 +293,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Anglo-americká vysoká škola, z.ú.",
           socialAndArts: "1",
-          website: "https://www.aauni.edu/"
+          website: "https://www.aauni.edu/",
         },
         {
           x: 16.6031308187691,
@@ -318,7 +318,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "ARCHAIA Brno z. ú.",
           socialAndArts: "1",
-          website: "https://www.archaiabrno.org/home_cs/"
+          website: "https://www.archaiabrno.org/home_cs/",
         },
         {
           x: 17.262670610653,
@@ -344,7 +344,7 @@ export default {
           scientificInstitution:
             "Archeologické centrum Olomouc, příspěvková organizace",
           socialAndArts: "1",
-          website: "http://ac-olomouc.cz/"
+          website: "http://ac-olomouc.cz/",
         },
         {
           x: 16.6208888717912,
@@ -369,7 +369,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Archeologický ústav AV ČR, Brno, v. v. i.",
           socialAndArts: "1",
-          website: "https://www.arub.cas.cz/"
+          website: "https://www.arub.cas.cz/",
         },
         {
           x: 14.4092109573078,
@@ -394,7 +394,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Archeologický ústav AV ČR, Praha, v. v. i.",
           socialAndArts: "1",
-          website: "https://www.arup.cas.cz/"
+          website: "https://www.arup.cas.cz/",
         },
         {
           x: 14.7800092049384,
@@ -419,7 +419,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Astronomický ústav AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "http://www.asu.cas.cz/"
+          website: "http://www.asu.cas.cz/",
         },
         {
           x: 16.5799882746439,
@@ -444,7 +444,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Biofyzikální ústav AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "https://www.ibp.cz/cs/"
+          website: "https://www.ibp.cz/cs/",
         },
         {
           x: 14.4464927434532,
@@ -470,7 +470,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Biologické centrum AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "https://www.bc.cas.cz/"
+          website: "https://www.bc.cas.cz/",
         },
         {
           x: 14.4874594444,
@@ -495,7 +495,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Biotechnologický ústav AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "http://www.ibt.cas.cz/"
+          website: "http://www.ibt.cas.cz/",
         },
         {
           x: 14.5574722249789,
@@ -520,7 +520,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Botanický ústav AV ČR, Praha, v. v. i.",
           socialAndArts: "",
-          website: "https://www.ibot.cas.cz/cs/"
+          website: "https://www.ibot.cas.cz/cs/",
         },
         {
           x: 14.3937543165917,
@@ -546,7 +546,7 @@ export default {
           scientificInstitution:
             "CASRI - Vědecké a servisní pracoviště tělesné výchovy a sportu",
           socialAndArts: "",
-          website: "http://casri.cz/"
+          website: "http://casri.cz/",
         },
         {
           x: 14.4678937408387,
@@ -572,7 +572,7 @@ export default {
           scientificInstitution:
             "CENIA, česká informační agentura životního prostředí",
           socialAndArts: "",
-          website: "https://www.cenia.cz/"
+          website: "https://www.cenia.cz/",
         },
         {
           x: 16.660974878552,
@@ -597,7 +597,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Centrum dopravního výzkumu, v. v. i.",
           socialAndArts: "",
-          website: "https://www.cdv.cz/"
+          website: "https://www.cdv.cz/",
         },
         {
           x: 17.1427226416292,
@@ -623,7 +623,7 @@ export default {
           scientificInstitution: "Centrum hydraulického výzkumu, spol. s r. o.",
           socialAndArts: "",
           website:
-            "http://www.sigmagroup.cz/skupina-sigma/struktura-skupiny/tuzemske/centrum-hydraulickeho-vyzkumu-spol-s"
+            "http://www.sigmagroup.cz/skupina-sigma/struktura-skupiny/tuzemske/centrum-hydraulickeho-vyzkumu-spol-s",
         },
         {
           x: 16.5987768146624,
@@ -649,7 +649,7 @@ export default {
           scientificInstitution:
             "Centrum kardiovaskulární a transplantační chirurgie Brno",
           socialAndArts: "",
-          website: "https://www.cktch.cz/"
+          website: "https://www.cktch.cz/",
         },
         {
           x: 15.710973677356,
@@ -675,7 +675,7 @@ export default {
           scientificInstitution: "Centrum organické chemie s.r.o.",
           socialAndArts: "",
           website:
-            "https://www.agrofert.cz/nase-spolecnosti/190/centrum-organicke-chemie-s.r.o."
+            "https://www.agrofert.cz/nase-spolecnosti/190/centrum-organicke-chemie-s.r.o.",
         },
         {
           x: 14.5229510496479,
@@ -700,7 +700,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Centrum pro bezpečný stát z.s.",
           socialAndArts: "",
-          website: "https://www.ochranaobyvatel.cz/"
+          website: "https://www.ochranaobyvatel.cz/",
         },
         {
           x: 14.4222662542906,
@@ -725,7 +725,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "CEVRO Institut, z.ú.",
           socialAndArts: "1",
-          website: "https://www.cevroinstitut.cz/"
+          website: "https://www.cevroinstitut.cz/",
         },
         {
           x: 14.3589307067171,
@@ -750,7 +750,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Centrum výzkumu Řež s.r.o.",
           socialAndArts: "",
-          website: "http://cvrez.cz/"
+          website: "http://cvrez.cz/",
         },
         {
           x: 14.4097856434597,
@@ -775,7 +775,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Česká geologická služba",
           socialAndArts: "",
-          website: "http://www.geology.cz/extranet"
+          website: "http://www.geology.cz/extranet",
         },
         {
           x: 14.4056720855433,
@@ -800,7 +800,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Česká společnost ornitologická",
           socialAndArts: "",
-          website: "https://www.birdlife.cz/"
+          website: "https://www.birdlife.cz/",
         },
         {
           x: 14.373818005733,
@@ -825,7 +825,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Česká zemědělská univerzita v Praze",
           socialAndArts: "",
-          website: "https://www.czu.cz/cs/"
+          website: "https://www.czu.cz/cs/",
         },
         {
           x: 14.3886591667,
@@ -850,7 +850,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "ČVUT - Fakulta stavební ",
           socialAndArts: "",
-          website: "https://web.fsv.cvut.cz/"
+          website: "https://web.fsv.cvut.cz/",
         },
         {
           x: 14.3946033333,
@@ -875,7 +875,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "České vysoké učení technické v Praze",
           socialAndArts: "",
-          website: "https://www.cvut.cz/"
+          website: "https://www.cvut.cz/",
         },
         {
           x: 14.391677476591,
@@ -900,7 +900,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "ČVUT - Fakulta strojní ",
           socialAndArts: "",
-          website: "https://www.fs.cvut.cz/"
+          website: "https://www.fs.cvut.cz/",
         },
         {
           x: 14.3923092208244,
@@ -925,7 +925,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "ČVUT - Fakulta elektrotechnická ",
           socialAndArts: "",
-          website: "http://www.fel.cvut.cz/cz/"
+          website: "http://www.fel.cvut.cz/cz/",
         },
         {
           x: 14.4166466667,
@@ -950,7 +950,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "ČVUT - Fakulta dopravní ",
           socialAndArts: "",
-          website: "http://www.fd.cvut.cz"
+          website: "http://www.fd.cvut.cz",
         },
         {
           x: 14.4163027721296,
@@ -976,7 +976,7 @@ export default {
           scientificInstitution:
             "ČVUT - Fakulta jaderná a fyzikálně inženýrská ",
           socialAndArts: "",
-          website: "https://www.fjfi.cvut.cz/cz/"
+          website: "https://www.fjfi.cvut.cz/cz/",
         },
         {
           x: 14.3896427778,
@@ -1001,7 +1001,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "ČVUT - Fakulta architektury ",
           socialAndArts: "",
-          website: "https://www.fa.cvut.cz/cs"
+          website: "https://www.fa.cvut.cz/cs",
         },
         {
           x: 14.1041863491747,
@@ -1026,7 +1026,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "ČVUT - Fakulta biomedicínského inženýrství ",
           socialAndArts: "",
-          website: "http://www.fbmi.cvut.cz"
+          website: "http://www.fbmi.cvut.cz",
         },
         {
           x: 16.62267548645,
@@ -1051,7 +1051,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Český metrologický institut",
           socialAndArts: "",
-          website: "https://www.cmi.cz/"
+          website: "https://www.cmi.cz/",
         },
         {
           x: 14.4153184465006,
@@ -1076,7 +1076,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Endokrinologický ústav",
           socialAndArts: "",
-          website: "http://www.endo.cz/"
+          website: "http://www.endo.cz/",
         },
         {
           x: 14.4335778626383,
@@ -1101,7 +1101,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Etnologický ústav AV ČR, v. v. i.",
           socialAndArts: "1",
-          website: "http://www.eu.avcr.cz/cs/"
+          website: "http://www.eu.avcr.cz/cs/",
         },
         {
           x: 14.4050124514943,
@@ -1126,7 +1126,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Český hydrometeorologický ústav",
           socialAndArts: "",
-          website: "http://portal.chmi.cz/"
+          website: "http://portal.chmi.cz/",
         },
         {
           x: 14.7742477887719,
@@ -1151,7 +1151,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "ENKI, o.p.s.",
           socialAndArts: "",
-          website: "https://www.enki.cz/"
+          website: "https://www.enki.cz/",
         },
         {
           x: 16.5765796358142,
@@ -1176,7 +1176,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Fakultní nemocnice Brno",
           socialAndArts: "",
-          website: "https://www.fnbrno.cz/"
+          website: "https://www.fnbrno.cz/",
         },
         {
           x: 18.1610729875431,
@@ -1201,7 +1201,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Fakultní nemocnice Ostrava",
           socialAndArts: "",
-          website: "https://www.fno.cz/"
+          website: "https://www.fno.cz/",
         },
         {
           x: 14.4754253454984,
@@ -1226,7 +1226,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Fakultní nemocnice Královské Vinohrady",
           socialAndArts: "",
-          website: "https://www.fnkv.cz/"
+          website: "https://www.fnkv.cz/",
         },
         {
           x: 15.8269366733377,
@@ -1251,7 +1251,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Fakultní nemocnice Hradec Králové",
           socialAndArts: "",
-          website: "https://www.fnhk.cz/"
+          website: "https://www.fnhk.cz/",
         },
         {
           x: 16.5987768146624,
@@ -1276,7 +1276,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Fakultní nemocnice u sv. Anny v Brně",
           socialAndArts: "",
-          website: "https://iweb3.fnusa.cz/"
+          website: "https://iweb3.fnusa.cz/",
         },
         {
           x: 13.3758255954707,
@@ -1301,7 +1301,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Fakultní nemocnice Plzeň",
           socialAndArts: "",
-          website: "https://www.fnplzen.cz/"
+          website: "https://www.fnplzen.cz/",
         },
         {
           x: 14.3405435603097,
@@ -1326,7 +1326,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Fakultní nemocnice v Motole",
           socialAndArts: "",
-          website: "https://www.fnmotol.cz/"
+          website: "https://www.fnmotol.cz/",
         },
         {
           x: 17.2382151572012,
@@ -1351,7 +1351,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Fakultní nemocnice Olomouc",
           socialAndArts: "",
-          website: "https://www.fnol.cz/"
+          website: "https://www.fnol.cz/",
         },
         {
           x: 14.4187375,
@@ -1376,7 +1376,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Filosofický ústav AV ČR, v. v. i.",
           socialAndArts: "1",
-          website: "http://flu.cas.cz/"
+          website: "http://flu.cas.cz/",
         },
         {
           x: 14.3819806228348,
@@ -1401,7 +1401,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Geologický ústav AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "http://www.gli.cas.cz/cs"
+          website: "http://www.gli.cas.cz/cs",
         },
         {
           x: 14.505281699967,
@@ -1426,7 +1426,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Historický ústav AV ČR, v. v. i.",
           socialAndArts: "1",
-          website: "http://www.hiu.cas.cz/"
+          website: "http://www.hiu.cas.cz/",
         },
         {
           x: 14.4689523247055,
@@ -1451,7 +1451,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Fyzikální ústav AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "https://www.fzu.cz/"
+          website: "https://www.fzu.cz/",
         },
         {
           x: 14.4658301972067,
@@ -1476,7 +1476,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Fyziologický ústav AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "https://www.fgu.cas.cz/"
+          website: "https://www.fgu.cas.cz/",
         },
         {
           x: 14.4767023529281,
@@ -1501,7 +1501,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Geofyzikální ústav AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "https://www.ig.cas.cz/"
+          website: "https://www.ig.cas.cz/",
         },
         {
           x: 17.9736564478558,
@@ -1527,7 +1527,7 @@ export default {
           scientificInstitution:
             "Hvězdárna Valašské Meziříčí, příspěvková organizace",
           socialAndArts: "",
-          website: "https://www.astrovm.cz/"
+          website: "https://www.astrovm.cz/",
         },
         {
           x: 13.5256959120978,
@@ -1552,7 +1552,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Chmelařský institut s. r. o.",
           socialAndArts: "",
-          website: "http://www.chizatec.cz/"
+          website: "http://www.chizatec.cz/",
         },
         {
           x: 14.4315193941395,
@@ -1577,7 +1577,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "INESAN, s.r.o.",
           socialAndArts: "1",
-          website: "http://www.inesan.eu/"
+          website: "http://www.inesan.eu/",
         },
         {
           x: 14.4630069389627,
@@ -1602,7 +1602,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Institut klinické a experimentální medicíny",
           socialAndArts: "",
-          website: "https://ikem.cz/"
+          website: "https://ikem.cz/",
         },
         {
           x: 14.6556442086495,
@@ -1627,7 +1627,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Husitské muzeum v Táboře",
           socialAndArts: "1",
-          website: "http://www.husitskemuzeum.cz/"
+          website: "http://www.husitskemuzeum.cz/",
         },
         {
           x: 14.4721253990761,
@@ -1653,7 +1653,7 @@ export default {
           scientificInstitution:
             "Institut postgraduálního vzdělávání ve zdravotnictví",
           socialAndArts: "",
-          website: "https://www.ipvz.cz/"
+          website: "https://www.ipvz.cz/",
         },
         {
           x: 14.4247723719792,
@@ -1678,7 +1678,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Institut umění ‐ Divadelní ústav",
           socialAndArts: "1",
-          website: "https://www.idu.cz/cs"
+          website: "https://www.idu.cz/cs",
         },
         {
           x: 14.4501887501743,
@@ -1703,7 +1703,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Institut pro studium literatury, o. p. s.",
           socialAndArts: "1",
-          website: "http://www.ipsl.cz/"
+          website: "http://www.ipsl.cz/",
         },
         {
           x: 14.4044437559947,
@@ -1729,7 +1729,7 @@ export default {
           scientificInstitution:
             "Institut pro kriminologii a sociální prevenci",
           socialAndArts: "1",
-          website: "http://www.ok.cz/iksp/"
+          website: "http://www.ok.cz/iksp/",
         },
         {
           x: 14.4483828862382,
@@ -1754,7 +1754,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Jihočeská univerzita v Českých Budějovicích",
           socialAndArts: "1",
-          website: "https://www.jcu.cz/"
+          website: "https://www.jcu.cz/",
         },
         {
           x: 16.5366459957914,
@@ -1779,7 +1779,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Intemac Solutions, s.r.o.",
           socialAndArts: "",
-          website: "https://www.intemac.cz/cz/"
+          website: "https://www.intemac.cz/cz/",
         },
         {
           x: 16.6103499559791,
@@ -1804,7 +1804,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Janáčkova akademie múzických umění v Brně",
           socialAndArts: "1",
-          website: "https://www.jamu.cz/"
+          website: "https://www.jamu.cz/",
         },
         {
           x: 14.4142314198145,
@@ -1829,7 +1829,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Knihovna AV ČR, v. v. i.",
           socialAndArts: "1",
-          website: "https://www.lib.cas.cz/"
+          website: "https://www.lib.cas.cz/",
         },
         {
           x: 14.4175468526696,
@@ -1854,7 +1854,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Kriminalistický ústav",
           socialAndArts: "1",
-          website: "https://www.policie.cz/kriminalisticky-ustav-praha.aspx"
+          website: "https://www.policie.cz/kriminalisticky-ustav-praha.aspx",
         },
         {
           x: 15.0634410277233,
@@ -1879,7 +1879,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Krajská nemocnice Liberec, a.s.",
           socialAndArts: "",
-          website: "https://www.nemlib.cz/"
+          website: "https://www.nemlib.cz/",
         },
         {
           x: 16.605227032335,
@@ -1904,7 +1904,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Masarykova univerzita",
           socialAndArts: "1",
-          website: "https://www.muni.cz/"
+          website: "https://www.muni.cz/",
         },
         {
           x: 16.5701253914244,
@@ -1929,7 +1929,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Masarykova univerzita - Lékařská fakulta ",
           socialAndArts: "",
-          website: "http://www.med.muni.cz/"
+          website: "http://www.med.muni.cz/",
         },
         {
           x: 16.5970817275545,
@@ -1955,7 +1955,7 @@ export default {
           scientificInstitution:
             "Masarykova univerzita - Přírodovědecká fakulta ",
           socialAndArts: "",
-          website: "http://www.sci.muni.cz/"
+          website: "http://www.sci.muni.cz/",
         },
         {
           x: 16.5922804657091,
@@ -1980,7 +1980,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Masarykova univerzita - Právnická fakulta ",
           socialAndArts: "1",
-          website: "http://www.law.muni.cz/"
+          website: "http://www.law.muni.cz/",
         },
         {
           x: 16.5989163079254,
@@ -2005,7 +2005,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Masarykova univerzita - Fakulta informatiky ",
           socialAndArts: "",
-          website: "https://www.fi.muni.cz/"
+          website: "https://www.fi.muni.cz/",
         },
         {
           x: 16.5774481471619,
@@ -2031,7 +2031,7 @@ export default {
           scientificInstitution:
             "Masarykova univerzita - Ekonomicko-správní fakulta ",
           socialAndArts: "1",
-          website: "http://www.econ.muni.cz/"
+          website: "http://www.econ.muni.cz/",
         },
         {
           x: 16.5984836011001,
@@ -2056,7 +2056,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Masarykova univerzita - Filozofická fakulta ",
           socialAndArts: "1",
-          website: "http://www.phil.muni.cz/"
+          website: "http://www.phil.muni.cz/",
         },
         {
           x: 16.5953722222,
@@ -2081,7 +2081,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Masarykova univerzita - Pedagogická fakulta ",
           socialAndArts: "1",
-          website: "https://www.ped.muni.cz/"
+          website: "https://www.ped.muni.cz/",
         },
         {
           x: 13.354586015675,
@@ -2106,7 +2106,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "METCENAS o.p.s.",
           socialAndArts: "",
-          website: "https://www.metcenas.cz/"
+          website: "https://www.metcenas.cz/",
         },
         {
           x: 16.602361971625,
@@ -2132,7 +2132,7 @@ export default {
           scientificInstitution:
             "Masarykova univerzita - Fakulta sociálních studií ",
           socialAndArts: "1",
-          website: "http://www.fss.muni.cz/"
+          website: "http://www.fss.muni.cz/",
         },
         {
           x: 14.4658301972067,
@@ -2157,7 +2157,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Mikrobiologický ústav AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "https://mbucas.cz/"
+          website: "https://mbucas.cz/",
         },
         {
           x: 16.5701253914244,
@@ -2183,7 +2183,7 @@ export default {
           scientificInstitution:
             "Masarykova univerzita - Fakulta sportovních studií",
           socialAndArts: "1",
-          website: "http://www.fsps.muni.cz/"
+          website: "http://www.fsps.muni.cz/",
         },
         {
           x: 14.4519734558319,
@@ -2208,7 +2208,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Metropolitní univerzita Praha, o.p.s.",
           socialAndArts: "1",
-          website: "https://www.mup.cz/"
+          website: "https://www.mup.cz/",
         },
         {
           x: 17.266470700223,
@@ -2233,7 +2233,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Moravská vysoká škola Olomouc, o.p.s.",
           socialAndArts: "1",
-          website: "https://mvso.cz/"
+          website: "https://mvso.cz/",
         },
         {
           x: 16.6042159284609,
@@ -2258,7 +2258,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Moravská galerie v Brně",
           socialAndArts: "1",
-          website: "http://www.moravska-galerie.cz/"
+          website: "http://www.moravska-galerie.cz/",
         },
         {
           x: 16.5652070199106,
@@ -2283,7 +2283,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Moravský zemský archiv v Brně",
           socialAndArts: "1",
-          website: "https://www.mza.cz/"
+          website: "https://www.mza.cz/",
         },
         {
           x: 16.6090882822839,
@@ -2308,7 +2308,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Moravské zemské muzeum",
           socialAndArts: "1",
-          website: "http://www.mzm.cz/"
+          website: "http://www.mzm.cz/",
         },
         {
           x: 14.4210242172916,
@@ -2333,7 +2333,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Muzeum hlavního města Prahy",
           socialAndArts: "1",
-          website: "http://www.muzeumprahy.cz/"
+          website: "http://www.muzeumprahy.cz/",
         },
         {
           x: 16.5940280703543,
@@ -2358,7 +2358,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Moravská zemská knihovna v Brně",
           socialAndArts: "1",
-          website: "https://www.mzk.cz/"
+          website: "https://www.mzk.cz/",
         },
         {
           x: 17.9994386321735,
@@ -2384,7 +2384,7 @@ export default {
           scientificInstitution:
             "Muzeum regionu Valašsko, příspěvková organizace",
           socialAndArts: "",
-          website: "http://www.muzeumvalassko.cz/"
+          website: "http://www.muzeumvalassko.cz/",
         },
         {
           x: 15.1720838514947,
@@ -2409,7 +2409,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Muzeum skla a bižuterie v Jablonci nad Nisou",
           socialAndArts: "1",
-          website: "https://www.msb-jablonec.cz/"
+          website: "https://www.msb-jablonec.cz/",
         },
         {
           x: 15.8289983677003,
@@ -2434,7 +2434,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Muzeum východních Čech v Hradci Králové",
           socialAndArts: "1",
-          website: "https://www.muzeumhk.cz/"
+          website: "https://www.muzeumhk.cz/",
         },
         {
           x: 15.5889432024757,
@@ -2460,7 +2460,7 @@ export default {
           scientificInstitution:
             "Muzeum Vysočiny Jihlava, příspěvková organizace",
           socialAndArts: "1",
-          website: "http://muzeum.ji.cz/"
+          website: "http://muzeum.ji.cz/",
         },
         {
           x: 17.2563,
@@ -2486,7 +2486,7 @@ export default {
           scientificInstitution:
             "Muzeum umění Olomouc, státní příspěvková organizace",
           socialAndArts: "1",
-          website: "https://www.muo.cz/kontakty/"
+          website: "https://www.muo.cz/kontakty/",
         },
         {
           x: 15.6858162636576,
@@ -2511,7 +2511,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "MV GŘ HZS ČR, Institut ochrany obyvatelstva",
           socialAndArts: "",
-          website: "https://www.hzscr.cz/institut-ochrany-obyvatelstva.aspx"
+          website: "https://www.hzscr.cz/institut-ochrany-obyvatelstva.aspx",
         },
         {
           x: 14.4174500163833,
@@ -2538,7 +2538,7 @@ export default {
             "MV GŘ HZS ČR, Technický ústav požární ochrany",
           socialAndArts: "",
           website:
-            "https://www.hzscr.cz/utvary-mv-generalniho-reditelstvi-hzs-cr-technicky-ustav-pozarni-ochrany.aspx"
+            "https://www.hzscr.cz/utvary-mv-generalniho-reditelstvi-hzs-cr-technicky-ustav-pozarni-ochrany.aspx",
         },
         {
           x: 14.4735105611952,
@@ -2563,7 +2563,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Národní filmový archiv",
           socialAndArts: "1",
-          website: "https://nfa.cz/"
+          website: "https://nfa.cz/",
         },
         {
           x: 14.4299996147031,
@@ -2589,7 +2589,7 @@ export default {
           scientificInstitution:
             "Národní informační a poradenské středisko pro kulturu",
           socialAndArts: "1",
-          website: "https://www.nipos.cz/"
+          website: "https://www.nipos.cz/",
         },
         {
           x: 14.4932466667,
@@ -2614,7 +2614,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Národní archiv",
           socialAndArts: "1",
-          website: "https://www.nacr.cz/"
+          website: "https://www.nacr.cz/",
         },
         {
           x: 14.4305557577386,
@@ -2639,7 +2639,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Národní muzeum",
           socialAndArts: "1",
-          website: "https://www.nm.cz/"
+          website: "https://www.nm.cz/",
         },
         {
           x: 18.1482969281304,
@@ -2664,7 +2664,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Národní muzeum v přírodě",
           socialAndArts: "1",
-          website: "https://www.nmvp.cz/"
+          website: "https://www.nmvp.cz/",
         },
         {
           x: 14.416595458984375,
@@ -2689,7 +2689,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Národní knihovna České republiky",
           socialAndArts: "1",
-          website: "https://www.nkp.cz/"
+          website: "https://www.nkp.cz/",
         },
         {
           x: 14.4216199911856,
@@ -2714,7 +2714,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Národní galerie v Praze",
           socialAndArts: "1",
-          website: "https://www.ngprague.cz/"
+          website: "https://www.ngprague.cz/",
         },
         {
           x: 14.4053015220739,
@@ -2740,7 +2740,7 @@ export default {
           scientificInstitution:
             "Národní pedagogické muzeum a knihovna Jana Amose Komenského",
           socialAndArts: "1",
-          website: "https://www.npmk.cz/"
+          website: "https://www.npmk.cz/",
         },
         {
           x: 14.3906,
@@ -2765,7 +2765,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Národní technická knihovna",
           socialAndArts: "",
-          website: "https://www.techlib.cz/cs/"
+          website: "https://www.techlib.cz/cs/",
         },
         {
           x: 14.4049734142249,
@@ -2790,7 +2790,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Národní památkový ústav",
           socialAndArts: "1",
-          website: "https://www.npu.cz/cs"
+          website: "https://www.npu.cz/cs",
         },
         {
           x: 14.4200572147,
@@ -2815,7 +2815,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Národní ústav duševního zdraví",
           socialAndArts: "",
-          website: "https://www.nudz.cz/"
+          website: "https://www.nudz.cz/",
         },
         {
           x: 14.464082747882,
@@ -2840,7 +2840,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Nemocnice Na Bulovce",
           socialAndArts: "",
-          website: "http://bulovka.cz/"
+          website: "http://bulovka.cz/",
         },
         {
           x: 17.313114659019,
@@ -2865,7 +2865,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Národní ústav lidové kultury",
           socialAndArts: "1",
-          website: "http://www.nulk.cz/"
+          website: "http://www.nulk.cz/",
         },
         {
           x: 14.423283206284,
@@ -2890,7 +2890,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Národní zemědělské muzeum, s. p. o.",
           socialAndArts: "",
-          website: "https://www.nzm.cz/"
+          website: "https://www.nzm.cz/",
         },
         {
           x: 14.4249084407241,
@@ -2915,7 +2915,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Národní technické muzeum",
           socialAndArts: "",
-          website: "http://www.ntm.cz/"
+          website: "http://www.ntm.cz/",
         },
         {
           x: 14.42898237047,
@@ -2940,7 +2940,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Národohospodářský ústav AV ČR, v. v. i.",
           socialAndArts: "1",
-          website: "https://www.ei.cas.cz/"
+          website: "https://www.ei.cas.cz/",
         },
         {
           x: 18.2907296955483,
@@ -2965,7 +2965,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Ostravská univerzita",
           socialAndArts: "1",
-          website: "https://www.osu.cz/"
+          website: "https://www.osu.cz/",
         },
         {
           x: 18.081395039281,
@@ -2990,7 +2990,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "OSEVA vývoj a výzkum s.r.o.",
           socialAndArts: "",
-          website: "http://www.oseva-vav.cz/"
+          website: "http://www.oseva-vav.cz/",
         },
         {
           x: 14.3533317949984,
@@ -3015,7 +3015,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Nemocnice Na Homolce",
           socialAndArts: "",
-          website: "https://www.homolka.cz/"
+          website: "https://www.homolka.cz/",
         },
         {
           x: 14.4315999251248,
@@ -3040,7 +3040,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Policejní akademie České republiky v Praze",
           socialAndArts: "1",
-          website: "https://www.polac.cz/"
+          website: "https://www.polac.cz/",
         },
         {
           x: 16.5909478999023,
@@ -3065,7 +3065,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Psychologický ústav AV ČR, v. v. i.",
           socialAndArts: "1",
-          website: "http://www.psu.cas.cz/cs/index.html"
+          website: "http://www.psu.cas.cz/cs/index.html",
         },
         {
           x: 14.3896668370056,
@@ -3090,7 +3090,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Památník národního písemnictví",
           socialAndArts: "1",
-          website: "http://www.pamatniknarodnihopisemnictvi.cz/"
+          website: "http://www.pamatniknarodnihopisemnictvi.cz/",
         },
         {
           x: 17.9047590808016,
@@ -3115,7 +3115,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Slezské zemské muzeum",
           socialAndArts: "1",
-          website: "http://www.szm.cz/"
+          website: "http://www.szm.cz/",
         },
         {
           x: 14.421303469238,
@@ -3140,7 +3140,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Revmatologický ústav",
           socialAndArts: "",
-          website: "https://www.revma.cz/"
+          website: "https://www.revma.cz/",
         },
         {
           x: 14.4187375,
@@ -3165,7 +3165,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Sociologický ústav AV ČR, v. v. i.",
           socialAndArts: "1",
-          website: "https://www.soc.cas.cz/"
+          website: "https://www.soc.cas.cz/",
         },
         {
           x: 15.0683559445865,
@@ -3191,7 +3191,7 @@ export default {
           scientificInstitution:
             "Severočeské muzeum v Liberci, příspěvková organizace",
           socialAndArts: "1",
-          website: "http://www.muzeumlb.cz/"
+          website: "http://www.muzeumlb.cz/",
         },
         {
           x: 17.898,
@@ -3216,7 +3216,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Slezská univerzita v Opavě",
           socialAndArts: "1",
-          website: "https://www.slu.cz/"
+          website: "https://www.slu.cz/",
         },
         {
           x: 14.4166518125277,
@@ -3241,7 +3241,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Slovanský ústav AV ČR, v. v. i.",
           socialAndArts: "1",
-          website: "http://www.slu.cas.cz/"
+          website: "http://www.slu.cas.cz/",
         },
         {
           x: 14.4729249653083,
@@ -3266,7 +3266,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Státní zdravotní ústav",
           socialAndArts: "",
-          website: "http://www.szu.cz/"
+          website: "http://www.szu.cz/",
         },
         {
           x: 13.996825,
@@ -3292,7 +3292,7 @@ export default {
           scientificInstitution:
             "Státní ústav jaderné, chemické a biologické ochrany, v. v. i.",
           socialAndArts: "",
-          website: "https://www.sujchbo.cz/"
+          website: "https://www.sujchbo.cz/",
         },
         {
           x: 14.7403572403,
@@ -3317,7 +3317,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "SVÚM a.s.",
           socialAndArts: "",
-          website: "http://www.svum.cz/"
+          website: "http://www.svum.cz/",
         },
         {
           x: 14.4476467874482,
@@ -3342,7 +3342,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "SVÚOM s.r.o.",
           socialAndArts: "",
-          website: "http://www.svuom.cz/"
+          website: "http://www.svuom.cz/",
         },
         {
           x: 14.452175845702,
@@ -3367,7 +3367,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Státní ústav radiační ochrany, v. v. i.",
           socialAndArts: "",
-          website: "https://www.suro.cz/"
+          website: "https://www.suro.cz/",
         },
         {
           x: 15.0744135551,
@@ -3392,7 +3392,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Technická univerzita v Liberci",
           socialAndArts: "",
-          website: "https://www.tul.cz/"
+          website: "https://www.tul.cz/",
         },
         {
           x: 14.39514314319,
@@ -3418,7 +3418,7 @@ export default {
           scientificInstitution:
             "Technologické centrum Akademie věd České republiky",
           socialAndArts: "",
-          website: "http://www.tc.cz/"
+          website: "http://www.tc.cz/",
         },
         {
           x: 14.4571777778,
@@ -3443,7 +3443,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Thomayerova nemocnice",
           socialAndArts: "",
-          website: "http://www.ftn.cz/"
+          website: "http://www.ftn.cz/",
         },
         {
           x: 16.5814380915088,
@@ -3468,7 +3468,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Technické muzeum v Brně",
           socialAndArts: "",
-          website: "http://www.technicalmuseum.cz/"
+          website: "http://www.technicalmuseum.cz/",
         },
         {
           x: 14.4163139439113,
@@ -3494,7 +3494,7 @@ export default {
           scientificInstitution:
             "Uměleckoprůmyslové museum v Praze, státní příspěvková organizace",
           socialAndArts: "1",
-          website: "https://www.upm.cz/"
+          website: "https://www.upm.cz/",
         },
         {
           x: 15.8301381747258,
@@ -3519,7 +3519,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Univerzita Hradec Králové",
           socialAndArts: "1",
-          website: "https://www.uhk.cz/"
+          website: "https://www.uhk.cz/",
         },
         {
           x: 14.4602769241217,
@@ -3545,7 +3545,7 @@ export default {
           scientificInstitution:
             "Univerzita Jana Amose Komenského Praha s.r.o.",
           socialAndArts: "1",
-          website: "http://www.ujak.cz/"
+          website: "http://www.ujak.cz/",
         },
         {
           x: 14.0253383401255,
@@ -3571,7 +3571,7 @@ export default {
           scientificInstitution:
             "Univerzita Jana Evangelisty Purkyně v Ústí nad Labem",
           socialAndArts: "1",
-          website: "https://www.ujep.cz/"
+          website: "https://www.ujep.cz/",
         },
         {
           x: 14.4239429946649,
@@ -3596,7 +3596,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Univerzita Karlova",
           socialAndArts: "1",
-          website: "https://cuni.cz/UK-1.html"
+          website: "https://cuni.cz/UK-1.html",
         },
         {
           x: 14.3871959228316,
@@ -3622,7 +3622,7 @@ export default {
           scientificInstitution:
             "Univerzita Karlova - Katolická teologická fakulta",
           socialAndArts: "1",
-          website: "http://www.ktf.cuni.cz/"
+          website: "http://www.ktf.cuni.cz/",
         },
         {
           x: 14.0303998666347,
@@ -3647,7 +3647,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Unipetrol výzkumně vzdělávací centrum, a.s.",
           socialAndArts: "",
-          website: "https://www.unicre.cz/"
+          website: "https://www.unicre.cz/",
         },
         {
           x: 14.4181468775211,
@@ -3673,7 +3673,7 @@ export default {
           scientificInstitution:
             "Univerzita Karlova - Evangelická teologická fakulta",
           socialAndArts: "1",
-          website: "http://www.etf.cuni.cz/"
+          website: "http://www.etf.cuni.cz/",
         },
         {
           x: 14.4174904028465,
@@ -3698,7 +3698,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Univerzita Karlova - Právnická fakulta",
           socialAndArts: "1",
-          website: "http://www.prf.cuni.cz/"
+          website: "http://www.prf.cuni.cz/",
         },
         {
           x: 14.4417465878721,
@@ -3724,7 +3724,7 @@ export default {
           scientificInstitution:
             "Univerzita Karlova - Husitská teologická fakulta",
           socialAndArts: "1",
-          website: "http://htf.cuni.cz/"
+          website: "http://htf.cuni.cz/",
         },
         {
           x: 14.3405435603097,
@@ -3749,7 +3749,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Univerzita Karlova - 2. lékařská fakulta",
           socialAndArts: "",
-          website: "https://www.lf2.cuni.cz/"
+          website: "https://www.lf2.cuni.cz/",
         },
         {
           x: 14.4265929279182,
@@ -3774,7 +3774,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Univerzita Karlova - 1. lékařská fakulta",
           socialAndArts: "",
-          website: "https://www.lf1.cuni.cz/"
+          website: "https://www.lf1.cuni.cz/",
         },
         {
           x: 14.4738822575986,
@@ -3799,7 +3799,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Univerzita Karlova - 3. lékařská fakulta",
           socialAndArts: "",
-          website: "http://www.lf3.cuni.cz/"
+          website: "http://www.lf3.cuni.cz/",
         },
         {
           x: 15.8350545752659,
@@ -3825,7 +3825,7 @@ export default {
           scientificInstitution:
             "Univerzita Karlova - Lékařská fakulta v Hradci Králové",
           socialAndArts: "",
-          website: "https://www.lfhk.cuni.cz/"
+          website: "https://www.lfhk.cuni.cz/",
         },
         {
           x: 14.9032035042253,
@@ -3850,7 +3850,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "ŠKODA AUTO VYSOKÁ ŠKOLA o.p.s.",
           socialAndArts: "",
-          website: "https://www.savs.cz/"
+          website: "https://www.savs.cz/",
         },
         {
           x: 14.4158584690213,
@@ -3875,7 +3875,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Univerzita Karlova - Filozofická fakulta",
           socialAndArts: "1",
-          website: "http://www.ff.cuni.cz/"
+          website: "http://www.ff.cuni.cz/",
         },
         {
           x: 14.4244911040407,
@@ -3900,7 +3900,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Univerzita Karlova - Přírodovědecká fakulta",
           socialAndArts: "",
-          website: "https://www.natur.cuni.cz/"
+          website: "https://www.natur.cuni.cz/",
         },
         {
           x: 15.8358163681853,
@@ -3926,7 +3926,7 @@ export default {
           scientificInstitution:
             "Univerzita Karlova - Farmaceutická fakulta v Hradci Králové",
           socialAndArts: "",
-          website: "http://www.faf.cuni.cz/"
+          website: "http://www.faf.cuni.cz/",
         },
         {
           x: 14.4203650572612,
@@ -3951,7 +3951,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Univerzita Karlova - Pedagogická fakulta",
           socialAndArts: "1",
-          website: "http://www.pedf.cuni.cz/"
+          website: "http://www.pedf.cuni.cz/",
         },
         {
           x: 13.371798708401,
@@ -3977,7 +3977,7 @@ export default {
           scientificInstitution:
             "Univerzita Karlova - Lékařská fakulta v Plzni",
           socialAndArts: "",
-          website: "http://www.lfp.cuni.cz/"
+          website: "http://www.lfp.cuni.cz/",
         },
         {
           x: 14.3350712847917,
@@ -4003,7 +4003,7 @@ export default {
           scientificInstitution:
             "Univerzita Karlova - Fakulta tělesné výchovy a sportu",
           socialAndArts: "1",
-          website: "http://www.ftvs.cuni.cz/"
+          website: "http://www.ftvs.cuni.cz/",
         },
         {
           x: 14.4283382936173,
@@ -4029,7 +4029,7 @@ export default {
           scientificInstitution:
             "Univerzita Karlova - Matematicko-fyzikální fakulta",
           socialAndArts: "",
-          website: "https://www.mff.cuni.cz/"
+          website: "https://www.mff.cuni.cz/",
         },
         {
           x: 14.4132989753333,
@@ -4054,7 +4054,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Univerzita Karlova - Fakulta sociálních věd",
           socialAndArts: "1",
-          website: "http://www.fsv.cuni.cz/"
+          website: "http://www.fsv.cuni.cz/",
         },
         {
           x: 14.3688176961741,
@@ -4080,7 +4080,7 @@ export default {
           scientificInstitution:
             "Univerzita Karlova - Fakulta humanitních studií",
           socialAndArts: "1",
-          website: "http://fhs.cuni.cz/"
+          website: "http://fhs.cuni.cz/",
         },
         {
           x: 16.5896502570089,
@@ -4105,7 +4105,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav fyziky materiálů AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "https://www.ipm.cz/"
+          website: "https://www.ipm.cz/",
         },
         {
           x: 14.4657381910643,
@@ -4131,7 +4131,7 @@ export default {
           scientificInstitution:
             "Ústav fyzikální chemie J. Heyrovského AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "https://www.jh-inst.cas.cz/cs/about-the-institute"
+          website: "https://www.jh-inst.cas.cz/cs/about-the-institute",
         },
         {
           x: 14.4767023529281,
@@ -4156,7 +4156,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Ústav fyziky atmosféry AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "http://www.ufa.cas.cz/"
+          website: "http://www.ufa.cas.cz/",
         },
         {
           x: 18.1585163064558,
@@ -4181,7 +4181,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Ústav geoniky AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "http://www.ugn.cas.cz/?l=cz"
+          website: "http://www.ugn.cas.cz/?l=cz",
         },
         {
           x: 14.4209835789945,
@@ -4206,7 +4206,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav hematologie a krevní transfúze Praha",
           socialAndArts: "",
-          website: "https://www.uhkt.cz/"
+          website: "https://www.uhkt.cz/",
         },
         {
           x: 14.3589307067171,
@@ -4231,7 +4231,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav jaderné fyziky AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "http://www.ujf.cas.cz/cs/"
+          website: "http://www.ujf.cas.cz/cs/",
         },
         {
           x: 14.4679384207012,
@@ -4256,7 +4256,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav informatiky AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "http://www.cs.cas.cz/"
+          website: "http://www.cs.cas.cz/",
         },
         {
           x: 14.4641811635974,
@@ -4281,7 +4281,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav fyziky plazmatu AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "http://www.ipp.cas.cz/"
+          website: "http://www.ipp.cas.cz/",
         },
         {
           x: 14.3849675534622,
@@ -4306,7 +4306,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav chemických procesů AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "http://www.icpf.cas.cz/cs"
+          website: "http://www.icpf.cas.cz/cs",
         },
         {
           x: 14.3386126100576,
@@ -4332,7 +4332,7 @@ export default {
           scientificInstitution:
             "Ústav makromolekulární chemie AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "https://www.imc.cas.cz/cs/"
+          website: "https://www.imc.cas.cz/cs/",
         },
         {
           x: 14.4013070648489,
@@ -4357,7 +4357,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav mezinárodních vztahů, v. v. i.",
           socialAndArts: "1",
-          website: "https://www.iir.cz/"
+          website: "https://www.iir.cz/",
         },
         {
           x: 14.3913850858056,
@@ -4383,7 +4383,7 @@ export default {
           scientificInstitution:
             "Ústav organické chemie a biochemie AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "https://www.uochb.cz/cs"
+          website: "https://www.uochb.cz/cs",
         },
         {
           x: 14.4192493149192,
@@ -4408,7 +4408,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav pro péči o matku a dítě",
           socialAndArts: "",
-          website: "https://www.upmd.cz/"
+          website: "https://www.upmd.cz/",
         },
         {
           x: 14.3998867540042,
@@ -4433,7 +4433,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav pro soudobé dějiny AV ČR, v. v. i.",
           socialAndArts: "1",
-          website: "http://www.usd.cas.cz/"
+          website: "http://www.usd.cas.cz/",
         },
         {
           x: 14.4092109573078,
@@ -4458,7 +4458,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav pro jazyk český AV ČR, v. v. i.",
           socialAndArts: "1",
-          website: "http://www.ujc.cas.cz/"
+          website: "http://www.ujc.cas.cz/",
         },
         {
           x: 14.4433835388881,
@@ -4483,7 +4483,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav pro studium totalitních režimů",
           socialAndArts: "1",
-          website: "https://www.ustrcr.cz/"
+          website: "https://www.ustrcr.cz/",
         },
         {
           x: 14.3911440810311,
@@ -4508,7 +4508,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav pro hydrodynamiku AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "https://www.ih.cas.cz/"
+          website: "https://www.ih.cas.cz/",
         },
         {
           x: 16.5835453785156,
@@ -4533,7 +4533,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav přístrojové techniky AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "https://www.isibrno.cz/cs"
+          website: "https://www.isibrno.cz/cs",
         },
         {
           x: 14.465646097477,
@@ -4558,7 +4558,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav termomechaniky AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "https://www.it.cas.cz/"
+          website: "https://www.it.cas.cz/",
         },
         {
           x: 14.4699556425841,
@@ -4584,7 +4584,7 @@ export default {
           scientificInstitution:
             "Ústav teorie informace a automatizace AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "http://www.utia.cas.cz/cs/welcome-utia"
+          website: "http://www.utia.cas.cz/cs/welcome-utia",
         },
         {
           x: 14.4637266672917,
@@ -4610,7 +4610,7 @@ export default {
           scientificInstitution:
             "Ústav struktury a mechaniky hornin AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "https://www.irsm.cas.cz/"
+          website: "https://www.irsm.cas.cz/",
         },
         {
           x: 14.4182628073691,
@@ -4635,7 +4635,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav státu a práva AV ČR, v. v. i.",
           socialAndArts: "1",
-          website: "https://www.ilaw.cas.cz/"
+          website: "https://www.ilaw.cas.cz/",
         },
         {
           x: 14.4463162200141,
@@ -4660,7 +4660,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav zemědělské ekonomiky a informací",
           socialAndArts: "",
-          website: "https://www.uzei.cz/"
+          website: "https://www.uzei.cz/",
         },
         {
           x: 16.593,
@@ -4686,7 +4686,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Ústav výzkumu globální změny AV ČR, v.v.i.,",
           socialAndArts: "",
-          website: "http://www.czechglobe.cz/cs/"
+          website: "http://www.czechglobe.cz/cs/",
         },
         {
           x: 16.5658330286591,
@@ -4711,7 +4711,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Vojenský výzkumný ústav, s. p.",
           socialAndArts: "",
-          website: "https://www.vvubrno.cz/"
+          website: "https://www.vvubrno.cz/",
         },
         {
           x: 14.3634383928125,
@@ -4737,7 +4737,7 @@ export default {
           scientificInstitution:
             "Ústřední vojenská nemocnice – Vojenská fakultní nemocnice Praha",
           socialAndArts: "",
-          website: "https://www.uvn.cz/cs/"
+          website: "https://www.uvn.cz/cs/",
         },
         {
           x: 14.4540273512466,
@@ -4763,7 +4763,7 @@ export default {
           scientificInstitution:
             "Ústav živočišné fyziologie a genetiky AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "http://www.iapg.cas.cz/cs/"
+          website: "http://www.iapg.cas.cz/cs/",
         },
         {
           x: 14.420985445314,
@@ -4788,7 +4788,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Všeobecná fakultní nemocnice v Praze",
           socialAndArts: "",
-          website: "https://www.vfn.cz/"
+          website: "https://www.vfn.cz/",
         },
         {
           x: 16.5978285001769,
@@ -4813,7 +4813,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Veterinární a farmaceutická univerzita Brno",
           socialAndArts: "",
-          website: "https://www.vfu.cz/"
+          website: "https://www.vfu.cz/",
         },
         {
           x: 18.1636014760909,
@@ -4839,7 +4839,7 @@ export default {
           scientificInstitution:
             "Vysoká škola báňská – Technická univerzita Ostrava",
           socialAndArts: "",
-          website: "https://www.vsb.cz/"
+          website: "https://www.vsb.cz/",
         },
         {
           x: 15.019048516841,
@@ -4864,7 +4864,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "VÚTS, a.s.",
           socialAndArts: "",
-          website: "https://www.vuts.cz/"
+          website: "https://www.vuts.cz/",
         },
         {
           x: 14.4530614134193,
@@ -4889,7 +4889,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Vysoká škola finanční a správní, a.s.",
           socialAndArts: "1",
-          website: "https://www.vsfs.cz/"
+          website: "https://www.vsfs.cz/",
         },
         {
           x: 14.4799079534772,
@@ -4915,7 +4915,7 @@ export default {
           scientificInstitution:
             "Vysoká škola evropských a regionálních studií, z. ú.",
           socialAndArts: "1",
-          website: "https://vsers.cz/"
+          website: "https://vsers.cz/",
         },
         {
           x: 14.4411617928676,
@@ -4940,7 +4940,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Vysoká škola ekonomická v Praze",
           socialAndArts: "1",
-          website: "https://www.vse.cz/"
+          website: "https://www.vse.cz/",
         },
         {
           x: 14.4199280004819,
@@ -4965,7 +4965,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Vysoká škola obchodní v Praze, o.p.s.",
           socialAndArts: "1",
-          website: "https://www.vso.cz/"
+          website: "https://www.vso.cz/",
         },
         {
           x: 14.3898826798098,
@@ -4990,7 +4990,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Vysoká škola chemicko-technologická v Praze",
           socialAndArts: "",
-          website: "https://www.vscht.cz/"
+          website: "https://www.vscht.cz/",
         },
         {
           x: 14.408209458501,
@@ -5015,7 +5015,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Vysoká škola podnikání a práva a.s.",
           socialAndArts: "1",
-          website: "https://www.vspp.cz/"
+          website: "https://www.vspp.cz/",
         },
         {
           x: 14.411040950641,
@@ -5041,7 +5041,7 @@ export default {
           scientificInstitution:
             "Vysoká škola hotelová v Praze 8, spol. s r.o.",
           socialAndArts: "1",
-          website: "https://www.vsh.cz/"
+          website: "https://www.vsh.cz/",
         },
         {
           x: 18.4395077102195,
@@ -5066,7 +5066,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Vysoká škola PRIGO, z.ú.",
           socialAndArts: "1",
-          website: "https://www.vs-prigo.cz/"
+          website: "https://www.vs-prigo.cz/",
         },
         {
           x: 14.494917911003,
@@ -5092,7 +5092,7 @@ export default {
           scientificInstitution:
             "Vysoká škola technická a ekonomická v Českých Budějovicích",
           socialAndArts: "1",
-          website: "http://www.vstecb.cz/"
+          website: "http://www.vstecb.cz/",
         },
         {
           x: 14.6464021028017,
@@ -5117,7 +5117,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Výzkumné centrum SELTON, s.r.o.",
           socialAndArts: "",
-          website: "http://www.selton.cz/"
+          website: "http://www.selton.cz/",
         },
         {
           x: 14.4729991307342,
@@ -5143,7 +5143,7 @@ export default {
           scientificInstitution:
             "Vysoká škola regionálního rozvoje a Bankovní institut - AMBIS, a. s.",
           socialAndArts: "1",
-          website: "https://www.ambis.cz/"
+          website: "https://www.ambis.cz/",
         },
         {
           x: 15.5827008979104,
@@ -5168,7 +5168,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Vysoká škola polytechnická Jihlava",
           socialAndArts: "",
-          website: "https://www.vspj.cz/"
+          website: "https://www.vspj.cz/",
         },
         {
           x: 16.6036138491365,
@@ -5193,7 +5193,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Vysoké učení technické v Brně",
           socialAndArts: "",
-          website: "https://www.vutbr.cz/"
+          website: "https://www.vutbr.cz/",
         },
         {
           x: 14.4149240318902,
@@ -5218,7 +5218,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Vysoká škola uměleckoprůmyslová v Praze",
           socialAndArts: "1",
-          website: "https://www.umprum.cz/"
+          website: "https://www.umprum.cz/",
         },
         {
           x: 15.5813637262067,
@@ -5244,7 +5244,7 @@ export default {
           scientificInstitution:
             "VÝZKUMNÝ A ŠLECHTITELSKÝ ÚSTAV OVOCNÁŘSKÝ HOLOVOUSY s.r.o.",
           socialAndArts: "",
-          website: "http://www.vsuo.cz/"
+          website: "http://www.vsuo.cz/",
         },
         {
           x: 14.5142768827652,
@@ -5269,7 +5269,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Výzkumný a zkušební letecký ústav, a.s.",
           socialAndArts: "",
-          website: "https://www.vzlu.cz/"
+          website: "https://www.vzlu.cz/",
         },
         {
           x: 13.3650358327924,
@@ -5294,7 +5294,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Výzkumný a zkušební ústav Plzeň s.r.o.",
           socialAndArts: "",
-          website: "https://www.vzuplzen.cz/"
+          website: "https://www.vzuplzen.cz/",
         },
         {
           x: 15.5787497893712,
@@ -5320,7 +5320,7 @@ export default {
           scientificInstitution:
             "Výzkumný ústav bramborářský Havlíčkův Brod, s.r.o.",
           socialAndArts: "",
-          website: "https://www.vubhb.cz/"
+          website: "https://www.vubhb.cz/",
         },
         {
           x: 14.4320870117216,
@@ -5345,7 +5345,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Výzkumný ústav bezpečnosti práce, v. v. i.",
           socialAndArts: "",
-          website: "https://vubp.cz/"
+          website: "https://vubp.cz/",
         },
         {
           x: 14.4506562622367,
@@ -5371,7 +5371,7 @@ export default {
           scientificInstitution:
             "Výzkumný ústav geodetický, topografický a kartografický, v. v. i.",
           socialAndArts: "",
-          website: "https://www.vugtk.cz/"
+          website: "https://www.vugtk.cz/",
         },
         {
           x: 14.3828105685222,
@@ -5397,7 +5397,7 @@ export default {
           scientificInstitution:
             "Výzkumný ústav meliorací a ochrany půdy, v. v. i.",
           socialAndArts: "",
-          website: "https://www.vumop.cz/"
+          website: "https://www.vumop.cz/",
         },
         {
           x: 14.533572490096,
@@ -5422,7 +5422,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Výzkumný ústav potravinářský Praha, v. v. i.",
           socialAndArts: "",
-          website: "https://www.vupp.cz/cs/"
+          website: "https://www.vupp.cz/cs/",
         },
         {
           x: 14.4238281235051,
@@ -5447,7 +5447,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Výzkumný ústav pivovarský a sladařský, a.s.",
           socialAndArts: "",
-          website: "https://beerresearch.cz/"
+          website: "https://beerresearch.cz/",
         },
         {
           x: 14.3914579772682,
@@ -5473,7 +5473,7 @@ export default {
           scientificInstitution:
             "Výzkumný ústav lesního hospodářství a myslivosti, v. v. i.",
           socialAndArts: "",
-          website: "https://www.vulhm.cz/"
+          website: "https://www.vulhm.cz/",
         },
         {
           x: 14.3020896078813,
@@ -5498,7 +5498,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Výzkumný ústav rostlinné výroby, v. v. i.",
           socialAndArts: "",
-          website: "https://www.vurv.cz/"
+          website: "https://www.vurv.cz/",
         },
         {
           x: 14.3425047747397,
@@ -5523,7 +5523,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Výzkumný ústav mlékárenský s.r.o.",
           socialAndArts: "",
-          website: "http://www.vumlekarensky.cz/"
+          website: "http://www.vumlekarensky.cz/",
         },
         {
           x: 14.4462893302822,
@@ -5549,7 +5549,7 @@ export default {
           scientificInstitution:
             "Výzkumný ústav práce a sociálních věcí, v. v. i.",
           socialAndArts: "1",
-          website: "https://www.vupsv.cz/"
+          website: "https://www.vupsv.cz/",
         },
         {
           x: 14.3929,
@@ -5575,7 +5575,7 @@ export default {
           scientificInstitution:
             "Výzkumný ústav vodohospodářský T. G. Masaryka, veřejná výzkumná instituce",
           socialAndArts: "",
-          website: "https://www.vuv.cz/"
+          website: "https://www.vuv.cz/",
         },
         {
           x: 14.5616333333,
@@ -5601,7 +5601,7 @@ export default {
           scientificInstitution:
             "Výzkumný ústav Silva Taroucy pro krajinu a okrasné zahradnictví, v. v. i.",
           socialAndArts: "",
-          website: "https://www.vukoz.cz/"
+          website: "https://www.vukoz.cz/",
         },
         {
           x: 14.6056178121121,
@@ -5626,7 +5626,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Výzkumný ústav živočišné výroby, v. v. i.",
           socialAndArts: "",
-          website: "https://vuzv.cz/"
+          website: "https://vuzv.cz/",
         },
         {
           x: 16.6272732856478,
@@ -5651,7 +5651,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Výzkumný ústav stavebních hmot, a.s.",
           socialAndArts: "",
-          website: "https://www.vustah.cz/"
+          website: "https://www.vustah.cz/",
         },
         {
           x: 16.5797677078212,
@@ -5677,7 +5677,7 @@ export default {
           scientificInstitution:
             "Výzkumný ústav veterinárního lékařství v. v. i.",
           socialAndArts: "",
-          website: "https://www.vri.cz/"
+          website: "https://www.vri.cz/",
         },
         {
           x: 13.3799208709433,
@@ -5702,7 +5702,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Západočeská galerie v Plzni",
           socialAndArts: "1",
-          website: "http://www.zpc-galerie.cz/"
+          website: "http://www.zpc-galerie.cz/",
         },
         {
           x: 18.285297393798828,
@@ -5727,7 +5727,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Zdravotní ústav se sídlem v Ostravě",
           socialAndArts: "",
-          website: "https://www.zuova.cz/"
+          website: "https://www.zuova.cz/",
         },
         {
           x: 14.4544992701341,
@@ -5753,7 +5753,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "ELI Beamlines",
           socialAndArts: "",
-          website: "https://www.eli-beams.eu/cs/"
+          website: "https://www.eli-beams.eu/cs/",
         },
         {
           x: 13.3515655660454,
@@ -5778,7 +5778,7 @@ export default {
           scienceAboutEarth: "1",
           scientificInstitution: "Západočeská univerzita v Plzni",
           socialAndArts: "1",
-          website: "https://www.zcu.cz/cs/index.html"
+          website: "https://www.zcu.cz/cs/index.html",
         },
         {
           x: 13.3787443607447,
@@ -5803,7 +5803,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Západočeské muzeum v Plzni, p. o.",
           socialAndArts: "1",
-          website: "https://www.zcm.cz/"
+          website: "https://www.zcm.cz/",
         },
         {
           x: 16.5075491277474,
@@ -5828,7 +5828,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Zemědělský výzkum, spol. s r.o.",
           socialAndArts: "",
-          website: "https://www.vupt.cz/"
+          website: "https://www.vupt.cz/",
         },
         {
           x: 18.1560954429412,
@@ -5854,7 +5854,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "IT4Innovations",
           socialAndArts: "",
-          website: "https://www.it4i.cz/"
+          website: "https://www.it4i.cz/",
         },
         {
           x: 14.3589307067171,
@@ -5880,7 +5880,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "SUSEN",
           socialAndArts: "",
-          website: "http://susen2020.cz/"
+          website: "http://susen2020.cz/",
         },
         {
           x: 14.4874594444,
@@ -5906,7 +5906,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Biomedicínské centrum (BIOCEV)",
           socialAndArts: "",
-          website: "https://www.biocev.eu/"
+          website: "https://www.biocev.eu/",
         },
         {
           x: 16.605227032335,
@@ -5932,7 +5932,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "CEITEC",
           socialAndArts: "",
-          website: "https://www.ceitec.cz/"
+          website: "https://www.ceitec.cz/",
         },
         {
           x: 14.3896427778,
@@ -5957,7 +5957,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "ČVUT - Fakulta informačních technologií ",
           socialAndArts: "",
-          website: "http://www.fit.cvut.cz"
+          website: "http://www.fit.cvut.cz",
         },
         {
           x: 15.4466466432644,
@@ -5983,7 +5983,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Centrum Telč",
           socialAndArts: "",
-          website: "http://www.itam.cas.cz/CET/"
+          website: "http://www.itam.cas.cz/CET/",
         },
         {
           x: 13.3526231464892,
@@ -6010,7 +6010,7 @@ export default {
           scientificInstitution:
             "Nové technologie pro informační společnost (NTIS)",
           socialAndArts: "",
-          website: "https://ntis.zcu.cz/"
+          website: "https://ntis.zcu.cz/",
         },
         {
           x: 16.5987768146624,
@@ -6037,7 +6037,7 @@ export default {
           scientificInstitution:
             "Mezinárodní centrum klinického výzkumu (ICRC)",
           socialAndArts: "",
-          website: "https://www.fnusa-icrc.org/cz/"
+          website: "https://www.fnusa-icrc.org/cz/",
         },
         {
           x: 14.4335778626383,
@@ -6062,7 +6062,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav pro českou literaturu AV ČR, v. v. i.",
           socialAndArts: "1",
-          website: "https://www.ucl.cas.cz/cs/"
+          website: "https://www.ucl.cas.cz/cs/",
         },
         {
           x: 14.505281699967,
@@ -6088,7 +6088,7 @@ export default {
           scientificInstitution:
             "Ústav teoretické a aplikované mechaniky AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "http://www.itam.cas.cz/"
+          website: "http://www.itam.cas.cz/",
         },
         {
           x: 14.4658301972067,
@@ -6113,7 +6113,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Ústav molekulární genetiky AV ČR, v. v. i.",
           socialAndArts: "",
-          website: "https://www.img.cas.cz/"
+          website: "https://www.img.cas.cz/",
         },
         {
           x: 14.4932466667,
@@ -6138,7 +6138,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Státní oblastní archiv v Praze",
           socialAndArts: "1",
-          website: "http://www.soapraha.cz/"
+          website: "http://www.soapraha.cz/",
         },
         {
           x: 14.3020896078813,
@@ -6163,7 +6163,7 @@ export default {
           scienceAboutEarth: "",
           scientificInstitution: "Výzkumný ústav zemědělské techniky, v. v. i.",
           socialAndArts: "",
-          website: "http://www.vuzt.cz/"
+          website: "http://www.vuzt.cz/",
         },
         {
           x: 16.605227032335,
@@ -6189,8 +6189,8 @@ export default {
           scientificInstitution:
             "Masarykova univerzita - Farmaceutická fakulta",
           socialAndArts: "",
-          website: "https://www.muni.cz/farmacie"
-        }
+          website: "https://www.muni.cz/farmacie",
+        },
       ];
       institution.forEach(function(obj) {
         db.collection("institutions")
@@ -6198,7 +6198,7 @@ export default {
             address: obj.address,
             coords: {
               x: obj.x, // Watch out! input obj.coords must be {x: Number, y: Number}
-              y: obj.y // Watch out! input obj.coords must be {x: Number, y: Number}
+              y: obj.y, // Watch out! input obj.coords must be {x: Number, y: Number}
             },
             scientificInstitution: obj.scientificInstitution,
             funFact: obj.funFact,
@@ -6210,7 +6210,7 @@ export default {
               enviroAgri: obj.enviroAgri,
               mathsPhysicsInformatics: obj.mathsPhysicsInformatics,
               scienceAboutEarth: obj.scienceAboutEarth,
-              socialAndArts: obj.socialAndArts
+              socialAndArts: obj.socialAndArts,
             },
             subject: {
               bio: obj.bio,
@@ -6222,8 +6222,8 @@ export default {
               informatics: obj.informatics,
               maths: obj.maths,
               musicAndArt: obj.musicAndArt,
-              physics: obj.physics
-            }
+              physics: obj.physics,
+            },
           })
           .then(function() {
             console.log("Document successfully written!");
@@ -6232,10 +6232,9 @@ export default {
             console.error("Error writing document: ", error);
           });
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>

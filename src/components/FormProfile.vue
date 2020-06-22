@@ -44,7 +44,7 @@
             <option>Chemie</option>
             <option>Matematika</option>
             <option>Občanská výchova</option>
-            <option>Přirodopis</option>
+            <option>Přírodopis</option>
             <option>Informatika</option>
             <option>Hudební a výtvarná výchova</option>
             <option>Zeměpis</option>
@@ -226,6 +226,7 @@ export default {
   },
 };
 </script>
+
 <style>
 input[type="text"],
 select,
@@ -240,7 +241,7 @@ textarea {
   resize: vertical;
 }
 
-/* Submit button */
+/* Submit button style */
 input[type="submit"] {
   background-color: #4caf50;
   color: white;

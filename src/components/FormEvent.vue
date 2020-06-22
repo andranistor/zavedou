@@ -336,7 +336,7 @@ textarea {
   resize: vertical;
 }
 
-/* Submit button */
+/* Submit button style*/
 input[type="submit"] {
   background-color: #4caf50;
   color: white;

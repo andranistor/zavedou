@@ -111,12 +111,10 @@
 <script>
 import { db } from "../utils/db";
 import Event from "./Event.vue";
-// import FormEvent from "./FormEvent.vue";
 
 export default {
   name: "Calendar",
   components: {
-    // FormEvent,
     Event,
   },
   data() {
@@ -154,21 +152,24 @@ export default {
   computed: {
     filtered_events() {
       let result = this.events;
-      //filtr regiony
+
+      //Filter for regions
       result = result.filter((item) => {
         if (this.regionFilter === "Celá ČR") {
           return true;
         }
         return item.region === this.regionFilter;
       });
-      //filtr typy akcí
+
+      //Filter for events
       result = result.filter((item) => {
         if (this.typeFilter === "Všechny akce") {
           return true;
         }
         return item.type === this.typeFilter;
       });
-      //filtr návštěvníci
+
+      //Filter for attenders
       result = result.filter((item) => {
         if (this.attenderFilter === "Pro všechny") {
           return true;
@@ -183,14 +184,6 @@ export default {
       return result;
     },
   },
-  // computed: {
-  //   let dayStart = new Date(this.start);
-  //   let dayEnd = new Date(this.end);
-  //   start = `${dayStart.getDate()}.${dayStart.getMonth() +
-  //     1}.${dayStart.getFullYear()}`;
-  //   end = `${dayEnd.getDate()}.${dayEnd.getMonth() +
-  //     1}.${dayEnd.getFullYear()}`;
-  // }
 };
 </script>
 
@@ -223,7 +216,7 @@ h1 {
 }
 
 .custom-select select {
-  display: none; /*hide original SELECT element: */
+  display: none; /*Hides original SELECT element */
 }
 
 .select-selected {
@@ -231,7 +224,7 @@ h1 {
   width: 15rem;
 }
 
-/* Style the arrow inside the select element: */
+/* Style of the arrow inside the select element */
 .select-selected:after {
   position: absolute;
   content: "";
@@ -243,13 +236,12 @@ h1 {
   border-color: #fff transparent transparent transparent;
 }
 
-/* Point the arrow upwards when the select box is open (active): */
+/* Pointing the arrow upwards when the select box is open (active) */
 .select-selected.select-arrow-active:after {
   border-color: transparent transparent #fff transparent;
   top: 7px;
 }
 
-/* style the items (options), including the selected item: */
 .select-items div,
 .select-selected {
   color: black;
@@ -259,7 +251,6 @@ h1 {
   cursor: pointer;
 }
 
-/* Style items (options): */
 .select-items {
   position: absolute;
   background-color: white;
@@ -269,7 +260,7 @@ h1 {
   z-index: 99;
 }
 
-/* Hide the items when the select box is closed: */
+/* Hiding the items when the select box is closed */
 .select-hide {
   display: none;
 }

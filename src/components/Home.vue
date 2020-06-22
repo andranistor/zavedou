@@ -4,14 +4,14 @@
   </div>
 </template>
 
-// NOT DONE! the sending function is missing
 <script>
 import Map from "./Map.vue";
+
 export default {
   name: "Home",
   data() {
     return {
-      isSmapLoaded: false
+      isSmapLoaded: false,
     };
   },
   created() {
@@ -25,7 +25,7 @@ export default {
     test();
   },
   components: {
-    Map
-  }
+    Map,
+  },
 };
 </script>

@@ -7,16 +7,15 @@ export default {
   props: ["btnName"],
   data() {
     return {
-      image: "./assets/img/button_on.png"
+      image: "./assets/img/button_on.png",
     };
   },
 
   methods: {
     pressButton() {
       this.$emit("vyber");
-    }
-  }
+    },
+  },
 };
-</script scoped>
-<style>
-</style>  
+</script>
+<style></style>
