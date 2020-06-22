@@ -128,18 +128,12 @@ body {
   display: inline-block;
 }
 .blog-card .details .author:before {
-  font-family: FontAwesome;
   margin-right: 10px;
-  content: "\f007";
 }
 .blog-card .details .date:before {
-  font-family: FontAwesome;
   margin-right: 10px;
-  content: "\f133";
 }
 .blog-card .details .tags ul:before {
-  font-family: FontAwesome;
-  content: "\f02b";
   margin-right: 10px;
 }
 .blog-card .details .tags li {
@@ -179,8 +173,6 @@ body {
   position: relative;
 }
 .blog-card .description .read-more a:after {
-  content: "\f061";
-  font-family: FontAwesome;
   margin-left: -10px;
   opacity: 0;
   vertical-align: middle;

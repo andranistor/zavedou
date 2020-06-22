@@ -13,7 +13,6 @@
             required
           />
         </label>
-        <br />
         <label for="type-select">
           Vyberte typ události:
           <select name="type" id="type-select" v-model="type" required>
@@ -26,16 +25,7 @@
             <option>Ostatní</option>
           </select>
         </label>
-        <br />
-        <label for="description">
-          Popis události:
-          <textarea
-            id="description"
-            v-model.trim="description"
-            placeholder="Popis události"
-            required
-          ></textarea>
-        </label>
+
         <br />
         <label for="place">
           Místo konání:
@@ -47,7 +37,6 @@
             required
           />
         </label>
-        <br />
         <label for="town">
           Město:
           <input
@@ -131,15 +120,14 @@
           </select>
         </label>
         <br />
-        <label for="link">
-          Odkaz/zdroj:
-          <input
-            type="url"
-            id="link"
-            v-model.trim="link"
-            placeholder="Odkaz/zdroj"
+        <label for="description">
+          Popis události:
+          <textarea
+            id="description"
+            v-model.trim="description"
+            placeholder="Popis události"
             required
-          />
+          ></textarea>
         </label>
         <br />
         <label for="child">
@@ -177,10 +165,20 @@
           Začátek události:
           <input type="date" id="start" v-model="start" required />
         </label>
-        <br />
         <label for="end">
           Konec události:
           <input type="date" id="end" v-model="end" required />
+        </label>
+        <br />
+        <label for="link">
+          Odkaz/zdroj:
+          <input
+            type="url"
+            id="link"
+            v-model.trim="link"
+            placeholder="Odkaz/zdroj"
+            required
+          />
         </label>
         <br />
         <label for="note" class="optionalText">

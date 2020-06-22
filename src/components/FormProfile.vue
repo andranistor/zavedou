@@ -34,7 +34,6 @@
             required
           />
         </label>
-        <br />
         <label for="subject-select">
           Vhodné pro školní předmět:
           <select name="type" id="subject-select" v-model="subject" required>
@@ -62,7 +61,6 @@
             required
           />
         </label>
-        <br />
         <label for="address">
           Adresa instituce:
           <input
@@ -72,16 +70,6 @@
             placeholder="Adresa"
             required
           />
-        </label>
-        <br />
-        <label for="offer">
-          Nabízím:
-          <textarea
-            id="offer"
-            v-model.trim="offer"
-            placeholder="Vysvětlím teorii relativity"
-            required
-          ></textarea>
         </label>
         <br />
         <label for="whom-select">
@@ -94,7 +82,6 @@
             <option>Dospělé</option>
           </select>
         </label>
-        <br />
         <label for="region-select">
           Pro oblast:
           <select name="type" id="region-select" v-model="region" required>
@@ -114,6 +101,16 @@
             <option>Zlínský kraj</option>
             <option>Moravskoslezský kraj</option>
           </select>
+        </label>
+        <br />
+        <label for="offer">
+          Nabízím:
+          <textarea
+            id="offer"
+            v-model.trim="offer"
+            placeholder="Vysvětlím teorii relativity"
+            required
+          ></textarea>
         </label>
         <br />
         <label for="contact">
