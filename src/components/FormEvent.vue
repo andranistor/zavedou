@@ -113,7 +113,7 @@
       </label>
       <label for="adult">
         <input type="checkbox" name="attender" value="false" id="adult" v-model="adult" />
-        pro dospělý
+        pro dospělé
       </label>
       <br />
       <label for="start">

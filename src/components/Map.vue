@@ -346,7 +346,7 @@ export default {
 .smap {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   margin: 10px 0;
 }
 
@@ -354,11 +354,11 @@ export default {
   width: 40px;
 }
 button {
-  background-color: blueviolet;
+  background-color: #84d3ef;
 }
 
 .selected {
-  background-color: green;
+  background-color: #0aa2ff;
 }
 .custom_pin {
   width: 40px;

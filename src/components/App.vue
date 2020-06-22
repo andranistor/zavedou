@@ -55,7 +55,8 @@ export default {
 body {
   font-family: "Roboto Slab";
   width: 70%;
-  margin: auto 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body h1 {
