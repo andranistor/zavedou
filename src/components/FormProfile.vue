@@ -128,7 +128,7 @@
           variant="success"
           type="submit"
           v-on:submit.prevent="addProfile"
-          >Nahrajte profil</b-button
+          >Odeslat</b-button
         >
         <p v-if="showAddressLabel === true">Adresa neexistuje. Znovu a lépe.</p>
         <p v-if="formSent === true">Formulář odeslán. Děkujeme.</p>
