@@ -3,12 +3,24 @@
     <h2>Formulář</h2>
     <form @submit.prevent="addProfile">
       <label for="first-name">
-        Jméno
-        <input type="text" id="first-name" v-model.trim="firstName" placeholder="Jméno" />
+        Jméno:
+        <input
+          type="text"
+          id="first-name"
+          v-model.trim="firstName"
+          placeholder="Jméno"
+          required
+        />
       </label>
       <label for="last-name">
-        Příjmení
-        <input type="text" id="last-name" v-model.trim="lastName" placeholder="Příjmení" />
+        Příjmení:
+        <input
+          type="text"
+          id="last-name"
+          v-model.trim="lastName"
+          placeholder="Příjmení"
+          required
+        />
       </label>
       <br />
       <!-- <label for="branch-select">
@@ -25,13 +37,24 @@
       </label>
       <br />-->
       <label for="field">
-        Specifikujte obor
-        <input type="text" id="field" v-model.trim="field" placeholder="Obor" />
+        Specifikujte váš obor:
+        <input
+          type="text"
+          id="field"
+          v-model.trim="field"
+          placeholder="Obor"
+          required
+        />
       </label>
       <br />
       <label for="subject-select">
-        Vhodné pro školní předmět(y):
-        <select name="type" id="subject-select" v-model="subject">
+        Vhodné pro školní předmět:
+        <select
+          name="type"
+          id="subject-select"
+          v-model="subject"
+          required
+        >
           <option>Cizí jazyky</option>
           <option>Čeština</option>
           <option>Dějepis</option>
@@ -47,28 +70,40 @@
       </label>
       <br />
       <label for="institution">
-        Instituce
+        Instituce:
         <input
           type="text"
           id="institution"
           v-model.trim="institution"
           placeholder="Instituce"
+          required
         />
       </label>
       <br />
       <label for="address">
-        Adresa instituce
-        <input type="text" id="address" v-model.trim="address" placeholder="Adresa" />
+        Adresa instituce:
+        <input
+          type="text"
+          id="address"
+          v-model.trim="address"
+          placeholder="Adresa"
+          required
+        />
       </label>
       <br />
       <label for="offer">
         Nabízím:
-        <textarea id="offer" v-model.trim="offer" placeholder="Vysvětlím teorii relativity"></textarea>
+        <textarea
+          id="offer"
+          v-model.trim="offer"
+          placeholder="Vysvětlím teorii relativity"
+          required
+        ></textarea>
       </label>
       <br />
       <label for="whom-select">
         Pro koho:
-        <select name="type" id="whom-select" v-model="whom">
+        <select name="type" id="whom-select" v-model="whom" required>
           <option>Všechny</option>
           <option>1. stupeň ZŠ</option>
           <option>2. stupeň ZŠ</option>
@@ -79,7 +114,7 @@
       <br />
       <label for="region-select">
         Pro oblast:
-        <select name="type" id="region-select" v-model="region">
+        <select name="type" id="region-select" v-model="region" required>
           <option>Celá ČR</option>
           <option>Hlavní město Praha</option>
           <option>Středočeský kraj</option>
@@ -99,10 +134,15 @@
       </label>
       <br />
       <label for="contact">
-        E-mail
-        <input type="email" id="contact" v-model.trim="contact" placeholder="Email" />
+        E-mail:
+        <input type="email" id="contact" v-model.trim="contact" placeholder="Email" required />
       </label>
       <br />
+
+      <!-- <p v-if="errors.length">Please correct the following error(s):</p>
+      <ul>
+        <li v-for="error in errors">{{ error }}</li>
+      </ul>-->
 
       <button type="submit" v-on:submit.prevent="addProfile">Nahrajte profil</button>
     </form>
@@ -130,12 +170,14 @@ export default {
       offer: "",
       whom: "",
       region: "",
-      contact: ""
+      contact: "@"
+      // errors: []
     };
   },
+
   methods: {
     addProfile(event) {
-      const address = this.address;
+      const address = this.address.replace(/\d{3} ?\d{2}/, "");
       // Call mapy API and get coords
       new SMap.Geocoder(address, response => {
         let results = response.getResults()[0].results[0].coords;
@@ -182,6 +224,20 @@ export default {
         this.contact = "";
       });
     }
+    // checkForm: function(e) {
+    //   if (this.firstName && this.lastName) {
+    //     return true;
+    //   }
+
+    //   this.errors = [];
+
+    //   if (!this.firstName) {
+    //     this.errors.push("Doplňte prosím jméno.");
+    //   }
+    //   if (!this.lastName) {
+    //     this.errors.push("Doplňte prosím příjmení.");
+    //   }
+    // }
   }
 };
 </script>

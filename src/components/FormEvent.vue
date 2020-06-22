@@ -3,14 +3,19 @@
     <h2>Formulář</h2>
     <form @submit.prevent="addEvent">
       <label for="name">
-        Název události
-        <input type="text" id="name" v-model.trim="name" placeholder="Název události" />
+        Název události:
+        <input
+          type="text"
+          id="name"
+          v-model.trim="name"
+          placeholder="Název události"
+          required
+        />
       </label>
       <br />
       <label for="type-select">
-        Vyberte typ události
-        <select name="type" id="type-select" v-model="type">
-          <option>--Vyberte si prosím jednu z možností--</option>
+        Vyberte typ události:
+        <select name="type" id="type-select" v-model="type" required>
           <option>Veletrh / festival</option>
           <option>Přednáška</option>
           <option>Workshop</option>
@@ -22,49 +27,57 @@
       </label>
       <br />
       <label for="description">
-        Popis události
+        Popis události:
         <textarea
           id="description"
           v-model.trim="description"
           placeholder="Popis události"
+          required
         ></textarea>
       </label>
       <br />
       <label for="place">
-        Místo
-        <input type="text" id="place" v-model.trim="place" placeholder="Místo konání" />
+        Místo konání:
+        <input
+          type="text"
+          id="place"
+          v-model.trim="place"
+          placeholder="Místo konání"
+          required
+        />
       </label>
       <br />
       <label for="town">
-        Město
-        <input type="text" id="town" v-model.trim="town" placeholder="Město" />
+        Město:
+        <input type="text" id="town" v-model.trim="town" placeholder="Město" required />
       </label>
       <br />
       <label for="street">
-        Ulice
-        <input type="text" id="street" v-model.trim="street" placeholder="Ulice" />
+        Ulice:
+        <input type="text" id="street" v-model.trim="street" placeholder="Ulice" required />
       </label>
       <label for="descriptive-number">
-        Číslo popisné
+        Číslo popisné:
         <input
           type="number"
           id="descriptive-number"
-          min="0"
+          min="1"
           v-model="descriptiveNumber"
+          required
         />
       </label>
       <label for="orientation-number">
-        Číslo orientační
+        Číslo orientační:
         <input
           type="number"
           id="orientation-number"
-          min="0"
+          min="1"
           v-model="orientationNumber"
         />
       </label>
       <br />
       <label for="town-part">
-        Městská čtvrť
+        Městská čtvrť:
         <input
           type="text"
           id="town-part"
@@ -73,8 +86,15 @@
         />
       </label>
       <label for="zip-code">
-        PSČ
-        <input type="number" id="zip-code" v-model.trim="zipCode" />
+        PSČ:
+        <input
+          type="text"
+          inputmode="numeric"
+          id="zip-code"
+          v-model.trim="zipCode"
+          pattern="\d{3} ?\d{2}"
+          required
+        />
       </label>
       <br />
       <label for="type-select">
@@ -99,8 +119,14 @@
       </label>
       <br />
       <label for="link">
-        Odkaz/zdroj
-        <input type="url" id="link" v-model.trim="link" placeholder="Odkaz/zdroj" />
+        Odkaz/zdroj:
+        <input
+          type="url"
+          id="link"
+          v-model.trim="link"
+          placeholder="Odkaz/zdroj"
+          required
+        />
       </label>
       <br />
       <label for="child">
@@ -117,13 +143,13 @@
       </label>
       <br />
       <label for="start">
-        Začátek události
-        <input type="date" id="start" v-model="start" />
+        Začátek události:
+        <input type="date" id="start" v-model="start" required />
       </label>
       <br />
       <label for="end">
-        Konec události
-        <input type="date" id="end" v-model="end" />
+        Konec události:
+        <input type="date" id="end" v-model="end" required />
       </label>
       <br />
       <label for="note">
@@ -159,7 +185,7 @@ export default {
       orientationNumber: "",
       townPart: "",
       zipCode: "",
-      link: "",
+      link: "http://www.",
       child: false,
       teenager: false,
       adult: false,
