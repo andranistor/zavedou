@@ -194,7 +194,7 @@
         </label>
         <br />
         <b-button
-          variant="outline-primary"
+          variant="success"
           type="submit"
           v-on:submit.prevent="addEvent"
         >
@@ -203,10 +203,12 @@
         <p v-if="showAddressLabel === true">Adresa neexistuje. Znovu a lépe.</p>
         <p v-if="formSent === true">Formulář odeslán. Děkujeme.</p>
       </form>
-      <router-link to="/calendar">
-        <b-button variant="outline-primary">Zpět do kalendáře</b-button>
-      </router-link>
     </div>
+    <router-link to="/calendar">
+      <div class="mb-0">
+        <p><b-icon-arrow-left />Zpět do kalendáře</p>
+      </div>
+    </router-link>
   </div>
 </template>
 

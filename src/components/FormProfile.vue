@@ -147,7 +147,7 @@
         </ul>-->
 
         <b-button
-          variant="outline-primary"
+          variant="success"
           type="submit"
           v-on:submit.prevent="addProfile"
           >Nahrajte profil</b-button
@@ -158,7 +158,9 @@
       <br />
     </div>
     <router-link to="/profiles">
-      <b-button variant="outline-primary">Zpět na profily</b-button>
+      <div class="mb-0">
+        <p><b-icon-arrow-left />Zpět na profily</p>
+      </div>
     </router-link>
   </div>
 </template>
