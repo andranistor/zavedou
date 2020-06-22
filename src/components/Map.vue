@@ -451,7 +451,7 @@ button:focus {
   font-family: Raleway;
   font-size: 1.2rem;
   padding-top: 2rem;
-  padding-botton: 1rem;
+  padding-bottom: 1rem;
   height: 10%;
 }
 .select {
