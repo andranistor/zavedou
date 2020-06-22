@@ -133,7 +133,7 @@ body img {
     font-size: 0.8rem;
   }
   .page--center {
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
   }
 }
@@ -158,7 +158,7 @@ body img {
   }
 
   .page--center {
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
   }
 }
