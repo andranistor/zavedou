@@ -201,7 +201,7 @@ export default {
         card.getHeader().style.backgroundColor = "#ccc";
         card.getHeader().style.width = "100%";
         card.getHeader().style.height = "100%";
-        card.getHeader().style.padding = "2";
+        card.getHeader().style.padding = "2px";
         card.getBody().style.padding = "5px 0px";
         card.getFooter().style.padding = "0";
 
@@ -244,7 +244,7 @@ export default {
         card.getHeader().style.backgroundColor = "#ccc";
         card.getHeader().style.width = "100%";
         card.getHeader().style.height = "100%";
-        card.getHeader().style.padding = "2";
+        card.getHeader().style.padding = "2px";
         card.getBody().style.padding = "5px 0px";
         card.getFooter().style.padding = "0";
 
@@ -281,7 +281,7 @@ export default {
         card.getHeader().style.backgroundColor = "#ccc";
         card.getHeader().style.width = "100%";
         card.getHeader().style.height = "100%";
-        card.getHeader().style.padding = "2";
+        card.getHeader().style.padding = "2px";
         card.getBody().style.padding = "5px 0px";
         card.getFooter().style.padding = "0";
 
@@ -293,8 +293,7 @@ export default {
         cards.push(card);
       };
 
-      //card for parks
-
+      //Markers and cards for Parks
       const renderParks = (park, index) => {
         const pin = JAK.mel("div");
         const pinImg = JAK.mel("img", {
@@ -312,12 +311,21 @@ export default {
         markers.push(marker);
 
         let card = new SMap.Card();
-        card.getHeader().innerHTML = `
-             <strong>${park.name}</strong> <br />
-             <a href="${park.website}">Odkaz na akci</a><br />
 
+        // Card styles and content
+        card.setSize(450, 300);
+        card.getHeader().style.backgroundColor = "#ccc";
+        card.getHeader().style.width = "100%";
+        card.getHeader().style.height = "100%";
+        card.getHeader().style.padding = "2px";
+        card.getBody().style.padding = "5px 0px";
+        card.getFooter().style.padding = "0";
+
+        card.getHeader().innerHTML = `
+             <strong>${park.name}</strong>
             `;
         card.getBody().innerHTML = `${park.address}`;
+        card.getFooter().innerHTML = `<a href="${park.website}">Odkaz na akci</a>`;
         cards.push(card);
       };
 
