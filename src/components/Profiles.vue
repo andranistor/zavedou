@@ -178,5 +178,3 @@ export default {
 //     } else {
 //       this.$bind("profiles", all_entries);
 </script>
-
-<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
