@@ -100,15 +100,15 @@ export default {
 .subject {
   font-family: "Roboto Slab";
   font-size: 1rem;
-  width: 40%;
+  width: 35%;
 }
 
 .picture {
-  width: 20%;
+  width: 10%;
 }
 
 td:first-child {
-  width: 10rem;
+  width: 30rem;
 }
 td:nth-child(2) {
   padding-right: 1rem;
