@@ -23,14 +23,13 @@
         jako svou profesi nebo aby rozšířili svoje znalosti, něčemu novému se
         přiučili, protože kvalitní informace jsou v dnešní době nesmírně cenné.
         Prostě tak, jako Czechitas podporuje vstup žen do IT, tak by autorky
-        bychom rády podpořily vstup lidí do vědy. <br /><br />Neznáš Czechitas?
+        bychom rády podpořily vstup lidí do vědy. <br /><br />Znáš
         <a
           href="https://www.czechitas.cz/cs/"
           target="_blank"
           rel="noopener noreferrer"
-          >Určitě se na ně podívej.</a
-        >
-        <br /><br />
+          ><img id="czechitas" src="../assets/img/czechitas.png"/></a
+        >? <br /><br />
         Andra & Bára
       </p>
     </div>
@@ -51,5 +50,9 @@ export default {
 }
 h1 {
   margin-bottom: 20px;
+}
+
+#czechitas {
+  width: 10rem;
 }
 </style>
