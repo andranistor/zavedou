@@ -3,44 +3,59 @@
     <h1>Kalendář akcí</h1>
     <label for="region-filter">
       Vyberte kraj:
-      <select name="type" id="region-filter" v-model="regionFilter">
-        <option>Celá ČR</option>
-        <option>Hlavní město Praha</option>
-        <option>Středočeský kraj</option>
-        <option>Jihočeský kraj</option>
-        <option>Plzeňský kraj</option>
-        <option>Karlovarský kraj</option>
-        <option>Ústecký kraj</option>
-        <option>Liberecký kraj</option>
-        <option>Královéhradecký kraj</option>
-        <option>Pardubický kraj</option>
-        <option>Kraj Vysočina</option>
-        <option>Jihomoravský kraj</option>
-        <option>Olomoucký kraj</option>
-        <option>Zlínský kraj</option>
-        <option>Moravskoslezský kraj</option>
+      <select
+        class="custom-select select-selected"
+        name="type"
+        id="region-filter"
+        v-model="regionFilter"
+      >
+        <option class="select-items">Celá ČR</option>
+        <option class="select-items">Hlavní město Praha</option>
+        <option class="select-items">Středočeský kraj</option>
+        <option class="select-items">Jihočeský kraj</option>
+        <option class="select-items">Plzeňský kraj</option>
+        <option class="select-items">Karlovarský kraj</option>
+        <option class="select-items">Ústecký kraj</option>
+        <option class="select-items">Liberecký kraj</option>
+        <option class="select-items">Královéhradecký kraj</option>
+        <option class="select-items">Pardubický kraj</option>
+        <option class="select-items">Kraj Vysočina</option>
+        <option class="select-items">Jihomoravský kraj</option>
+        <option class="select-items">Olomoucký kraj</option>
+        <option class="select-items">Zlínský kraj</option>
+        <option class="select-items">Moravskoslezský kraj</option>
       </select>
     </label>
     <label for="type-filter">
       Vyberte druh akce:
-      <select name="type" id="type-filter" v-model="typeFilter">
-        <option>Všechny akce</option>
-        <option>Veletrh / festival</option>
-        <option>Přednáška</option>
-        <option>Workshop</option>
-        <option>Soutěž</option>
-        <option>Tábor/letní škola</option>
-        <option>Kroužek</option>
-        <option>Ostatní</option>
+      <select
+        class="custom-select select-selected"
+        name="type"
+        id="type-filter"
+        v-model="typeFilter"
+      >
+        <option class="select-items">Všechny akce</option>
+        <option class="select-items">Veletrh / festival</option>
+        <option class="select-items">Přednáška</option>
+        <option class="select-items">Workshop</option>
+        <option class="select-items">Soutěž</option>
+        <option class="select-items">Tábor/letní škola</option>
+        <option class="select-items">Kroužek</option>
+        <option class="select-items">Ostatní</option>
       </select>
     </label>
     <label for="attender-filter">
       Pro koho je akce určená:
-      <select name="type" id="attender-filter" v-model="attenderFilter">
-        <option>Pro všechny</option>
-        <option>Děti (ZŠ)</option>
-        <option>Studenti (SŠ)</option>
-        <option>Dospělí</option>
+      <select
+        class="custom-select select-selected"
+        name="type"
+        id="attender-filter"
+        v-model="attenderFilter"
+      >
+        <option class="select-items">Pro všechny</option>
+        <option class="select-items">Děti (ZŠ)</option>
+        <option class="select-items">Studenti (SŠ)</option>
+        <option class="select-items">Dospělí</option>
       </select>
     </label>
     <div class="b-container fluid">
@@ -164,4 +179,63 @@ export default {
 </script>
 
 <style>
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: #84d3ef;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: black;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 </style>

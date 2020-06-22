@@ -29,19 +29,20 @@
     <label for="subject-filter">
       Vyberte obor:
       <select
+        class="custom-select select-selected"
         name="type"
         id="branch-filter"
         v-model="branchFilter"
         @change="filtered_items"
       >
-        <option>Zobrazit vše</option>
-        <option>Matematika, fyzika a informatika</option>
-        <option>Chemie</option>
-        <option>Technické vědy, inženýrství</option>
-        <option>Vědy o Zemi</option>
-        <option>Biologie a medicína</option>
-        <option>Environmentální a zemědělské vědy</option>
-        <option>Společenské a humanitní vědy</option>
+        <option class="select-items">Zobrazit vše</option>
+        <option class="select-items">Matematika, fyzika a informatika</option>
+        <option class="select-items">Chemie</option>
+        <option class="select-items">Technické vědy, inženýrství</option>
+        <option class="select-items">Vědy o Zemi</option>
+        <option class="select-items">Biologie a medicína</option>
+        <option class="select-items">Environmentální a zemědělské vědy</option>
+        <option class="select-items">Společenské a humanitní vědy</option>
       </select>
     </label>
 
@@ -353,14 +354,71 @@ export default {
 .smap img.custom_pin {
   width: 40px;
 }
-button {
-  background-color: #84d3ef;
-}
 
 .selected {
-  background-color: #0aa2ff;
+  background-color: blue;
 }
 .custom_pin {
   width: 40px;
+}
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: #84d3ef;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: black;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 </style>

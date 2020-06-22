@@ -1,12 +1,14 @@
 <template>
-  <button @click="pressButton">{{btnName}}</button>
+  <button @click="pressButton" id="button">{{ btnName }}</button>
 </template>
 <script>
 export default {
   name: "Button",
   props: ["btnName"],
   data() {
-    return {};
+    return {
+      image: "./assets/img/button_on.png"
+    };
   },
 
   methods: {
@@ -15,9 +17,6 @@ export default {
     }
   }
 };
-</script>
+</script scoped>
 <style>
-.color {
-  background-color: green;
-}
 </style>  

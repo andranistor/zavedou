@@ -4,39 +4,49 @@
     <div>
       <label for="region-filter">
         Vyberte kraj:
-        <select name="type" id="region-filter" v-model="regionFilter">
-          <option>Celá ČR</option>
-          <option>Hlavní město Praha</option>
-          <option>Středočeský kraj</option>
-          <option>Jihočeský kraj</option>
-          <option>Plzeňský kraj</option>
-          <option>Karlovarský kraj</option>
-          <option>Ústecký kraj</option>
-          <option>Liberecký kraj</option>
-          <option>Královéhradecký kraj</option>
-          <option>Pardubický kraj</option>
-          <option>Kraj Vysočina</option>
-          <option>Jihomoravský kraj</option>
-          <option>Olomoucký kraj</option>
-          <option>Zlínský kraj</option>
-          <option>Moravskoslezský kraj</option>
+        <select
+          class="custom-select select-selected"
+          name="type"
+          id="region-filter"
+          v-model="regionFilter"
+        >
+          <option class="select-items">Celá ČR</option>
+          <option class="select-items">Hlavní město Praha</option>
+          <option class="select-items">Středočeský kraj</option>
+          <option class="select-items">Jihočeský kraj</option>
+          <option class="select-items">Plzeňský kraj</option>
+          <option class="select-items">Karlovarský kraj</option>
+          <option class="select-items">Ústecký kraj</option>
+          <option class="select-items">Liberecký kraj</option>
+          <option class="select-items">Královéhradecký kraj</option>
+          <option class="select-items">Pardubický kraj</option>
+          <option class="select-items">Kraj Vysočina</option>
+          <option class="select-items">Jihomoravský kraj</option>
+          <option class="select-items">Olomoucký kraj</option>
+          <option class="select-items">Zlínský kraj</option>
+          <option class="select-items">Moravskoslezský kraj</option>
         </select>
       </label>
       <label for="subject-filter">
         Vyberte školní předmět:
-        <select name="type" id="subject-filter" v-model="subjectFilter">
-          <option>Zobrazit vše</option>
-          <option>Cizí jazyky</option>
-          <option>Čeština</option>
-          <option>Dějepis</option>
-          <option>Fyzika</option>
-          <option>Chemie</option>
-          <option>Matematika</option>
-          <option>Občanská výchova</option>
-          <option>Přirodopis/biologie</option>
-          <option>Informatika</option>
-          <option>Hudební a výtvarná výchova</option>
-          <option>Zeměpis</option>
+        <select
+          class="custom-select select-selected"
+          name="type"
+          id="subject-filter"
+          v-model="subjectFilter"
+        >
+          <option class="select-items">Zobrazit vše</option>
+          <option class="select-items">Cizí jazyky</option>
+          <option class="select-items">Čeština</option>
+          <option class="select-items">Dějepis</option>
+          <option class="select-items">Fyzika</option>
+          <option class="select-items">Chemie</option>
+          <option class="select-items">Matematika</option>
+          <option class="select-items">Občanská výchova</option>
+          <option class="select-items">Přirodopis/biologie</option>
+          <option class="select-items">Informatika</option>
+          <option class="select-items">Hudební a výtvarná výchova</option>
+          <option class="select-items">Zeměpis</option>
         </select>
       </label>
     </div>
