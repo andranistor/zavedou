@@ -152,6 +152,8 @@
           v-on:submit.prevent="addProfile"
           >Odeslat</b-button
         >
+        <p v-if="showAddressLabel === true">Adresa neexistuje. Znovu a lépe.</p>
+        <p v-if="formSent === true">Formulář odeslán. Děkujeme.</p>
       </form>
       <router-link to="/profiles">
         <b-button variant="outline-primary">Zpět na profily</b-button>
@@ -178,7 +180,8 @@ export default {
       whom: "",
       region: "",
       contact: "@",
-      // errors: []
+      showAddressLabel: false,
+      formSent: false,
     };
   },
 
@@ -187,8 +190,12 @@ export default {
       const address = this.address.replace(/\d{3} ?\d{2}/, "");
       // Call mapy API and get coords
       new SMap.Geocoder(address, (response) => {
-        let results = response.getResults()[0].results[0].coords;
-        console.log(results);
+        let results = response.getResults()[0].results[0];
+
+        if (!results) {
+          this.showAddressLabel = true;
+          return;
+        }
 
         // Add to database
         db.collection("profiles")
@@ -199,7 +206,7 @@ export default {
             subject: this.subject,
             institution: this.institution,
             address: this.address,
-            coords: { x: results.x, y: results.y },
+            coords: { x: results.coords.x, y: results.coords.y },
             offer: this.offer,
             whom: this.whom,
             region: this.region,
@@ -229,22 +236,10 @@ export default {
         this.whom = "";
         this.region = "";
         this.contact = "";
+        this.showAddressLabel = false;
+        this.formSent = true;
       });
     },
-    // checkForm: function(e) {
-    //   if (this.firstName && this.lastName) {
-    //     return true;
-    //   }
-
-    //   this.errors = [];
-
-    //   if (!this.firstName) {
-    //     this.errors.push("Doplňte prosím jméno.");
-    //   }
-    //   if (!this.lastName) {
-    //     this.errors.push("Doplňte prosím příjmení.");
-    //   }
-    // }
   },
 };
 </script>
