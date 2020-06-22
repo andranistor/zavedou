@@ -11,7 +11,7 @@
 
     <div class="b-container">
       <b-row>
-        <b-col b-col sm="12" md="6" lg="4"
+        <b-col b-col sm="12" md="4" lg="4"
           ><label for="region-filter">
             Kraj: <br />
             <select
@@ -39,7 +39,7 @@
           </label>
         </b-col>
 
-        <b-col b-col sm="12" md="6" lg="4">
+        <b-col b-col sm="12" md="4" lg="4">
           <label for="type-filter">
             Druh akce: <br />
             <select
@@ -59,7 +59,7 @@
             </select>
           </label>
         </b-col>
-        <b-col b-col sm="12" md="6" lg="4">
+        <b-col b-col sm="12" md="4" lg="4">
           <label for="attender-filter">
             Pro koho:
             <br />
@@ -75,9 +75,6 @@
               <option class="select-items">Dospělí</option>
             </select>
           </label>
-        </b-col>
-        <b-col b-col sm="12" md="12" lg="3">
-          <!-- <FormEvent /> -->
         </b-col>
       </b-row>
     </div>
@@ -208,7 +205,7 @@ h1 {
 
 .plus {
   position: absolute;
-  right: 5rem;
+  right: 3rem;
 }
 
 .menu-select {
@@ -280,5 +277,36 @@ h1 {
 .select-items div:hover,
 .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767.98px) {
+  .select-selected {
+    width: 90vw;
+  }
+  .plus {
+    position: absolute;
+    right: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 991.98px) and (min-width: 767.99px) {
+  .select-selected {
+    width: 30vw;
+  }
+
+  .plus {
+    position: absolute;
+    right: 1rem;
+  }
+}
+
+@media (min-width: 991.99px) {
+  .select-selected {
+    width: 20vw;
+    margin: 0 auto;
+  }
 }
 </style>
