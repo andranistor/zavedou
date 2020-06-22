@@ -24,6 +24,7 @@ Vue.use(IconsPlugin)
 Vue.use(VueAutosuggest);
 Vue.component("multiselect", Multiselect);
 Vue.use(firestorePlugin)
+Vue.use(require('vue-moment'));
 
 const router = new VueRouter({
   mode: 'history',

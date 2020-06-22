@@ -2,13 +2,19 @@
   <div>
     <div class="blog-card">
       <div class="meta">
-        <div class="photo" :style="{ backgroundImage: 'url(' + link_picture + ')' }"></div>
+        <div
+          class="photo"
+          :style="{ backgroundImage: 'url(' + link_picture + ')' }"
+        ></div>
         <ul class="details">
-          <li class="date">{{ start }}</li>
+          <li class="date">
+            Od {{ start | moment("DD.MM.") }} do
+            {{ end | moment("DD.MM.YYYY") }}
+          </li>
           <li class="tags">
             <ul>
               <li>
-                <a v-bind:href="link">Web</a>
+                <a v-bind:href="link">Více informací</a>
               </li>
             </ul>
           </li>
@@ -24,6 +30,8 @@
 </template>
 
 <script>
+import moment from "moment";
+
 export default {
   name: "Event",
   props: [
@@ -46,8 +54,8 @@ export default {
     "start",
     "end",
     "note",
-    "region"
-  ]
+    "region",
+  ],
 };
 </script>
 
@@ -228,4 +236,3 @@ body {
   }
 }
 </style>
-

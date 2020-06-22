@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Mapa</h1>
     <!-- <label for="subject-filter">
       Vyberte školní předmět:
       <select name="type" id="subject-filter" v-model="subjectFilter">
@@ -198,7 +197,7 @@ export default {
         let card = new SMap.Card();
         // Card styles and content
         card.setSize(450, 300);
-        card.getHeader().style.backgroundColor = "#ccc";
+        card.getHeader().style.backgroundColor = "#6687C4";
         card.getHeader().style.width = "100%";
         card.getHeader().style.height = "100%";
         card.getHeader().style.padding = "2px";
@@ -241,7 +240,7 @@ export default {
         let card = new SMap.Card();
         // Card styles and content
         card.setSize(450, 300);
-        card.getHeader().style.backgroundColor = "#ccc";
+        card.getHeader().style.backgroundColor = "#AF519A";
         card.getHeader().style.width = "100%";
         card.getHeader().style.height = "100%";
         card.getHeader().style.padding = "2px";
@@ -278,7 +277,7 @@ export default {
 
         // Card styles and content
         card.setSize(450, 300);
-        card.getHeader().style.backgroundColor = "#ccc";
+        card.getHeader().style.backgroundColor = "#7DBA27";
         card.getHeader().style.width = "100%";
         card.getHeader().style.height = "100%";
         card.getHeader().style.padding = "2px";
@@ -314,7 +313,7 @@ export default {
 
         // Card styles and content
         card.setSize(450, 300);
-        card.getHeader().style.backgroundColor = "#ccc";
+        card.getHeader().style.backgroundColor = "#FBBB19";
         card.getHeader().style.width = "100%";
         card.getHeader().style.height = "100%";
         card.getHeader().style.padding = "2px";
