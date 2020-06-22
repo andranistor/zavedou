@@ -397,7 +397,7 @@ export default {
 }
 
 .smap img.custom_pin {
-  width: 40px;
+  width: 30px;
 }
 
 .selected {
