@@ -13,11 +13,7 @@
           </div>
         </b-button>
       </b-card-header>
-      <b-collapse
-        :id="'accordion-' + id"
-        accordion="my-accordion"
-        role="tabpanel"
-      >
+      <b-collapse :id="'accordion-' + id" accordion="my-accordion" role="tabpanel">
         <b-card-body>
           <table>
             <tr>
@@ -90,8 +86,8 @@ export default {
     "whom",
     "region",
     "contact",
-    "image",
-  ],
+    "image"
+  ]
 };
 </script>
 
@@ -108,7 +104,8 @@ export default {
 }
 
 td:first-child {
-  width: 30rem;
+  min-width: 10vw;
+  padding: 1px;
 }
 td:nth-child(2) {
   padding-right: 1rem;
@@ -195,9 +192,18 @@ div[role="tablist"] {
   .btn.btn-info:focus {
     width: 90vw;
   }
+  td:first-child {
+    min-width: 20vw;
+    padding: 1px;
+  }
 }
 
 @media (max-width: 991.98px) and (min-width: 767.99px) {
+  td:first-child {
+    min-width: 12vw;
+    padding: 1px;
+  }
+
   .avatar {
     height: 60px;
     width: 60px;
@@ -225,5 +231,9 @@ div[role="tablist"] {
 }
 
 @media (min-width: 991.99px) {
+  td:first-child {
+    min-width: 6vw;
+    padding: 1px;
+  }
 }
 </style>
