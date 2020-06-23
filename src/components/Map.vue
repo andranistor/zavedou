@@ -97,10 +97,10 @@ export default {
     };
   },
   firestore: {
-    institutions: db.collection("institutions"),
-    profiles: db.collection("profiles"),
-    events: db.collection("events"),
-    parks: db.collection("parks"),
+    institutions: db.collection("institutions"), //.limit(10),
+    profiles: db.collection("profiles"), //.limit(10),
+    events: db.collection("events"), //.limit(10),
+    parks: db.collection("parks"), //.limit(10),
   },
 
   mounted() {
@@ -423,7 +423,7 @@ button {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  background-color: #ff3b41;
+  background-color: #8d99ae;
   border-radius: 20px;
   width: 8rem;
 }
