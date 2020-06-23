@@ -97,10 +97,10 @@ export default {
     };
   },
   firestore: {
-    institutions: db.collection("institutions").limit(10),
-    profiles: db.collection("profiles").limit(10),
-    events: db.collection("events").limit(10),
-    parks: db.collection("parks").limit(10),
+    institutions: db.collection("institutions"), //.limit(10),
+    profiles: db.collection("profiles"), //.limit(10),
+    events: db.collection("events"), //.limit(10),
+    parks: db.collection("parks"), //.limit(10),
   },
 
   mounted() {
