@@ -47,7 +47,7 @@
             <tr>
               <b-card-text>
                 <td>
-                  <strong>Komu:</strong>
+                  <strong>Pro koho:</strong>
                 </td>
                 <td>{{ whom }}</td>
               </b-card-text>
@@ -55,7 +55,7 @@
             <tr>
               <b-card-text>
                 <td>
-                  <strong>Pro oblast:</strong>
+                  <strong>Půdobím v:</strong>
                 </td>
                 <td>{{ region }}</td>
               </b-card-text>

@@ -55,6 +55,13 @@
       >
       <router-link class="footer-item" to="/about">O projektu</router-link>
       <p>Copyright ©2020 zavedou.cz</p>
+      <a
+        class="footer-item"
+        href="http://www.freepik.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Illustrations by macrovector &#128151;</a
+      >
     </div>
   </div>
 </template>
