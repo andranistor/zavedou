@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Přidej profil</h2>
+    <h1>Přidej profil</h1>
     <div class="form">
       <form @submit.prevent="addProfile">
         <label for="first-name">
@@ -228,6 +228,9 @@ export default {
 </script>
 
 <style>
+.h1 {
+  padding: 1rem 0;
+}
 input[type="text"],
 select,
 textarea {

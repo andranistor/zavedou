@@ -96,11 +96,17 @@ export default {
 </script>
 
 <style>
-.name_surname,
-.subject {
+.name_surname {
   font-family: "Roboto Slab";
   font-size: 1rem;
   width: 35%;
+  margin-left: 2rem;
+}
+
+.subject {
+  font-family: "Roboto Slab";
+  font-size: 1rem;
+  width: 30%;
 }
 
 .picture {
@@ -182,6 +188,10 @@ div[role="tablist"] {
     width: 90vw;
   }
 
+  .card-body {
+    line-height: 25px;
+  }
+
   .card-header:first-child {
     width: 90vw;
   }
@@ -200,6 +210,10 @@ div[role="tablist"] {
     min-width: 20vw;
     padding: 1px;
   }
+  td:nth-child(2) {
+    min-width: 15rem;
+    padding: 0.5rem;
+  }
 }
 
 @media (max-width: 991.98px) and (min-width: 767.99px) {
@@ -208,10 +222,19 @@ div[role="tablist"] {
     padding: 1px;
   }
 
+  td:nth-child(2) {
+    width: 15rem;
+    padding: 0.5rem;
+  }
+
   .avatar {
     height: 60px;
     width: 60px;
     padding: 0;
+  }
+
+  .card-body {
+    line-height: 25px;
   }
 
   .card.mb-1 {
@@ -238,6 +261,9 @@ div[role="tablist"] {
   td:first-child {
     min-width: 6vw;
     padding: 1px;
+  }
+  td:nth-child(2) {
+    width: 20rem;
   }
 }
 </style>

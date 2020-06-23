@@ -11,7 +11,7 @@
       </p>
     </div>
     <div class="b-container-fluid">
-      <b-row>
+      <b-row class="text-center">
         <b-col>
           <Button
             btnName="Vědecké instituce"
@@ -97,10 +97,10 @@ export default {
     };
   },
   firestore: {
-    institutions: db.collection("institutions"), //.limit(10),
-    profiles: db.collection("profiles"), //.limit(10),
-    events: db.collection("events"), //.limit(10),
-    parks: db.collection("parks"), //.limit(10),
+    institutions: db.collection("institutions").limit(10),
+    profiles: db.collection("profiles").limit(10),
+    events: db.collection("events").limit(10),
+    parks: db.collection("parks").limit(10),
   },
 
   mounted() {
@@ -245,7 +245,7 @@ export default {
 
         let card = new SMap.Card();
         // Card styles and content
-        card.setSize(350, 250);
+        card.setSize(350, 200);
         card.getHeader().style.backgroundColor = "#AF519A";
         card.getHeader().style.width = "100%";
         card.getHeader().style.height = "100%";
@@ -519,7 +519,7 @@ button:focus {
 
 @media (max-width: 767.98px) {
   .custom-select.select-selected {
-    width: 70vw;
+    width: 90vw;
   }
 
   h1 {
@@ -532,15 +532,19 @@ button:focus {
     height: 3rem;
     margin: 4px 2px;
     cursor: pointer;
-    background-color: #ff3b41;
     border-radius: 20px;
     width: 5rem;
+  }
+  .select {
+    margin-top: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 @media (max-width: 991.98px) and (min-width: 767.99px) {
   .custom-select.select-selected {
-    width: 70vw;
+    width: 50vw;
   }
 }
 
