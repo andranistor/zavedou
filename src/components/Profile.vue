@@ -55,7 +55,7 @@
             <tr>
               <b-card-text>
                 <td>
-                  <strong>Půdobím v:</strong>
+                  <strong>Působím v:</strong>
                 </td>
                 <td>{{ region }}</td>
               </b-card-text>
