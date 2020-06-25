@@ -159,7 +159,7 @@ export default {
       subject: "Zeměpis",
       institution: "Space X",
       address: "Karlovy Vary",
-      offer: "Vezmu vaši třídu do vemíru",
+      offer: "Vezmu vaši třídu do vesmíru",
       whom: "2. stupeň ZŠ",
       region: "Karlovarský kraj",
       contact: "elon@musk.com",
