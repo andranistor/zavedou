@@ -36,7 +36,12 @@
         </label>
         <label for="subject-select">
           Vhodné pro školní předmět:
-          <select name="type" id="subject-select" v-model="subject" required>
+          <select
+            name="type"
+            id="subject-select"
+            v-model="subject"
+            required
+          >
             <option>Cizí jazyky</option>
             <option>Čeština</option>
             <option>Dějepis</option>
@@ -124,12 +129,7 @@
           />
         </label>
         <br />
-        <b-button
-          variant="success"
-          type="submit"
-          v-on:submit.prevent="addProfile"
-          >Odeslat</b-button
-        >
+        <b-button variant="success" type="submit" v-on:submit.prevent="addProfile">Odeslat</b-button>
         <p v-if="showAddressLabel === true">Adresa neexistuje. Znovu a lépe.</p>
         <p v-if="formSent === true">Formulář odeslán. Děkujeme.</p>
       </form>
@@ -137,7 +137,9 @@
     </div>
     <router-link to="/profiles">
       <div class="mb-0">
-        <p><b-icon-arrow-left />Zpět na profily</p>
+        <p>
+          <b-icon-arrow-left />Zpět na profily
+        </p>
       </div>
     </router-link>
   </div>
@@ -151,18 +153,18 @@ export default {
   data() {
     return {
       profiles: [],
-      firstName: "",
-      lastName: "",
-      field: "",
-      subject: "",
-      institution: "",
-      address: "",
-      offer: "",
-      whom: "",
-      region: "",
-      contact: "@",
+      firstName: "Elon",
+      lastName: "Musk",
+      field: "vesmírné technologie",
+      subject: "Zeměpis",
+      institution: "Space X",
+      address: "Karlovy Vary",
+      offer: "Vezmu vaši třídu do vemíru",
+      whom: "2. stupeň ZŠ",
+      region: "Karlovarský kraj",
+      contact: "elon@musk.com",
       showAddressLabel: false,
-      formSent: false,
+      formSent: false
     };
   },
 
@@ -170,7 +172,7 @@ export default {
     addProfile(event) {
       const address = this.address.replace(/\d{3} ?\d{2}/, "");
       // Call mapy API and get coords
-      new SMap.Geocoder(address, (response) => {
+      new SMap.Geocoder(address, response => {
         let results = response.getResults()[0].results[0];
 
         // Error message call
@@ -200,10 +202,10 @@ export default {
               enviroAgri: "1",
               mathsPhysicsInformatics: "1",
               scienceAboutEarth: "1",
-              socialAndArts: "1",
-            },
+              socialAndArts: "1"
+            }
           })
-          .then((docRef) => {
+          .then(docRef => {
             docRef.update({ id: docRef.id });
           });
 
@@ -222,8 +224,8 @@ export default {
         this.formSent = true;
       });
       this.$router.push("profiles");
-    },
-  },
+    }
+  }
 };
 </script>
 

@@ -11,9 +11,10 @@
 
     <div class="b-container">
       <b-row>
-        <b-col b-col sm="12" md="4" lg="4"
-          ><label for="region-filter">
-            Kraj: <br />
+        <b-col b-col sm="12" md="4" lg="4">
+          <label for="region-filter">
+            Kraj:
+            <br />
             <select
               class="custom-select select-selected"
               name="type"
@@ -41,7 +42,8 @@
 
         <b-col b-col sm="12" md="4" lg="4">
           <label for="type-filter">
-            Druh akce: <br />
+            Druh akce:
+            <br />
             <select
               class="custom-select select-selected"
               name="type"
@@ -53,7 +55,7 @@
               <option class="select-items">Přednáška</option>
               <option class="select-items">Workshop</option>
               <option class="select-items">Soutěž</option>
-              <option class="select-items">Tábor/letní škola</option>
+              <option class="select-items">Tábor / letní škola</option>
               <option class="select-items">Kroužek</option>
               <option class="select-items">Ostatní</option>
             </select>
@@ -115,7 +117,7 @@ import Event from "./Event.vue";
 export default {
   name: "Calendar",
   components: {
-    Event,
+    Event
   },
   data() {
     return {
@@ -143,18 +145,18 @@ export default {
       regionFilter: "Celá ČR",
       typeFilter: "Všechny akce",
       attenderFilter: "Pro všechny",
-      image: "./assets/img/button_plus.png",
+      image: "./assets/img/button_plus.png"
     };
   },
   firestore: {
-    events: db.collection("events").orderBy("date.start"),
+    events: db.collection("events").orderBy("date.start")
   },
   computed: {
     filtered_events() {
       let result = this.events;
 
       //Filter for regions
-      result = result.filter((item) => {
+      result = result.filter(item => {
         if (this.regionFilter === "Celá ČR") {
           return true;
         }
@@ -162,7 +164,7 @@ export default {
       });
 
       //Filter for events
-      result = result.filter((item) => {
+      result = result.filter(item => {
         if (this.typeFilter === "Všechny akce") {
           return true;
         }
@@ -170,7 +172,7 @@ export default {
       });
 
       //Filter for attenders
-      result = result.filter((item) => {
+      result = result.filter(item => {
         if (this.attenderFilter === "Pro všechny") {
           return true;
         } else if (this.attenderFilter === "Děti (ZŠ)") {
@@ -182,8 +184,8 @@ export default {
         }
       });
       return result;
-    },
-  },
+    }
+  }
 };
 </script>
 
