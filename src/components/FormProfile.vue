@@ -153,16 +153,16 @@ export default {
   data() {
     return {
       profiles: [],
-      firstName: "Elon",
-      lastName: "Musk",
-      field: "vesmírné technologie",
-      subject: "Zeměpis",
-      institution: "Space X",
-      address: "Karlovy Vary",
-      offer: "Vezmu vaši třídu do vesmíru",
-      whom: "2. stupeň ZŠ",
-      region: "Karlovarský kraj",
-      contact: "elon@musk.com",
+      firstName: "",
+      lastName: "",
+      field: "",
+      subject: "",
+      institution: "",
+      address: "",
+      offer: "",
+      whom: "",
+      region: "",
+      contact: "",
       showAddressLabel: false,
       formSent: false
     };
