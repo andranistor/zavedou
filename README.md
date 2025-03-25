@@ -5,6 +5,8 @@ The project is a website serving as a gateway to scientific activities for the p
 
 It features an interactive map of scientific institutions, science parks in the Czech Republic, and other science popularization activities with filtering options. Further it includes a calendar of events, and a database with profiles of scientific popularizers who schools can invite to their premises. And so, the project zavedou was born – a site that takes you to science 🧑‍🔬
 
+Used technologies: Vue.js, Bootstrap, Firebase, mapy.cz
+
 ## Running locally
 1. Clone the repo.
 2. Run the web:
